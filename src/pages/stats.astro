@@ -69,7 +69,17 @@ const generateHeatmap = () => {
 };
 
 const activityWeeks = generateHeatmap();
-const months = ['Nov', 'Dec', 'Jan', 'Feb'];
+
+// Calculate month labels and their positions
+const heatmapColumns = activityWeeks.map((week, i) => {
+    const firstDay = new Date(week[0].date);
+    const month = firstDay.toLocaleString('default', { month: 'short' });
+    const prevMonth = i > 0 ? new Date(activityWeeks[i-1][0].date).toLocaleString('default', { month: 'short' }) : null;
+    return {
+        week,
+        monthLabel: month !== prevMonth ? month : null
+    };
+});
 ---
 
 <BaseLayout title="Alchemist Dashboard">
@@ -177,24 +187,32 @@ const months = ['Nov', 'Dec', 'Jan', 'Feb'];
 
 		<!-- Validated Heatmap Pulse -->
 		<section class="p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-visible">
-			<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10">
-				<div>
-					<h2 class="text-xl md:text-2xl font-bold">The Alchemist Pulse</h2>
-					<p class="text-xs md:text-sm text-slate-500">Activity heatmap across code, soul, and knowledge.</p>
-				</div>
-				<div class="flex gap-3 md:gap-4 text-[9px] md:text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-					{months.map(m => <span>{m}</span>)}
-				</div>
+			<div class="mb-6">
+				<h2 class="text-xl md:text-2xl font-bold">The Alchemist Pulse</h2>
+				<p class="text-xs md:text-sm text-slate-500">Activity heatmap across code, soul, and knowledge.</p>
 			</div>
 			
 			<div class="relative">
-				<div class="flex gap-1 md:gap-1.5 overflow-x-auto pb-6 scrollbar-hide relative px-1">
-					<div class="flex flex-col gap-1.5 pr-3 md:pr-4 text-[8px] text-slate-400 font-bold uppercase justify-between py-1 shrink-0 sticky left-0 bg-white/95 dark:bg-slate-900/95 z-10">
-						<span>Mon</span><span>Wed</span><span>Fri</span>
+				<div class="flex gap-1 md:gap-1.5 overflow-x-auto pb-4 scrollbar-hide relative px-1">
+					<!-- Labels for Days -->
+					<div class="flex flex-col gap-1 md:gap-1.5 pr-3 md:pr-4 text-[8px] text-slate-400 font-bold uppercase shrink-0 sticky left-0 bg-white/95 dark:bg-slate-900/95 z-10">
+						<div class="h-4 mb-1"></div> <!-- Spacer for Month labels -->
+						<div class="h-3.5 md:h-4 flex items-center">Mon</div>
+						<div class="h-3.5 md:h-4"></div>
+						<div class="h-3.5 md:h-4 flex items-center">Wed</div>
+						<div class="h-3.5 md:h-4"></div>
+						<div class="h-3.5 md:h-4 flex items-center">Fri</div>
+						<div class="h-3.5 md:h-4"></div>
 					</div>
-					{activityWeeks.map((week, wIdx) => (
+
+					{heatmapColumns.map((col, wIdx) => (
 						<div class="flex flex-col gap-1 md:gap-1.5 shrink-0">
-							{week.map((day, dIdx) => (
+							<!-- Month Label Row -->
+							<div class="h-4 mb-1 text-[9px] font-bold text-slate-400 uppercase tracking-tighter whitespace-nowrap overflow-visible">
+								{col.monthLabel || ''}
+							</div>
+							
+							{col.week.map((day, dIdx) => (
 								<div 
 									class={`pulse-cell w-3.5 h-3.5 md:w-4 md:h-4 rounded-[2px] md:rounded-sm transition-all duration-300 cursor-help hover:scale-125 relative group ${
 										day.count === 0 ? 'bg-slate-100 dark:bg-slate-800' :
