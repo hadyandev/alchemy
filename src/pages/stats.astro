@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Placeholder data - later this will fetch from Notion
+const stats = [
+  { name: 'Code Alchemy', level: 5, exp: 450, color: 'blue' },
+  { name: 'Infra Alchemy', level: 8, exp: 820, color: 'orange' },
+  { name: 'Soul Alchemy', level: 3, exp: 150, color: 'emerald' },
+  { name: 'Defense Alchemy', level: 4, exp: 310, color: 'red' }
+];
+
+const totalWisdom = 120;
+const totalKnowledge = 340;
+
+// Placeholder for Heatmap Data (Activity Log)
+const activityWeeks = Array.from({ length: 20 }, () => 
+  Array.from({ length: 7 }, () => Math.floor(Math.random() * 5))
+);
+---
+
+<BaseLayout title="Alchemist Stats">
+	<div class="py-10">
+		<header class="mb-12">
+			<h1 class="text-4xl font-extrabold mb-2">Alchemist Status</h1>
+			<p class="text-slate-500 dark:text-slate-400">Monitoring the transmutation of knowledge and soul.</p>
+		</header>
+
+		<!-- Leveling Overview -->
+		<div class="grid md:grid-cols-3 gap-6 mb-12">
+			<div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+				<div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Total Wisdom</div>
+				<div class="text-3xl font-black text-purple-500">{totalWisdom}</div>
+			</div>
+			<div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+				<div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Total Knowledge</div>
+				<div class="text-3xl font-black text-blue-500">{totalKnowledge}</div>
+			</div>
+			<div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+				<div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Current Rank</div>
+				<div class="text-3xl font-black text-emerald-500">Apprentice</div>
+			</div>
+		</div>
+
+		<!-- Path Progress -->
+		<div class="space-y-8 mb-16">
+			<h2 class="text-2xl font-bold flex items-center gap-2">
+				<span class="text-blue-500">⚗️</span> Alchemist Paths
+			</h2>
+			<div class="grid gap-6">
+				{stats.map(stat => (
+					<div class="space-y-2">
+						<div class="flex justify-between text-sm font-bold">
+							<span>{stat.name}</span>
+							<span class="text-slate-400">LVL {stat.level}</span>
+						</div>
+						<div class="h-3 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+							<div class="h-full bg-blue-500 rounded-full transition-all duration-1000" style={`width: ${(stat.exp % 100)}%`}></div>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+
+		<!-- Custom Activity Heatmap (The Alchemist Pulse) -->
+		<div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+			<h2 class="text-xl font-bold mb-6">The Alchemist Pulse</h2>
+			<p class="text-sm text-slate-500 mb-6 italic">Tracking daily transmutations, ibadah, and learning activities.</p>
+			
+			<div class="flex gap-2 overflow-x-auto pb-4 scrollbar-hide">
+				{activityWeeks.map(week => (
+					<div class="flex flex-col gap-2">
+						{week.map(day => (
+							<div class={`w-4 h-4 rounded-sm ${
+								day === 0 ? 'bg-slate-100 dark:bg-slate-800' :
+								day === 1 ? 'bg-blue-200 dark:bg-blue-900' :
+								day === 2 ? 'bg-blue-400 dark:bg-blue-700' :
+								day === 3 ? 'bg-blue-600 dark:bg-blue-500' :
+								'bg-blue-800 dark:bg-blue-300'
+							}`} title={`Activity Level: ${day}`}></div>
+						))}
+					</div>
+				))}
+			</div>
+			<div class="mt-4 flex items-center justify-end gap-2 text-[10px] text-slate-400 uppercase tracking-widest font-bold">
+				<span>Less Active</span>
+				<div class="flex gap-1">
+					<div class="w-3 h-3 bg-slate-100 dark:bg-slate-800 rounded-sm"></div>
+					<div class="w-3 h-3 bg-blue-900 rounded-sm"></div>
+					<div class="w-3 h-3 bg-blue-500 rounded-sm"></div>
+					<div class="w-3 h-3 bg-blue-300 rounded-sm"></div>
+				</div>
+				<span>Transmuting</span>
+			</div>
+		</div>
+	</div>
+</BaseLayout>
