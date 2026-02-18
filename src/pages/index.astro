@@ -9,13 +9,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			<div class="absolute inset-0 bg-blue-500/10 blur-3xl rounded-full scale-150 animate-pulse"></div>
 			<div class="w-56 h-56 md:w-80 md:h-80 border-2 border-dashed border-blue-500/20 rounded-full absolute -inset-10 animate-[spin_60s_linear_infinite]"></div>
 			
-			<div class="relative w-52 h-52 md:w-72 md:h-72 bg-white dark:bg-slate-900 rounded-full flex items-center justify-center shadow-2xl border-4 border-slate-100 dark:border-slate-800 overflow-hidden transition-all duration-500">
-				<!-- Using MASK approach for perfect color control in both modes -->
-				<div 
-					class="w-full h-full p-8 transition-transform duration-[3000ms] group-hover:rotate-180 bg-slate-900 dark:bg-white"
-					style="mask-image: url('/transmutation-circle.svg'); mask-size: contain; mask-repeat: no-repeat; mask-position: center; -webkit-mask-image: url('/transmutation-circle.svg'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center;"
-				>
-				</div>
+			<div class="relative w-52 h-52 md:w-80 md:h-80 bg-white dark:bg-slate-900 rounded-full flex items-center justify-center shadow-2xl border-4 border-slate-100 dark:border-slate-800 overflow-hidden transition-all duration-500">
+				<!-- Using high-fidelity processed PNG from the source Master provided -->
+				<img 
+					src="/transmutation-circle.png" 
+					alt="FMA Transmutation Circle" 
+					class="w-full h-full object-contain p-4 transition-transform duration-[4000ms] group-hover:rotate-180 brightness-0 dark:brightness-100 dark:invert-0 transition-all"
+				/>
 			</div>
 		</div>
 
