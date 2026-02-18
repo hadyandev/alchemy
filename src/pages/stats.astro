@@ -1,96 +1,142 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Placeholder data - later this will fetch from Notion
-const stats = [
-  { name: 'Code Alchemy', level: 5, exp: 450, color: 'blue' },
-  { name: 'Infra Alchemy', level: 8, exp: 820, color: 'orange' },
-  { name: 'Soul Alchemy', level: 3, exp: 150, color: 'emerald' },
-  { name: 'Defense Alchemy', level: 4, exp: 310, color: 'red' }
+// Character Data
+const characters = [
+  { 
+    name: 'Hadyan Ahmad', 
+    role: 'The Master Alchemist', 
+    avatar: '👨‍💻', 
+    description: 'Directing the transmutation of code and life.',
+    stats: { wisdom: 120, knowledge: 340, level: 12 }
+  },
+  { 
+    name: 'Al-Z (Alkhawarizmi Zaid)', 
+    role: 'The Eternal Scribe', 
+    avatar: '⚗️', 
+    description: 'Linking knowledge with the pen. Logic and strategy.',
+    stats: { wisdom: 85, knowledge: 420, level: 10 }
+  }
 ];
 
-const totalWisdom = 120;
-const totalKnowledge = 340;
+// Mock Learning Journey data (later from Notion)
+const learningLog = [
+  { date: 'Feb 18', title: 'Self Reliability Engineering: Core Principles', category: 'Philosophy', icon: '🧠' },
+  { date: 'Feb 17', title: 'Caddy WebSocket Proxying for Coolify', category: 'Infra', icon: '🌐' },
+  { date: 'Feb 17', title: 'Imam Syafi\'i: Binding Knowledge with the Pen', category: 'Turath', icon: '📚' },
+  { date: 'Feb 16', title: 'Tailwind Dark Mode Implementation', category: 'Code', icon: '🎨' },
+];
 
-// Placeholder for Heatmap Data (Activity Log)
-const activityWeeks = Array.from({ length: 20 }, () => 
+const months = ['Nov', 'Dec', 'Jan', 'Feb'];
+const activityWeeks = Array.from({ length: 18 }, () => 
   Array.from({ length: 7 }, () => Math.floor(Math.random() * 5))
 );
 ---
 
 <BaseLayout title="Alchemist Stats">
-	<div class="py-10">
-		<header class="mb-12">
-			<h1 class="text-4xl font-extrabold mb-2">Alchemist Status</h1>
-			<p class="text-slate-500 dark:text-slate-400">Monitoring the transmutation of knowledge and soul.</p>
-		</header>
-
-		<!-- Leveling Overview -->
-		<div class="grid md:grid-cols-3 gap-6 mb-12">
-			<div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-				<div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Total Wisdom</div>
-				<div class="text-3xl font-black text-purple-500">{totalWisdom}</div>
-			</div>
-			<div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-				<div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Total Knowledge</div>
-				<div class="text-3xl font-black text-blue-500">{totalKnowledge}</div>
-			</div>
-			<div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-				<div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Current Rank</div>
-				<div class="text-3xl font-black text-emerald-500">Apprentice</div>
-			</div>
-		</div>
-
-		<!-- Path Progress -->
-		<div class="space-y-8 mb-16">
-			<h2 class="text-2xl font-bold flex items-center gap-2">
-				<span class="text-blue-500">⚗️</span> Alchemist Paths
-			</h2>
-			<div class="grid gap-6">
-				{stats.map(stat => (
-					<div class="space-y-2">
-						<div class="flex justify-between text-sm font-bold">
-							<span>{stat.name}</span>
-							<span class="text-slate-400">LVL {stat.level}</span>
-						</div>
-						<div class="h-3 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
-							<div class="h-full bg-blue-500 rounded-full transition-all duration-1000" style={`width: ${(stat.exp % 100)}%`}></div>
+	<div class="py-10 space-y-16">
+		
+		<!-- Character Profiles Section -->
+		<section>
+			<h2 class="text-2xl font-bold mb-8 border-l-4 border-blue-500 pl-4">The Alchemists</h2>
+			<div class="grid md:grid-cols-2 gap-8">
+				{characters.map(char => (
+					<div class="p-6 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl relative overflow-hidden group">
+						<div class="absolute top-0 right-0 p-4 opacity-10 text-6xl group-hover:scale-110 transition-transform">{char.avatar}</div>
+						<div class="relative z-10">
+							<div class="flex items-center gap-4 mb-4">
+								<div class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-2xl">{char.avatar}</div>
+								<div>
+									<h3 class="font-bold text-xl">{char.name}</h3>
+									<p class="text-xs text-blue-500 font-mono uppercase tracking-widest">{char.role}</p>
+								</div>
+							</div>
+							<p class="text-sm text-slate-500 dark:text-slate-400 mb-6">{char.description}</p>
+							<div class="grid grid-cols-3 gap-4 text-center">
+								<div class="bg-slate-50 dark:bg-slate-800/50 p-2 rounded-xl">
+									<div class="text-[10px] uppercase text-slate-400">LVL</div>
+									<div class="font-bold text-lg">{char.stats.level}</div>
+								</div>
+								<div class="bg-slate-50 dark:bg-slate-800/50 p-2 rounded-xl">
+									<div class="text-[10px] uppercase text-slate-400">Wisdom</div>
+									<div class="font-bold text-lg">{char.stats.wisdom}</div>
+								</div>
+								<div class="bg-slate-50 dark:bg-slate-800/50 p-2 rounded-xl">
+									<div class="text-[10px] uppercase text-slate-400">Knowl.</div>
+									<div class="font-bold text-lg">{char.stats.knowledge}</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				))}
 			</div>
-		</div>
+		</section>
 
-		<!-- Custom Activity Heatmap (The Alchemist Pulse) -->
-		<div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-			<h2 class="text-xl font-bold mb-6">The Alchemist Pulse</h2>
-			<p class="text-sm text-slate-500 mb-6 italic">Tracking daily transmutations, ibadah, and learning activities.</p>
+		<!-- The Alchemist Pulse (Heatmap) -->
+		<section class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+			<div class="flex justify-between items-end mb-8">
+				<div>
+					<h2 class="text-2xl font-bold">The Alchemist Pulse</h2>
+					<p class="text-sm text-slate-500">Activity heatmap across code, soul, and knowledge.</p>
+				</div>
+				<div class="flex gap-4 text-[10px] font-bold text-slate-400 uppercase">
+					{months.map(m => <span>{m}</span>)}
+				</div>
+			</div>
 			
-			<div class="flex gap-2 overflow-x-auto pb-4 scrollbar-hide">
+			<div class="flex gap-1.5 overflow-x-auto pb-4 scrollbar-hide">
+				<div class="flex flex-col gap-1.5 pr-2 text-[8px] text-slate-400 font-bold uppercase justify-between py-1">
+					<span>Mon</span><span>Wed</span><span>Fri</span>
+				</div>
 				{activityWeeks.map(week => (
-					<div class="flex flex-col gap-2">
+					<div class="flex flex-col gap-1.5">
 						{week.map(day => (
-							<div class={`w-4 h-4 rounded-sm ${
+							<div class={`w-3.5 h-3.5 rounded-sm transition-colors ${
 								day === 0 ? 'bg-slate-100 dark:bg-slate-800' :
-								day === 1 ? 'bg-blue-200 dark:bg-blue-900' :
+								day === 1 ? 'bg-blue-200 dark:bg-blue-900/50' :
 								day === 2 ? 'bg-blue-400 dark:bg-blue-700' :
 								day === 3 ? 'bg-blue-600 dark:bg-blue-500' :
 								'bg-blue-800 dark:bg-blue-300'
-							}`} title={`Activity Level: ${day}`}></div>
+							}`} title={`Intensity: ${day}`}></div>
 						))}
 					</div>
 				))}
 			</div>
-			<div class="mt-4 flex items-center justify-end gap-2 text-[10px] text-slate-400 uppercase tracking-widest font-bold">
-				<span>Less Active</span>
-				<div class="flex gap-1">
-					<div class="w-3 h-3 bg-slate-100 dark:bg-slate-800 rounded-sm"></div>
-					<div class="w-3 h-3 bg-blue-900 rounded-sm"></div>
-					<div class="w-3 h-3 bg-blue-500 rounded-sm"></div>
-					<div class="w-3 h-3 bg-blue-300 rounded-sm"></div>
-				</div>
-				<span>Transmuting</span>
+		</section>
+
+		<!-- Learning Journey List (Levi Style) -->
+		<section>
+			<h2 class="text-2xl font-bold mb-8 border-l-4 border-purple-500 pl-4">Learning Journey</h2>
+			<div class="space-y-4">
+				{learningLog.map(item => (
+					<div class="flex items-center gap-6 group cursor-pointer p-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors">
+						<div class="text-sm text-slate-400 font-mono w-12">{item.date}</div>
+						<div class="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-blue-500 transition-colors"></div>
+						<div class="flex-1">
+							<span class="text-slate-800 dark:text-slate-200 group-hover:text-blue-500 transition-colors font-medium">{item.title}</span>
+							<span class="ml-3 px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 tracking-tighter">{item.category}</span>
+						</div>
+						<div class="text-xl opacity-50">{item.icon}</div>
+					</div>
+				))}
 			</div>
-		</div>
+			
+			<div class="mt-12 pt-8 border-t border-dashed border-slate-200 dark:border-slate-800">
+				<h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+					<span class="animate-pulse">🎯</span> Up Next
+				</h3>
+				<ul class="space-y-3 text-slate-500 dark:text-slate-400 text-sm">
+					<li class="flex gap-3">
+						<span class="text-slate-300">•</span>
+						<span>Integrasi Notion API Real-time ke Landing Page</span>
+					</li>
+					<li class="flex gap-3">
+						<span class="text-slate-300">•</span>
+						<span>SRE Deep Dive: Log Analysis Life System</span>
+					</li>
+				</ul>
+			</div>
+		</section>
+
 	</div>
 </BaseLayout>
