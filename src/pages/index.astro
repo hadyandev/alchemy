@@ -1,27 +1,28 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Home">
-	<header class="mb-16">
-		<h1 class="text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">The Alchemist Library</h1>
-		<p class="text-slate-400 text-lg italic">"Ilmu adalah buruan dan tulisan adalah ikatannya." — Imam Syafi'i</p>
-	</header>
-
-	<section class="grid md:grid-cols-2 gap-8">
-		<div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500 transition-all cursor-pointer group">
-			<h2 class="text-xl font-bold mb-3 group-hover:text-blue-400">🛠️ SRE (Self Reliability Engineering)</h2>
-			<p class="text-sm text-slate-400">Menerapkan logika sistem ke dalam jiwa. Post-mortems, log analysis, dan rute adaptif.</p>
+<BaseLayout title="Coming Soon">
+	<div class="flex flex-col items-center justify-center min-h-[60vh] text-center w-full">
+		<div class="text-8xl mb-8 animate-pulse text-blue-500">⚗️</div>
+		<h1 class="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">The Library Alchemist</h1>
+		<p class="text-slate-400 text-xl italic max-w-md mx-auto">
+			"Ilmu adalah buruan dan tulisan adalah ikatannya." — Imam Syafi'i
+		</p>
+		<div class="mt-12 inline-block px-8 py-3 bg-slate-900 border border-slate-800 rounded-xl">
+			<span class="text-blue-400 text-sm font-mono uppercase tracking-widest">Transmutation in Progress...</span>
+			<div class="mt-4 h-1 w-full bg-slate-800 rounded-full overflow-hidden">
+				<div class="h-full bg-blue-500 w-1/3 animate-progress"></div>
+			</div>
 		</div>
-		<div class="p-6 rounded-xl bg-slate-900 border border-slate-800 hover:border-purple-500 transition-all cursor-pointer group">
-			<h2 class="text-xl font-bold mb-3 group-hover:text-purple-400">📖 Story Mode</h2>
-			<p class="text-sm text-slate-400">Hikmah dari anime, manga, dan perjalanan hidup. Menyingkap yang tersirat.</p>
-		</div>
-	</section>
-
-	<section class="mt-16">
-		<h2 class="text-2xl font-bold mb-8 border-l-4 border-blue-500 pl-4">Alchemist Activity</h2>
-		<div class="bg-slate-900 p-8 rounded-xl border border-slate-800 text-center italic text-slate-500">
-			Heatmap component coming soon... (Transmuting data from GitHub)
-		</div>
-	</section>
+	</div>
 </BaseLayout>
+
+<style>
+	@keyframes progress {
+		0% { transform: translateX(-100%); }
+		100% { transform: translateX(250%); }
+	}
+	.animate-progress {
+		animation: progress 2s infinite linear;
+	}
+</style>
