@@ -6,7 +6,7 @@ const { title, hideNav = false } = Astro.props;
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title} | The Library Alchemist</title>
 		<script is:inline>
@@ -31,13 +31,15 @@ const { title, hideNav = false } = Astro.props;
 			applyTheme();
 		</script>
 	</head>
-	<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-500">
-		<nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+	<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-500 pb-20 md:pb-0">
+		<nav class="sticky top-0 z-[60] bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
 			<div class="max-w-4xl mx-auto px-4 flex justify-between items-center py-4">
-				<div class="text-xl font-bold text-blue-600 dark:text-blue-400">💠 The Library Alchemist</div>
-				<div class="flex items-center space-x-6 text-sm font-medium">
-					<a href="/" class="hover:text-blue-500 transition-colors">Home</a>
-					<a href="/stats" class="hover:text-blue-500 transition-colors">Stats</a>
+				<div class="text-lg md:text-xl font-bold text-blue-600 dark:text-blue-400 truncate pr-4">💠 The Library Alchemist</div>
+				<div class="flex items-center space-x-4 md:space-x-6 text-sm font-medium">
+					<div class="hidden md:flex items-center space-x-6">
+						<a href="/" class="hover:text-blue-500 transition-colors">Home</a>
+						<a href="/stats" class="hover:text-blue-500 transition-colors">Stats</a>
+					</div>
 					<button class="theme-toggle p-2 rounded-lg bg-slate-100 dark:bg-slate-800" aria-label="Toggle theme">
 						<span class="dark:hidden">🌙</span>
 						<span class="hidden dark:inline">☀️</span>
@@ -46,11 +48,25 @@ const { title, hideNav = false } = Astro.props;
 			</div>
 		</nav>
 
-		<main class="max-w-4xl mx-auto px-4">
+		<!-- Mobile Bottom Nav -->
+		<nav class="md:hidden fixed bottom-0 left-0 right-0 z-[60] bg-white/95 dark:bg-slate-950/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 px-6 py-3">
+			<div class="flex justify-around items-center">
+				<a href="/" class="flex flex-col items-center gap-1 text-slate-500 hover:text-blue-500 transition-colors">
+					<span class="text-xl">🏠</span>
+					<span class="text-[10px] font-bold uppercase tracking-widest">Home</span>
+				</a>
+				<a href="/stats" class="flex flex-col items-center gap-1 text-slate-500 hover:text-blue-500 transition-colors">
+					<span class="text-xl">📊</span>
+					<span class="text-[10px] font-bold uppercase tracking-widest">Stats</span>
+				</a>
+			</div>
+		</nav>
+
+		<main class="max-w-4xl mx-auto px-4 relative z-10">
 			<slot />
 		</main>
 
-		<button id="backToTop" class="fixed bottom-8 right-8 p-3 rounded-full bg-blue-600 text-white shadow-lg opacity-0 transition-opacity duration-300 hover:bg-blue-700 focus:outline-none" aria-label="Back to top">
+		<button id="backToTop" class="fixed bottom-24 md:bottom-8 right-6 md:right-8 p-3 rounded-full bg-blue-600 text-white shadow-2xl opacity-0 transition-all duration-300 hover:scale-110 active:scale-95 z-[55]" aria-label="Back to top">
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
 			</svg>
@@ -76,9 +92,11 @@ const { title, hideNav = false } = Astro.props;
 			const backToTopBtn = document.getElementById('backToTop');
 			window.addEventListener('scroll', () => {
 				if (window.scrollY > 300) {
-					backToTopBtn.style.opacity = '1';
+					backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+					backToTopBtn.classList.add('opacity-100');
 				} else {
-					backToTopBtn.style.opacity = '0';
+					backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+					backToTopBtn.classList.remove('opacity-100');
 				}
 			});
 
