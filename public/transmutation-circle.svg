@@ -1,1 +1,8 @@
-404: Not Found
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="200" cy="200" r="190" stroke="currentColor" stroke-width="2"/>
+  <circle cx="200" cy="200" r="160" stroke="currentColor" stroke-width="1" stroke-dasharray="5 5"/>
+  <path d="M200 10 L373 310 L27 310 Z" stroke="currentColor" stroke-width="2"/>
+  <path d="M200 390 L27 90 L373 90 Z" stroke="currentColor" stroke-width="2"/>
+  <circle cx="200" cy="200" r="60" stroke="currentColor" stroke-width="2"/>
+  <path d="M200 140 L200 260 M140 200 L260 200" stroke="currentColor" stroke-width="1"/>
+</svg>

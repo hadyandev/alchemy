@@ -7,15 +7,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		<div class="relative group">
 			<!-- Transmutation Circle Decoration -->
 			<div class="absolute inset-0 bg-blue-500/10 blur-3xl rounded-full scale-150 animate-pulse"></div>
-			<div class="w-56 h-56 md:w-72 md:h-72 border-2 border-dashed border-blue-500/20 rounded-full absolute -inset-6 animate-[spin_30s_linear_infinite]"></div>
+			<div class="w-56 h-56 md:w-72 md:h-72 border-2 border-dashed border-blue-500/20 rounded-full absolute -inset-6 animate-[spin_40s_linear_infinite]"></div>
 			
 			<div class="relative w-48 h-48 md:w-64 md:h-64 bg-white dark:bg-slate-900 rounded-full flex items-center justify-center shadow-xl border-4 border-slate-100 dark:border-slate-800 overflow-hidden transition-all duration-500">
-				<!-- Using LOCAL image with fixed color filters -->
-				<img 
-					src="/transmutation-circle.svg" 
-					alt="Transmutation Circle" 
-					class="w-full h-full object-contain opacity-80 dark:invert-0 brightness-0 dark:brightness-100 p-8 group-hover:rotate-180 transition-transform duration-[3000ms]"
-				/>
+				<!-- Using my custom-forged SVG -->
+				<div class="w-full h-full p-8 text-slate-900 dark:text-white opacity-80 group-hover:rotate-180 transition-transform duration-[3000ms]">
+					<img src="/transmutation-circle.svg" class="w-full h-full object-contain dark:invert-0 brightness-0 dark:brightness-100" />
+				</div>
 			</div>
 		</div>
 
