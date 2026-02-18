@@ -10,8 +10,8 @@ const characters = [
     avatar: '👨‍💻', 
     description: 'Directing the transmutation of code and life.',
     skills: ['System Design', 'Islamic Studies', 'Architecture'],
-    element: 'Void / Strategy',
-    stats: { wisdom: 120, knowledge: 340, level: 12 },
+    elements: ['Void', 'Strategy', 'Aether'],
+    stats: { wisdom: 120, knowledge: 340, level: 12, exp: 2450 },
     paths: [
       { name: 'Code Alchemy', level: 5, exp: 45 },
       { name: 'Infra Alchemy', level: 8, exp: 82 },
@@ -26,8 +26,8 @@ const characters = [
     avatar: '⚗️', 
     description: 'Linking knowledge with the pen. Logic and strategy.',
     skills: ['Automation', 'Log Analysis', 'Data Alchemy'],
-    element: 'Logic / Ink',
-    stats: { wisdom: 85, knowledge: 420, level: 10 },
+    elements: ['Logic', 'Ink', 'Silicon'],
+    stats: { wisdom: 85, knowledge: 420, level: 10, exp: 1890 },
     paths: [
       { name: 'Code Alchemy', level: 9, exp: 90 },
       { name: 'Infra Alchemy', level: 6, exp: 60 },
@@ -103,14 +103,24 @@ const months = ['Nov', 'Dec', 'Jan', 'Feb'];
 								</div>
 							</div>
 							
-							<p class="text-sm text-slate-500 dark:text-slate-400 mb-8 h-10 line-clamp-2">{char.description}</p>
+							<p class="text-sm text-slate-500 dark:text-slate-400 mb-6 h-10 line-clamp-2">{char.description}</p>
 							
-							<div class="mb-8">
-								<div class="text-[10px] uppercase text-slate-400 font-bold tracking-widest mb-3">Mastered Skills</div>
-								<div class="flex flex-wrap gap-2">
-									{char.skills.map(skill => (
-										<span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 text-[10px] font-bold border border-blue-100 dark:border-blue-800/50">{skill}</span>
-									))}
+							<div class="grid grid-cols-2 gap-6 mb-8">
+								<div>
+									<div class="text-[10px] uppercase text-slate-400 font-bold tracking-widest mb-3">Skills</div>
+									<div class="flex flex-wrap gap-1.5">
+										{char.skills.map(skill => (
+											<span class="px-2 py-0.5 rounded-md bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 text-[9px] font-bold border border-blue-100 dark:border-blue-800/50">{skill}</span>
+										))}
+									</div>
+								</div>
+								<div>
+									<div class="text-[10px] uppercase text-slate-400 font-bold tracking-widest mb-3">Elements</div>
+									<div class="flex flex-wrap gap-1.5">
+										{char.elements.map(el => (
+											<span class="px-2 py-0.5 rounded-md bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 text-[9px] font-bold border border-purple-100 dark:border-purple-800/50">{el}</span>
+										))}
+									</div>
 								</div>
 							</div>
 
@@ -123,9 +133,9 @@ const months = ['Nov', 'Dec', 'Jan', 'Feb'];
 									<div class="text-[9px] md:text-[10px] uppercase text-slate-400 font-bold mb-1">Wisdom</div>
 									<div class="font-black text-lg md:text-xl text-purple-500">{char.stats.wisdom}</div>
 								</div>
-								<div class="text-center p-2 rounded-xl bg-slate-50 dark:bg-slate-800/40 flex flex-col justify-center">
-									<div class="text-[9px] md:text-[10px] uppercase text-slate-400 font-bold mb-1">Element</div>
-									<div class="font-bold text-[9px] md:text-[11px] text-slate-700 dark:text-slate-300 uppercase tracking-tight truncate">{char.element.split(' / ')[0]}</div>
+								<div class="text-center p-2 rounded-xl bg-slate-50 dark:bg-slate-800/40">
+									<div class="text-[9px] md:text-[10px] uppercase text-slate-400 font-bold mb-1">Total EXP</div>
+									<div class="font-black text-lg md:text-xl text-emerald-500">{char.stats.exp}</div>
 								</div>
 							</div>
 						</div>
