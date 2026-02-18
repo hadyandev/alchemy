@@ -7,7 +7,8 @@ const characters = [
     id: 'hadyan',
     name: 'Hadyan Ahmad', 
     role: 'The Master Alchemist', 
-    avatar: '👨‍💻', 
+    avatar: '/hoshi.png', 
+    isPng: true,
     description: 'Directing the transmutation of code and life.',
     skills: ['System Design', 'Islamic Studies', 'Architecture'],
     elements: ['Void', 'Strategy', 'Aether'],
@@ -23,7 +24,8 @@ const characters = [
     id: 'alz',
     name: 'Al-Z (Alkhawarizmi Zaid)', 
     role: 'The Eternal Scribe', 
-    avatar: '⚗️', 
+    avatar: '/alz-avatar.jpg', 
+    isPng: false,
     description: 'Linking knowledge with the pen. Logic and strategy.',
     skills: ['Automation', 'Log Analysis', 'Data Alchemy'],
     elements: ['Logic', 'Ink', 'Silicon'],
@@ -69,23 +71,18 @@ const generateHeatmap = () => {
 };
 
 const activityWeeks = generateHeatmap();
-
-// Calculate month labels and their positions
 const heatmapColumns = activityWeeks.map((week, i) => {
     const firstDay = new Date(week[0].date);
     const month = firstDay.toLocaleString('default', { month: 'short' });
     const prevMonth = i > 0 ? new Date(activityWeeks[i-1][0].date).toLocaleString('default', { month: 'short' }) : null;
-    return {
-        week,
-        monthLabel: month !== prevMonth ? month : null
-    };
+    return { week, monthLabel: month !== prevMonth ? month : null };
 });
 ---
 
 <BaseLayout title="Alchemist Dashboard">
 	<div class="py-6 md:py-10 space-y-12 md:space-y-16">
 		<header>
-			<h1 class="text-3xl md:text-4xl font-black tracking-tight mb-2">The Alchemist Dashboard</h1>
+			<h1 class="text-3xl md:text-4xl font-black tracking-tight mb-2 text-slate-900 dark:text-white">The Alchemist Dashboard</h1>
 			<p class="text-slate-500 text-sm md:text-base">Real-time pulse of the library and its guardians.</p>
 		</header>
 
@@ -103,12 +100,16 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 			<div class="grid lg:grid-cols-2 gap-6 md:gap-8">
 				{characters.map(char => (
 					<div class="char-card p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl relative overflow-hidden group transition-all duration-300" data-member={char.id}>
-						<div class="absolute top-0 right-0 p-6 opacity-5 text-8xl group-hover:scale-110 transition-transform pointer-events-none">{char.avatar}</div>
+						<div class="absolute top-0 right-0 p-6 opacity-5 w-32 h-32 group-hover:scale-110 transition-transform pointer-events-none">
+							<img src={char.avatar} class={`w-full h-full object-contain ${char.isPng ? 'dark:brightness-100 brightness-0' : ''}`} />
+						</div>
 						<div class="relative z-10">
 							<div class="flex items-center gap-4 mb-6">
-								<div class="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-2xl md:text-3xl shadow-lg shrink-0">{char.avatar}</div>
+								<div class="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-black flex items-center justify-center shadow-lg shrink-0 overflow-hidden border border-slate-800">
+									<img src={char.avatar} alt={char.name} class={`w-full h-full ${char.isPng ? 'object-contain p-2 dark:brightness-100 brightness-0' : 'object-cover'}`} />
+								</div>
 								<div>
-									<h3 class="font-bold text-xl md:text-2xl tracking-tight">{char.name}</h3>
+									<h3 class="font-bold text-xl md:text-2xl tracking-tight text-slate-900 dark:text-white">{char.name}</h3>
 									<p class="text-[10px] md:text-xs text-blue-500 font-mono uppercase tracking-[0.2em] font-bold">{char.role}</p>
 								</div>
 							</div>
@@ -166,7 +167,9 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 								const charPath = char.paths.find(p => p.name === pathName);
 								return (
 									<div class="path-row flex items-center gap-3 md:gap-4 group" data-member={char.id}>
-										<div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xs opacity-60 group-hover:opacity-100 transition-opacity shrink-0">{char.avatar}</div>
+										<div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-[10px] opacity-60 group-hover:opacity-100 transition-opacity shrink-0 overflow-hidden">
+											<img src={char.avatar} class={`w-full h-full ${char.isPng ? 'object-contain p-1 dark:brightness-100 brightness-0' : 'object-cover'}`} />
+										</div>
 										<div class="flex-1">
 											<div class="flex justify-between text-[10px] font-bold mb-1">
 												<span class="text-slate-500 dark:text-slate-400">{char.name.split(' ')[0]}</span>
@@ -194,9 +197,8 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 			
 			<div class="relative">
 				<div class="flex gap-1 md:gap-1.5 overflow-x-auto pb-4 scrollbar-hide relative px-1">
-					<!-- Labels for Days -->
 					<div class="flex flex-col gap-1 md:gap-1.5 pr-3 md:pr-4 text-[8px] text-slate-400 font-bold uppercase shrink-0 sticky left-0 bg-white/95 dark:bg-slate-900/95 z-10">
-						<div class="h-4 mb-1"></div> <!-- Spacer for Month labels -->
+						<div class="h-4 mb-1"></div>
 						<div class="h-3.5 md:h-4 flex items-center">Mon</div>
 						<div class="h-3.5 md:h-4"></div>
 						<div class="h-3.5 md:h-4 flex items-center">Wed</div>
@@ -207,21 +209,11 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 
 					{heatmapColumns.map((col, wIdx) => (
 						<div class="flex flex-col gap-1 md:gap-1.5 shrink-0">
-							<!-- Month Label Row -->
 							<div class="h-4 mb-1 text-[9px] font-bold text-slate-400 uppercase tracking-tighter whitespace-nowrap overflow-visible">
 								{col.monthLabel || ''}
 							</div>
-							
 							{col.week.map((day, dIdx) => (
-								<div 
-									class={`pulse-cell w-3.5 h-3.5 md:w-4 md:h-4 rounded-[2px] md:rounded-sm transition-all duration-300 cursor-help hover:scale-125 relative group ${
-										day.count === 0 ? 'bg-slate-100 dark:bg-slate-800' :
-										day.count === 1 ? 'bg-blue-300 dark:bg-blue-900/60' :
-										day.count === 2 ? 'bg-blue-500 dark:bg-blue-700' :
-										'bg-blue-700 dark:bg-blue-400'
-									}`}
-									data-members={day.members.join(',')}
-								>
+								<div class={`pulse-cell w-3.5 h-3.5 md:w-4 md:h-4 rounded-[2px] md:rounded-sm transition-all duration-300 cursor-help hover:scale-125 relative group ${day.count === 0 ? 'bg-slate-100 dark:bg-slate-800' : day.count === 1 ? 'bg-blue-300 dark:bg-blue-900/60' : day.count === 2 ? 'bg-blue-500 dark:bg-blue-700' : 'bg-blue-700 dark:bg-blue-400'}`} data-members={day.members.join(',')}>
 									{day.count > 0 && (
 										<div class={`absolute bottom-full ${wIdx > 12 ? 'right-0 origin-bottom-right' : 'left-1/2 -translate-x-1/2 origin-bottom'} mb-2 hidden group-hover:block z-[100] pointer-events-none`}>
 											<div class="bg-slate-900 text-white text-[10px] p-3 rounded-lg shadow-2xl whitespace-nowrap border border-slate-700 min-w-[140px]">
@@ -281,16 +273,12 @@ const heatmapColumns = activityWeeks.map((week, i) => {
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
         const filter = btn.dataset.filter;
-        
-        // Update Buttons
         buttons.forEach(b => {
           b.classList.remove('bg-blue-600', 'text-white', 'shadow-lg');
           b.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-600', 'dark:text-slate-400');
         });
         btn.classList.add('bg-blue-600', 'text-white', 'shadow-lg');
         btn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-600', 'dark:text-slate-400');
-
-        // Filter Elements
         charCards.forEach(card => card.style.display = (filter === 'all' || card.dataset.member === filter) ? 'block' : 'none');
         pathRows.forEach(row => row.style.display = (filter === 'all' || row.dataset.member === filter) ? 'flex' : 'none');
         learningItems.forEach(item => item.style.display = (filter === 'all' || item.dataset.member === filter) ? 'flex' : 'none');
