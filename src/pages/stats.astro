@@ -11,7 +11,13 @@ const characters = [
     description: 'Directing the transmutation of code and life.',
     skills: ['System Design', 'Islamic Studies', 'Architecture'],
     element: 'Void / Strategy',
-    stats: { wisdom: 120, knowledge: 340, level: 12 }
+    stats: { wisdom: 120, knowledge: 340, level: 12 },
+    paths: [
+      { name: 'Code Alchemy', level: 5, exp: 45 },
+      { name: 'Infra Alchemy', level: 8, exp: 82 },
+      { name: 'Soul Alchemy', level: 3, exp: 15 },
+      { name: 'Defense Alchemy', level: 4, exp: 31 }
+    ]
   },
   { 
     id: 'alz',
@@ -21,11 +27,16 @@ const characters = [
     description: 'Linking knowledge with the pen. Logic and strategy.',
     skills: ['Automation', 'Log Analysis', 'Data Alchemy'],
     element: 'Logic / Ink',
-    stats: { wisdom: 85, knowledge: 420, level: 10 }
+    stats: { wisdom: 85, knowledge: 420, level: 10 },
+    paths: [
+      { name: 'Code Alchemy', level: 9, exp: 90 },
+      { name: 'Infra Alchemy', level: 6, exp: 60 },
+      { name: 'Soul Alchemy', level: 2, exp: 10 },
+      { name: 'Defense Alchemy', level: 7, exp: 75 }
+    ]
   }
 ];
 
-// Actual Learning Log Data (Synchronization Source)
 const learningLog = [
   { member: 'hadyan', date: '2026-02-18', title: 'Self Reliability Engineering: Core Principles', category: 'Philosophy', icon: '🧠' },
   { member: 'alz', date: '2026-02-17', title: 'Caddy WebSocket Proxying for Coolify', category: 'Infra', icon: '🌐' },
@@ -33,20 +44,17 @@ const learningLog = [
   { member: 'alz', date: '2026-02-16', title: 'Tailwind Dark Mode Implementation', category: 'Code', icon: '🎨' },
 ];
 
-// Generate Heatmap Data from Learning Log
 const generateHeatmap = () => {
   const weeks = 18;
   const daysPerWeek = 7;
   const today = new Date('2026-02-18');
   const data = [];
-
   for (let w = 0; w < weeks; w++) {
     const week = [];
     for (let d = 0; d < daysPerWeek; d++) {
       const targetDate = new Date(today);
       targetDate.setDate(today.getDate() - ((weeks - 1 - w) * 7 + (6 - d)));
       const dateString = targetDate.toISOString().split('T')[0];
-      
       const activities = learningLog.filter(log => log.date === dateString);
       week.push({
         date: dateString,
@@ -94,9 +102,7 @@ const months = ['Nov', 'Dec', 'Jan', 'Feb'];
 									<p class="text-xs text-blue-500 font-mono uppercase tracking-[0.2em] font-bold">{char.role}</p>
 								</div>
 							</div>
-							
 							<p class="text-sm text-slate-500 dark:text-slate-400 mb-8 line-clamp-2">{char.description}</p>
-							
 							<div class="mb-8">
 								<div class="text-[10px] uppercase text-slate-400 font-bold tracking-widest mb-3">Mastered Skills</div>
 								<div class="flex flex-wrap gap-2">
@@ -105,7 +111,6 @@ const months = ['Nov', 'Dec', 'Jan', 'Feb'];
 									))}
 								</div>
 							</div>
-
 							<div class="grid grid-cols-3 gap-4 border-t border-slate-100 dark:border-slate-800 pt-6">
 								<div class="text-center">
 									<div class="text-[10px] uppercase text-slate-400 font-bold mb-1">Level</div>
@@ -126,6 +131,35 @@ const months = ['Nov', 'Dec', 'Jan', 'Feb'];
 			</div>
 		</section>
 
+		<!-- Alchemy Paths (Filterable) -->
+		<section id="alchemyPaths">
+			<h2 class="text-2xl font-bold mb-8 border-l-4 border-emerald-500 pl-4">Alchemy Paths</h2>
+			<div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+				{['Code Alchemy', 'Infra Alchemy', 'Soul Alchemy', 'Defense Alchemy'].map(pathName => (
+					<div class="space-y-4">
+						<h3 class="text-sm font-black uppercase tracking-widest text-slate-400">{pathName}</h3>
+						{characters.map(char => {
+							const charPath = char.paths.find(p => p.name === pathName);
+							return (
+								<div class="path-row flex items-center gap-4 group" data-member={char.id}>
+									<div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xs opacity-60 group-hover:opacity-100 transition-opacity">{char.avatar}</div>
+									<div class="flex-1">
+										<div class="flex justify-between text-[10px] font-bold mb-1">
+											<span class="text-slate-500 dark:text-slate-400">{char.name.split(' ')[0]}</span>
+											<span>LVL {charPath.level}</span>
+										</div>
+										<div class="h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+											<div class="h-full bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full transition-all duration-1000" style={`width: ${charPath.exp}%`}></div>
+										</div>
+									</div>
+								</div>
+							);
+						})}
+					</div>
+				))}
+			</div>
+		</section>
+
 		<!-- Validated Heatmap Pulse -->
 		<section class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-visible">
 			<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10">
@@ -137,7 +171,6 @@ const months = ['Nov', 'Dec', 'Jan', 'Feb'];
 					{months.map(m => <span>{m}</span>)}
 				</div>
 			</div>
-			
 			<div class="flex gap-1.5 overflow-x-auto pb-4 scrollbar-hide relative">
 				<div class="flex flex-col gap-1.5 pr-4 text-[8px] text-slate-400 font-bold uppercase justify-between py-1 shrink-0">
 					<span>Mon</span><span>Wed</span><span>Fri</span>
@@ -145,15 +178,12 @@ const months = ['Nov', 'Dec', 'Jan', 'Feb'];
 				{activityWeeks.map(week => (
 					<div class="flex flex-col gap-1.5">
 						{week.map(day => (
-							<div 
-								class={`pulse-cell w-4 h-4 rounded-sm transition-all duration-300 cursor-help hover:scale-125 relative group ${
+							<div class={`pulse-cell w-4 h-4 rounded-sm transition-all duration-300 cursor-help hover:scale-125 relative group ${
 									day.count === 0 ? 'bg-slate-100 dark:bg-slate-800' :
 									day.count === 1 ? 'bg-blue-300 dark:bg-blue-900/60' :
 									day.count === 2 ? 'bg-blue-500 dark:bg-blue-700' :
 									'bg-blue-700 dark:bg-blue-400'
-								}`}
-                data-members={day.members.join(',')}
-							>
+								}`} data-members={day.members.join(',')}>
 								{day.count > 0 && (
 									<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block z-[100] pointer-events-none">
 										<div class="bg-slate-900 text-white text-[10px] p-3 rounded-lg shadow-2xl whitespace-nowrap border border-slate-700">
@@ -202,45 +232,23 @@ const months = ['Nov', 'Dec', 'Jan', 'Feb'];
   <script is:inline>
     const buttons = document.querySelectorAll('.filter-btn');
     const charCards = document.querySelectorAll('.char-card');
+    const pathRows = document.querySelectorAll('.path-row');
     const learningItems = document.querySelectorAll('.learning-item');
     const pulseCells = document.querySelectorAll('.pulse-cell');
 
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
         const filter = btn.dataset.filter;
-        
-        // Update Buttons
         buttons.forEach(b => b.classList.remove('bg-blue-600', 'text-white'));
         buttons.forEach(b => b.classList.add('bg-slate-200', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400'));
         btn.classList.add('bg-blue-600', 'text-white');
         btn.classList.remove('bg-slate-200', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
-
-        // Filter Characters
-        charCards.forEach(card => {
-          if (filter === 'all' || card.dataset.member === filter) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-
-        // Filter Learning Journey
-        learningItems.forEach(item => {
-          if (filter === 'all' || item.dataset.member === filter) {
-            item.style.display = 'flex';
-          } else {
-            item.style.display = 'none';
-          }
-        });
-
-        // Filter Pulse (Dim non-matching cells)
+        charCards.forEach(card => card.style.display = (filter === 'all' || card.dataset.member === filter) ? 'block' : 'none');
+        pathRows.forEach(row => row.style.display = (filter === 'all' || row.dataset.member === filter) ? 'flex' : 'none');
+        learningItems.forEach(item => item.style.display = (filter === 'all' || item.dataset.member === filter) ? 'flex' : 'none');
         pulseCells.forEach(cell => {
           const members = cell.dataset.members.split(',');
-          if (filter === 'all' || members.includes(filter)) {
-            cell.style.opacity = '1';
-          } else {
-            cell.style.opacity = '0.2';
-          }
+          cell.style.opacity = (filter === 'all' || members.includes(filter)) ? '1' : '0.2';
         });
       });
     });
