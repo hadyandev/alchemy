@@ -58,12 +58,7 @@ const generateHeatmap = () => {
       targetDate.setDate(today.getDate() - ((weeks - 1 - w) * 7 + (6 - d)));
       const dateString = targetDate.toISOString().split('T')[0];
       const activities = learningLog.filter(log => log.date === dateString);
-      week.push({
-        date: dateString,
-        count: activities.length,
-        topics: activities.map(a => a.title),
-        members: activities.map(a => a.member)
-      });
+      week.push({ date: dateString, count: activities.length, topics: activities.map(a => a.title), members: activities.map(a => a.member) });
     }
     data.push(week);
   }
@@ -83,7 +78,7 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 	<div class="py-6 md:py-10 space-y-12 md:space-y-16">
 		<header>
 			<h1 class="text-3xl md:text-4xl font-black tracking-tight mb-2 text-slate-900 dark:text-white">The Alchemist Dashboard</h1>
-			<p class="text-slate-500 text-sm md:text-base">Real-time pulse of the library and its guardians.</p>
+			<p class="text-slate-500 text-sm md:text-base">Real-time pulse of the atelier and its guardians.</p>
 		</header>
 
 		<section id="characters">
@@ -100,12 +95,12 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 				{characters.map(char => (
 					<div class="char-card p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl relative overflow-hidden group transition-all duration-300" data-member={char.id}>
 						<div class="absolute top-0 right-0 p-6 opacity-5 w-32 h-32 group-hover:scale-110 transition-transform pointer-events-none">
-							<img src={char.avatar} class={`w-full h-full object-contain ${char.isPng ? 'dark:brightness-100 brightness-0' : ''}`} />
+							<img src={char.avatar} class={`w-full h-full object-contain ${char.isPng ? 'dark:invert-0 invert' : ''}`} />
 						</div>
 						<div class="relative z-10">
 							<div class="flex items-center gap-4 mb-6">
-								<div class="w-14 h-14 md:w-20 md:h-20 rounded-2xl bg-slate-50 dark:bg-black flex items-center justify-center shadow-lg shrink-0 overflow-hidden border border-slate-100 dark:border-slate-800 transition-colors duration-500">
-									<img src={char.avatar} alt={char.name} class={`w-full h-full ${char.isPng ? 'object-contain scale-125 p-1 dark:brightness-100 brightness-0' : 'object-cover'}`} />
+								<div class={`w-16 h-16 md:w-24 md:h-24 rounded-2xl flex items-center justify-center shadow-lg shrink-0 overflow-hidden border ${char.isPng ? 'bg-slate-900 dark:bg-slate-100' : 'bg-black border-slate-800'}`}>
+									<img src={char.avatar} alt={char.name} class={`w-full h-full ${char.isPng ? 'object-contain p-2 dark:invert-0 invert scale-125' : 'object-cover'}`} />
 								</div>
 								<div>
 									<h3 class="font-bold text-xl md:text-2xl tracking-tight text-slate-900 dark:text-white">{char.name}</h3>
@@ -165,8 +160,8 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 								const charPath = char.paths.find(p => p.name === pathName);
 								return (
 									<div class="path-row flex items-center gap-3 md:gap-4 group" data-member={char.id}>
-										<div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-[10px] opacity-60 group-hover:opacity-100 transition-opacity shrink-0 overflow-hidden border border-slate-200 dark:border-slate-800">
-											<img src={char.avatar} class={`w-full h-full ${char.isPng ? 'object-contain p-1 dark:brightness-100 brightness-0 scale-150' : 'object-cover'}`} />
+										<div class={`w-10 h-10 rounded-full flex items-center justify-center text-[10px] opacity-60 group-hover:opacity-100 transition-opacity shrink-0 overflow-hidden border ${char.isPng ? 'bg-slate-900 dark:bg-slate-100 border-slate-700' : 'bg-black border-slate-800'}`}>
+											<img src={char.avatar} class={`w-full h-full ${char.isPng ? 'p-1.5 invert dark:invert-0 scale-125 object-contain' : 'object-cover'}`} />
 										</div>
 										<div class="flex-1">
 											<div class="flex justify-between text-[10px] font-bold mb-1">
