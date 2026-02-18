@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+// Character Data
 const characters = [
   { 
     id: 'hadyan',
@@ -24,20 +25,43 @@ const characters = [
   }
 ];
 
+// Actual Learning Log Data (Synchronization Source)
 const learningLog = [
-  { member: 'hadyan', date: 'Feb 18', title: 'Self Reliability Engineering: Core Principles', category: 'Philosophy', icon: '🧠', topics: 2 },
-  { member: 'alz', date: 'Feb 17', title: 'Caddy WebSocket Proxying for Coolify', category: 'Infra', icon: '🌐', topics: 1 },
-  { member: 'hadyan', date: 'Feb 17', title: 'Imam Syafi\'i: Binding Knowledge with the Pen', category: 'Turath', icon: '📚', topics: 3 },
-  { member: 'alz', date: 'Feb 16', title: 'Tailwind Dark Mode Implementation', category: 'Code', icon: '🎨', topics: 1 },
+  { member: 'hadyan', date: '2026-02-18', title: 'Self Reliability Engineering: Core Principles', category: 'Philosophy', icon: '🧠' },
+  { member: 'alz', date: '2026-02-17', title: 'Caddy WebSocket Proxying for Coolify', category: 'Infra', icon: '🌐' },
+  { member: 'hadyan', date: '2026-02-17', title: 'Imam Syafi\'i: Binding Knowledge with the Pen', category: 'Turath', icon: '📚' },
+  { member: 'alz', date: '2026-02-16', title: 'Tailwind Dark Mode Implementation', category: 'Code', icon: '🎨' },
 ];
 
+// Generate Heatmap Data from Learning Log
+const generateHeatmap = () => {
+  const weeks = 18;
+  const daysPerWeek = 7;
+  const today = new Date('2026-02-18');
+  const data = [];
+
+  for (let w = 0; w < weeks; w++) {
+    const week = [];
+    for (let d = 0; d < daysPerWeek; d++) {
+      const targetDate = new Date(today);
+      targetDate.setDate(today.getDate() - ((weeks - 1 - w) * 7 + (6 - d)));
+      const dateString = targetDate.toISOString().split('T')[0];
+      
+      const activities = learningLog.filter(log => log.date === dateString);
+      week.push({
+        date: dateString,
+        count: activities.length,
+        topics: activities.map(a => a.title),
+        members: activities.map(a => a.member)
+      });
+    }
+    data.push(week);
+  }
+  return data;
+};
+
+const activityWeeks = generateHeatmap();
 const months = ['Nov', 'Dec', 'Jan', 'Feb'];
-const activityWeeks = Array.from({ length: 18 }, () => 
-  Array.from({ length: 7 }, () => ({
-    count: Math.floor(Math.random() * 5),
-    topics: ['Bayesian Thinking', 'System Design'].slice(0, Math.floor(Math.random() * 3))
-  }))
-);
 ---
 
 <BaseLayout title="Alchemist Dashboard">
@@ -48,19 +72,19 @@ const activityWeeks = Array.from({ length: 18 }, () =>
 		</header>
 
 		<!-- Character Profiles Section -->
-		<section>
+		<section id="characters">
 			<div class="flex justify-between items-center mb-8">
 				<h2 class="text-2xl font-bold border-l-4 border-blue-500 pl-4">The Alchemists</h2>
-				<div class="flex gap-2">
-					<button class="px-4 py-1.5 rounded-full text-xs font-bold bg-blue-600 text-white">All</button>
-					<button class="px-4 py-1.5 rounded-full text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-100 transition-colors">Master</button>
-					<button class="px-4 py-1.5 rounded-full text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-100 transition-colors">Al-Z</button>
+				<div class="flex gap-2" id="memberFilters">
+					<button class="filter-btn active px-4 py-1.5 rounded-full text-xs font-bold bg-blue-600 text-white" data-filter="all">All</button>
+					<button class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-100 transition-colors" data-filter="hadyan">Master</button>
+					<button class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-100 transition-colors" data-filter="alz">Al-Z</button>
 				</div>
 			</div>
 
 			<div class="grid md:grid-cols-2 gap-8">
 				{characters.map(char => (
-					<div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl relative overflow-hidden group hover:border-blue-500/50 transition-colors">
+					<div class="char-card p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl relative overflow-hidden group transition-all duration-300" data-member={char.id}>
 						<div class="absolute top-0 right-0 p-6 opacity-5 text-8xl group-hover:scale-110 transition-transform">{char.avatar}</div>
 						<div class="relative z-10">
 							<div class="flex items-center gap-4 mb-6">
@@ -102,7 +126,7 @@ const activityWeeks = Array.from({ length: 18 }, () =>
 			</div>
 		</section>
 
-		<!-- Advanced Heatmap Pulse -->
+		<!-- Validated Heatmap Pulse -->
 		<section class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-visible">
 			<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10">
 				<div>
@@ -122,18 +146,18 @@ const activityWeeks = Array.from({ length: 18 }, () =>
 					<div class="flex flex-col gap-1.5">
 						{week.map(day => (
 							<div 
-								class={`w-4 h-4 rounded-sm transition-all duration-300 cursor-help hover:scale-125 relative group ${
+								class={`pulse-cell w-4 h-4 rounded-sm transition-all duration-300 cursor-help hover:scale-125 relative group ${
 									day.count === 0 ? 'bg-slate-100 dark:bg-slate-800' :
-									day.count === 1 ? 'bg-blue-200 dark:bg-blue-900/40' :
-									day.count === 2 ? 'bg-blue-400 dark:bg-blue-700' :
-									day.count === 3 ? 'bg-blue-600 dark:bg-blue-500' :
-									'bg-blue-800 dark:bg-blue-300'
+									day.count === 1 ? 'bg-blue-300 dark:bg-blue-900/60' :
+									day.count === 2 ? 'bg-blue-500 dark:bg-blue-700' :
+									'bg-blue-700 dark:bg-blue-400'
 								}`}
+                data-members={day.members.join(',')}
 							>
 								{day.count > 0 && (
-									<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block z-50">
+									<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block z-[100] pointer-events-none">
 										<div class="bg-slate-900 text-white text-[10px] p-3 rounded-lg shadow-2xl whitespace-nowrap border border-slate-700">
-											<div class="font-bold mb-1 text-blue-400">{day.count} Transmutations</div>
+											<div class="font-bold mb-1 text-blue-400">{day.date} • {day.count} Task(s)</div>
 											<ul class="space-y-1 list-disc list-inside text-slate-300">
 												{day.topics.map(t => <li>{t}</li>)}
 											</ul>
@@ -146,26 +170,15 @@ const activityWeeks = Array.from({ length: 18 }, () =>
 					</div>
 				))}
 			</div>
-			<div class="mt-6 flex items-center justify-end gap-3 text-[10px] text-slate-400 uppercase tracking-widest font-bold">
-				<span>Less</span>
-				<div class="flex gap-1">
-					<div class="w-3 h-3 bg-slate-100 dark:bg-slate-800 rounded-sm"></div>
-					<div class="w-3 h-3 bg-blue-900/40 rounded-sm"></div>
-					<div class="w-3 h-3 bg-blue-700 rounded-sm"></div>
-					<div class="w-3 h-3 bg-blue-500 rounded-sm"></div>
-					<div class="w-3 h-3 bg-blue-300 rounded-sm"></div>
-				</div>
-				<span>More</span>
-			</div>
 		</section>
 
-		<!-- Learning Journey List (Levi Style) -->
+		<!-- Learning Journey List -->
 		<section>
 			<h2 class="text-2xl font-bold mb-8 border-l-4 border-purple-500 pl-4">Learning Journey</h2>
-			<div class="space-y-6">
+			<div class="space-y-6" id="learningList">
 				{learningLog.map(item => (
-					<div class="flex items-start gap-6 group cursor-pointer p-3 rounded-2xl hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all">
-						<div class="text-sm text-slate-400 font-mono w-14 pt-1">{item.date}</div>
+					<div class="learning-item flex items-start gap-6 group cursor-pointer p-3 rounded-2xl hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all" data-member={item.member}>
+						<div class="text-sm text-slate-400 font-mono w-14 pt-1">{item.date.split('-').slice(1).join('/')}</div>
 						<div class="flex flex-col items-center pt-2">
 							<div class="w-3 h-3 rounded-full border-2 border-blue-500 bg-white dark:bg-slate-950 group-hover:bg-blue-500 transition-colors z-10"></div>
 							<div class="w-0.5 h-16 bg-slate-200 dark:bg-slate-800 -mt-1"></div>
@@ -177,8 +190,6 @@ const activityWeeks = Array.from({ length: 18 }, () =>
 							</div>
 							<div class="flex items-center gap-2 text-[10px] text-slate-500">
 								<span class="capitalize">By {item.member}</span>
-								<span>•</span>
-								<span>{item.topics} topics explored</span>
 							</div>
 						</div>
 						<div class="text-2xl opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all">{item.icon}</div>
@@ -186,6 +197,52 @@ const activityWeeks = Array.from({ length: 18 }, () =>
 				))}
 			</div>
 		</section>
-
 	</div>
+
+  <script is:inline>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const charCards = document.querySelectorAll('.char-card');
+    const learningItems = document.querySelectorAll('.learning-item');
+    const pulseCells = document.querySelectorAll('.pulse-cell');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        
+        // Update Buttons
+        buttons.forEach(b => b.classList.remove('bg-blue-600', 'text-white'));
+        buttons.forEach(b => b.classList.add('bg-slate-200', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400'));
+        btn.classList.add('bg-blue-600', 'text-white');
+        btn.classList.remove('bg-slate-200', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-400');
+
+        // Filter Characters
+        charCards.forEach(card => {
+          if (filter === 'all' || card.dataset.member === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Filter Learning Journey
+        learningItems.forEach(item => {
+          if (filter === 'all' || item.dataset.member === filter) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        // Filter Pulse (Dim non-matching cells)
+        pulseCells.forEach(cell => {
+          const members = cell.dataset.members.split(',');
+          if (filter === 'all' || members.includes(filter)) {
+            cell.style.opacity = '1';
+          } else {
+            cell.style.opacity = '0.2';
+          }
+        });
+      });
+    });
+  </script>
 </BaseLayout>
