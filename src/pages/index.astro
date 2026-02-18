@@ -6,24 +6,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	<div class="min-h-[70vh] flex flex-col items-center justify-center text-center space-y-12 py-20">
 		<div class="relative group">
 			<!-- Transmutation Circle Decoration -->
-			<div class="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full scale-150 animate-pulse"></div>
-			<div class="w-48 h-48 md:w-64 md:h-64 border-2 border-dashed border-blue-500/30 rounded-full absolute -inset-4 animate-[spin_20s_linear_infinite]"></div>
+			<div class="absolute inset-0 bg-blue-500/10 blur-3xl rounded-full scale-150 animate-pulse"></div>
+			<div class="w-48 h-48 md:w-64 md:h-64 border-2 border-dashed border-blue-500/20 rounded-full absolute -inset-4 animate-[spin_25s_linear_infinite]"></div>
 			
-			<div class="relative w-40 h-40 md:w-56 md:h-56 bg-slate-900 rounded-full flex items-center justify-center shadow-2xl border-4 border-slate-800 overflow-hidden">
+			<div class="relative w-40 h-40 md:w-56 md:h-56 bg-white dark:bg-slate-900 rounded-full flex items-center justify-center shadow-xl border-4 border-slate-100 dark:border-slate-800 overflow-hidden transition-colors duration-500">
+				<!-- Using a cleaner SVG-style Transmutation Circle from a reliable URL -->
 				<img 
 					src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Human_Transmutation_Circle.svg/1024px-Human_Transmutation_Circle.svg.png" 
 					alt="Transmutation Circle" 
-					class="w-full h-full object-contain opacity-80 invert p-4 group-hover:rotate-180 transition-transform duration-1000"
+					class="w-full h-full object-contain opacity-60 dark:opacity-80 dark:invert-0 brightness-0 dark:brightness-100 p-6 group-hover:rotate-180 transition-transform duration-[2000ms]"
 				/>
 			</div>
 		</div>
 
 		<div class="space-y-4 max-w-2xl px-4">
-			<h1 class="text-4xl md:text-6xl font-black tracking-tighter text-slate-900 dark:text-white">
-				Cooking Something <span class="text-blue-600">Legendary</span>
+			<h1 class="text-4xl md:text-5xl font-black tracking-tighter text-slate-900 dark:text-white">
+				Transmuting <span class="text-blue-600">Ideas</span> into Reality
 			</h1>
-			<p class="text-slate-500 md:text-xl font-medium">
-				The Library is undergoing a massive transmutation. Equivalent Exchange is in progress.
+			<p class="text-slate-500 md:text-lg font-medium leading-relaxed">
+				The Library is currently being reorganized. <br class="hidden md:block"/> Equivalent Exchange is in progress.
 			</p>
 		</div>
 

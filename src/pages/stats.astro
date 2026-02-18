@@ -86,7 +86,6 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 			<p class="text-slate-500 text-sm md:text-base">Real-time pulse of the library and its guardians.</p>
 		</header>
 
-		<!-- Character Profiles Section -->
 		<section id="characters">
 			<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
 				<h2 class="text-xl md:text-2xl font-bold border-l-4 border-blue-500 pl-4">The Alchemists</h2>
@@ -105,8 +104,8 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 						</div>
 						<div class="relative z-10">
 							<div class="flex items-center gap-4 mb-6">
-								<div class="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-black flex items-center justify-center shadow-lg shrink-0 overflow-hidden border border-slate-800">
-									<img src={char.avatar} alt={char.name} class={`w-full h-full ${char.isPng ? 'object-contain p-2 dark:brightness-100 brightness-0' : 'object-cover'}`} />
+								<div class="w-14 h-14 md:w-20 md:h-20 rounded-2xl bg-slate-50 dark:bg-black flex items-center justify-center shadow-lg shrink-0 overflow-hidden border border-slate-100 dark:border-slate-800 transition-colors duration-500">
+									<img src={char.avatar} alt={char.name} class={`w-full h-full ${char.isPng ? 'object-contain scale-125 p-1 dark:brightness-100 brightness-0' : 'object-cover'}`} />
 								</div>
 								<div>
 									<h3 class="font-bold text-xl md:text-2xl tracking-tight text-slate-900 dark:text-white">{char.name}</h3>
@@ -155,7 +154,6 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 			</div>
 		</section>
 
-		<!-- Alchemy Paths (Filterable) -->
 		<section id="alchemyPaths">
 			<h2 class="text-xl md:text-2xl font-bold mb-8 border-l-4 border-emerald-500 pl-4">Alchemy Paths</h2>
 			<div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
@@ -167,8 +165,8 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 								const charPath = char.paths.find(p => p.name === pathName);
 								return (
 									<div class="path-row flex items-center gap-3 md:gap-4 group" data-member={char.id}>
-										<div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-[10px] opacity-60 group-hover:opacity-100 transition-opacity shrink-0 overflow-hidden">
-											<img src={char.avatar} class={`w-full h-full ${char.isPng ? 'object-contain p-1 dark:brightness-100 brightness-0' : 'object-cover'}`} />
+										<div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-[10px] opacity-60 group-hover:opacity-100 transition-opacity shrink-0 overflow-hidden border border-slate-200 dark:border-slate-800">
+											<img src={char.avatar} class={`w-full h-full ${char.isPng ? 'object-contain p-1 dark:brightness-100 brightness-0 scale-150' : 'object-cover'}`} />
 										</div>
 										<div class="flex-1">
 											<div class="flex justify-between text-[10px] font-bold mb-1">
@@ -188,7 +186,6 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 			</div>
 		</section>
 
-		<!-- Validated Heatmap Pulse -->
 		<section class="p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-visible">
 			<div class="mb-6">
 				<h2 class="text-xl md:text-2xl font-bold">The Alchemist Pulse</h2>
@@ -206,7 +203,6 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 						<div class="h-3.5 md:h-4 flex items-center">Fri</div>
 						<div class="h-3.5 md:h-4"></div>
 					</div>
-
 					{heatmapColumns.map((col, wIdx) => (
 						<div class="flex flex-col gap-1 md:gap-1.5 shrink-0">
 							<div class="h-4 mb-1 text-[9px] font-bold text-slate-400 uppercase tracking-tighter whitespace-nowrap overflow-visible">
@@ -236,7 +232,6 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 			</div>
 		</section>
 
-		<!-- Learning Journey List -->
 		<section>
 			<h2 class="text-xl md:text-2xl font-bold mb-8 border-l-4 border-purple-500 pl-4">Learning Journey</h2>
 			<div class="space-y-8" id="learningList">
