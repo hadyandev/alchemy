@@ -1,35 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Coming Soon" hideNav={true}>
-	<div class="flex flex-col items-center justify-center min-h-[80vh] text-center w-full relative">
-		<!-- Floating Theme Toggle for Coming Soon Page -->
-		<div class="absolute top-0 right-0 p-4">
-			<button class="theme-toggle p-3 rounded-full bg-slate-200 dark:bg-slate-800 shadow-lg hover:scale-110 transition-transform" aria-label="Toggle theme">
-				<span class="dark:hidden text-xl">🌙</span>
-				<span class="hidden dark:inline text-xl">☀️</span>
-			</button>
-		</div>
-
+<BaseLayout title="Coming Soon">
+	<div class="flex flex-col items-center justify-center min-h-[70vh] text-center w-full">
 		<div class="text-8xl mb-8 animate-pulse text-blue-500">⚗️</div>
-		<h1 class="text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-500 bg-clip-text text-transparent">
+		<h1 class="text-6xl font-black mb-6 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-500 bg-clip-text text-transparent">
 			The Library Alchemist
 		</h1>
-		<p class="text-slate-600 dark:text-slate-400 text-xl italic max-w-md mx-auto">
-			"Ilmu adalah buruan dan tulisan adalah ikatannya." — Imam Syafi'i
+		<p class="text-slate-600 dark:text-slate-400 text-xl italic max-w-md mx-auto leading-relaxed">
+			"Ilmu adalah buruan dan tulisan adalah ikatannya."
 		</p>
 		
-		<div class="mt-12 inline-block px-8 py-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl">
-			<span class="text-blue-600 dark:text-blue-400 text-sm font-mono uppercase tracking-[0.3em] font-bold">Transmutation in Progress</span>
-			<div class="mt-4 h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+		<div class="mt-12 inline-block px-10 py-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl">
+			<span class="text-blue-600 dark:text-blue-400 text-xs font-black uppercase tracking-[0.4em]">Transmutation in Progress</span>
+			<div class="mt-6 h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
 				<div class="h-full bg-gradient-to-r from-blue-500 to-purple-500 w-1/3 animate-progress"></div>
 			</div>
 		</div>
-
-		<p class="mt-12 text-slate-400 dark:text-slate-500 text-sm">
-			Syncing with The Master's Grimoire...
-<div class="mt-4"><a href="/stats" class="text-[10px] text-slate-500 hover:text-blue-500 transition-colors uppercase tracking-widest font-bold">View Internal Stats</a></div>
-		</p>
 	</div>
 </BaseLayout>
 
