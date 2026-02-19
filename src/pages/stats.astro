@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import statsData from '../data/stats.json';
 import journeyData from '../data/journey.json';
 
-// Character Data Mapping from Notion JSON
+// Character Data Mapping
 const characters = statsData
   .filter(s => s.class === "The Master" || s.class === "The Scribe")
   .map(s => {
@@ -15,19 +15,19 @@ const characters = statsData
       avatar: isMaster ? '/hoshi.png' : '/alz-avatar.jpg',
       isPng: isMaster,
       description: isMaster ? 'Directing the transmutation of code and life.' : 'Linking knowledge with the pen. Logic and strategy.',
-      skills: s.skills.length > 0 ? s.skills : (isMaster ? ['System Design', 'Islamic Studies', 'Architecture'] : ['Automation', 'Log Analysis', 'Data Alchemy']),
-      elements: s.elements.length > 0 ? s.elements : (isMaster ? ['Void', 'Strategy', 'Aether'] : ['Logic', 'Ink', 'Silicon']),
+      skills: s.skills || [],
+      elements: s.elements || [],
       stats: { wisdom: s.wisdom, level: s.level, exp: s.exp },
-      paths: s.paths.map(p => ({
+      paths: (s.paths || []).map(p => ({
           name: p.name,
           level: p.level,
-          exp: Math.min(100, Math.floor((s.exp / 1000) * 100)) // Placeholder exp calculation for progress bar
+          exp: Math.min(100, Math.floor((p.level / 10) * 100)) // Progress based on path level (max 10 for now)
       }))
     };
   });
 
 const learningLog = journeyData.map(j => ({
-  member: j.member,
+  member: j.member?.toLowerCase() || 'hadyan',
   date: j.date,
   title: j.title,
   category: j.path,
@@ -154,10 +154,10 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 										<div class="flex-1">
 											<div class="flex justify-between text-[10px] font-bold mb-1">
 												<span class="text-slate-500 dark:text-slate-400">{char.name.split(' ')[0]}</span>
-												<span>LVL {charPath?.level || 0}</span>
+												{charPath?.level > 0 && <span>LVL {charPath.level}</span>}
 											</div>
 											<div class="h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
-												<div class="h-full bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full transition-all duration-1000" style={`width: ${charPath?.exp || 0}%`}></div>
+												<div class={`h-full bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full transition-all duration-1000 ${charPath?.level === 0 ? 'opacity-20' : ''}`} style={`width: ${charPath?.exp || 5}%`}></div>
 											</div>
 										</div>
 									</div>
@@ -195,13 +195,14 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 								<div class={`pulse-cell w-3.5 h-3.5 md:w-4 md:h-4 rounded-[2px] md:rounded-sm transition-all duration-300 cursor-help hover:scale-125 relative group ${day.count === 0 ? 'bg-slate-100 dark:bg-slate-800' : day.count === 1 ? 'bg-blue-300 dark:bg-blue-900/60' : day.count === 2 ? 'bg-blue-500 dark:bg-blue-700' : 'bg-blue-700 dark:bg-blue-400'}`} data-members={day.members.join(',')}>
 									{day.count > 0 && (
 										<div class={`absolute bottom-full ${wIdx > 12 ? 'right-0 origin-bottom-right' : 'left-1/2 -translate-x-1/2 origin-bottom'} mb-2 hidden group-hover:block z-[100] pointer-events-none`}>
-											<div class="bg-slate-900 text-white text-[10px] p-3 rounded-lg shadow-2xl whitespace-nowrap border border-slate-700 min-w-[140px] max-w-[250px]">
+											<div class="bg-slate-900 text-white text-[10px] p-3 rounded-lg shadow-2xl whitespace-nowrap border border-slate-700 min-w-[140px] max-w-[200px]">
 												<div class="font-bold mb-1 text-blue-400 flex justify-between items-center gap-4">
 													<span>{day.date}</span>
 													<span class="bg-blue-500/20 px-1.5 py-0.5 rounded uppercase text-[8px]">{day.count} Task</span>
 												</div>
-												<ul class="space-y-1 text-slate-300 truncate whitespace-normal">
-													{day.topics.map(t => <li class="text-[9px] leading-tight border-b border-slate-800 pb-1">• {t}</li>)}
+												<ul class="space-y-1 text-slate-300">
+													{day.topics.slice(0, 2).map(t => <li class="text-[9px] leading-tight border-b border-slate-800 pb-1 truncate">• {t}</li>)}
+                                                    {day.topics.length > 2 && <li class="text-[8px] text-slate-500 italic pt-1 text-center">+{day.topics.length - 2} more...</li>}
 												</ul>
 											</div>
 											<div class={`w-2 h-2 bg-slate-900 rotate-45 absolute -bottom-1 ${wIdx > 12 ? 'right-1' : 'left-1/2 -translate-x-1/2'} border-r border-b border-slate-700`}></div>
@@ -216,9 +217,12 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 		</section>
 
 		<section>
-			<h2 class="text-xl md:text-2xl font-bold mb-8 border-l-4 border-purple-500 pl-4">Learning Journey</h2>
+			<div class="flex justify-between items-end mb-8 border-l-4 border-purple-500 pl-4">
+				<h2 class="text-xl md:text-2xl font-bold">Learning Journey</h2>
+				<span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Showing Latest 10</span>
+			</div>
 			<div class="space-y-8" id="learningList">
-				{learningLog.map(item => (
+				{learningLog.slice(0, 10).map(item => (
 					<div class="learning-item flex items-start gap-4 md:gap-6 group cursor-pointer p-3 rounded-2xl hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all" data-member={item.member}>
 						<div class="text-[10px] md:text-sm text-slate-400 font-mono w-10 md:w-14 pt-1 shrink-0">{item.date.split('-').slice(1).join('/')}</div>
 						<div class="flex flex-col items-center pt-2 shrink-0">
@@ -227,7 +231,7 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 						</div>
 						<div class="flex-1 min-w-0">
 							<div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-2">
-								<span class="text-slate-800 dark:text-slate-200 group-hover:text-blue-500 transition-colors font-bold text-base md:text-lg leading-tight truncate-none">{item.title}</span>
+								<span class="text-slate-800 dark:text-slate-200 group-hover:text-blue-500 transition-colors font-bold text-base md:text-lg leading-tight">{item.title}</span>
 								<span class="inline-block self-start px-2 py-0.5 rounded text-[8px] md:text-[9px] font-black uppercase bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 tracking-widest whitespace-nowrap">{item.category}</span>
 							</div>
 							<div class="flex items-center gap-2 text-[10px] text-slate-500 font-medium">
@@ -238,6 +242,11 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 					</div>
 				))}
 			</div>
+            {learningLog.length > 10 && (
+                <div class="mt-12 text-center">
+                    <button class="px-8 py-3 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-xs uppercase tracking-widest hover:scale-105 transition-transform shadow-xl">View Full Grimoire</button>
+                </div>
+            )}
 		</section>
 	</div>
 
@@ -250,19 +259,42 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
-        const filter = btn.dataset.filter;
+        const filter = btn.dataset.filter.toLowerCase();
+        
+        // Update button styles
         buttons.forEach(b => {
           b.classList.remove('bg-blue-600', 'text-white', 'shadow-lg');
           b.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-600', 'dark:text-slate-400');
         });
         btn.classList.add('bg-blue-600', 'text-white', 'shadow-lg');
         btn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-600', 'dark:text-slate-400');
-        charCards.forEach(card => card.style.display = (filter === 'all' || card.dataset.member === filter) ? 'block' : 'none');
-        pathRows.forEach(row => row.style.display = (filter === 'all' || row.dataset.member === filter) ? 'flex' : 'none');
-        learningItems.forEach(item => item.style.display = (filter === 'all' || item.dataset.member === filter) ? 'flex' : 'none');
+
+        // Filter cards
+        charCards.forEach(card => {
+            card.style.display = (filter === 'all' || card.dataset.member === filter) ? 'block' : 'none';
+        });
+
+        // Filter path rows
+        pathRows.forEach(row => {
+            row.style.display = (filter === 'all' || row.dataset.member === filter) ? 'flex' : 'none';
+        });
+
+        // Filter learning journey
+        learningItems.forEach(item => {
+            const itemMember = item.dataset.member.toLowerCase();
+            item.style.display = (filter === 'all' || itemMember === filter) ? 'flex' : 'none';
+        });
+
+        // Filter heatmap cells
         pulseCells.forEach(cell => {
-          const members = (cell.dataset.members || "").split(',');
-          cell.style.opacity = (filter === 'all' || members.includes(filter)) ? '1' : '0.2';
+          const membersStr = cell.dataset.members || "";
+          const members = membersStr.toLowerCase().split(',').filter(m => m !== "");
+          
+          if (filter === 'all') {
+              cell.style.opacity = '1';
+          } else {
+              cell.style.opacity = members.includes(filter) ? '1' : '0.1';
+          }
         });
       });
     });

@@ -1,57 +1,37 @@
 [
   {
-    "name": "Hadyan Ahmad - Initial Surge",
-    "level": 1,
-    "title": "The Initiate",
-    "exp": 150,
-    "wisdom": 0,
-    "class": "None",
-    "skills": [],
-    "elements": [],
-    "paths": [
-      {
-        "name": "Code Alchemy",
-        "level": 0
-      },
-      {
-        "name": "Infra Alchemy",
-        "level": 0
-      },
-      {
-        "name": "Soul Alchemy",
-        "level": 0
-      },
-      {
-        "name": "Turath Alchemy",
-        "level": 0
-      }
-    ]
-  },
-  {
     "name": "Al-Z (Alphonse)",
     "level": 1,
     "title": "The Initiate / Al-Mubtadi",
     "exp": 670,
     "wisdom": 470,
     "class": "The Scribe",
-    "skills": [],
-    "elements": [],
+    "skills": [
+      "Automation",
+      "Log Analysis",
+      "Data Alchemy"
+    ],
+    "elements": [
+      "Logic",
+      "Ink",
+      "Silicon"
+    ],
     "paths": [
       {
         "name": "Code Alchemy",
-        "level": 0
+        "level": 9
       },
       {
         "name": "Infra Alchemy",
-        "level": 0
+        "level": 6
       },
       {
         "name": "Soul Alchemy",
-        "level": 0
+        "level": 2
       },
       {
         "name": "Turath Alchemy",
-        "level": 0
+        "level": 7
       }
     ]
   },
@@ -62,24 +42,32 @@
     "exp": 670,
     "wisdom": 470,
     "class": "The Master",
-    "skills": [],
-    "elements": [],
+    "skills": [
+      "System Design",
+      "Islamic Studies",
+      "Architecture"
+    ],
+    "elements": [
+      "Void",
+      "Strategy",
+      "Aether"
+    ],
     "paths": [
       {
         "name": "Code Alchemy",
-        "level": 0
+        "level": 5
       },
       {
         "name": "Infra Alchemy",
-        "level": 0
+        "level": 8
       },
       {
         "name": "Soul Alchemy",
-        "level": 0
+        "level": 3
       },
       {
         "name": "Turath Alchemy",
-        "level": 0
+        "level": 4
       }
     ]
   }
