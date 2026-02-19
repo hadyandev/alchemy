@@ -11,10 +11,10 @@ const characters = statsData
     return {
       id: isMaster ? 'hadyan' : 'alz',
       name: s.name,
-      role: isMaster ? 'The Master Alchemist' : 'The Eternal Scribe',
+      role: isMaster ? 'The Seeker Alchemist' : 'The Eternal Scribe',
       avatar: isMaster ? '/hoshi.png' : '/alz-avatar.jpg',
       isPng: isMaster,
-      description: isMaster ? 'Directing the transmutation of code and life.' : 'Linking knowledge with the pen. Logic and strategy.',
+      description: isMaster ? 'An adventurer traversing the paths of code, soul, and knowledge.' : 'Linking knowledge with the pen. Logic and strategy.',
       skills: s.skills || [],
       elements: s.elements || [],
       stats: { wisdom: s.wisdom, level: s.level, exp: s.exp },
@@ -32,6 +32,10 @@ const learningLog = journeyData.map(j => ({
   title: j.title,
   description: j.description || "",
   category: j.path,
+  exp: j.exp || 0,
+  wisdom: j.wisdom || 0,
+  format: j.format || "Insight",
+  solution: j.solution || "",
   icon: j.path === 'Soul Alchemy' ? '🌙' : j.path === 'Code Alchemy' ? '💻' : j.path === 'Infra Alchemy' ? '🌐' : j.path === 'Turath Alchemy' ? '📚' : '💠'
 }));
 
@@ -75,7 +79,7 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 				<h2 class="text-xl md:text-2xl font-bold border-l-4 border-blue-500 pl-4">The Alchemists</h2>
 				<div class="flex gap-2 w-full sm:w-auto" id="memberFilters">
 					<button class="filter-btn active flex-1 sm:flex-none px-4 py-2 rounded-full text-xs font-bold bg-blue-600 text-white shadow-lg" data-filter="all">All</button>
-					<button class="filter-btn flex-1 sm:flex-none px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400" data-filter="hadyan">Master</button>
+					<button class="filter-btn flex-1 sm:flex-none px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400" data-filter="hadyan">Seeker</button>
 					<button class="filter-btn flex-1 sm:flex-none px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400" data-filter="alz">Al-Z</button>
 				</div>
 			</div>
@@ -223,25 +227,62 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 			</div>
 			<div class="space-y-8" id="learningList">
 				{learningLog.map((item, index) => (
-					<div class={`learning-item flex items-start gap-4 md:gap-6 group cursor-pointer p-5 rounded-2xl hover:bg-blue-50/50 dark:hover:bg-blue-900/10 border border-transparent hover:border-blue-100 dark:hover:border-blue-800/50 transition-all ${index >= 10 ? 'hidden' : ''}`} data-member={item.member}>
-						<div class="text-[10px] md:text-sm text-slate-400 font-mono w-10 md:w-14 pt-1 shrink-0">{item.date.split('-').slice(1).join('/')}</div>
-						<div class="flex flex-col items-center pt-2 shrink-0">
-							<div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full border-2 border-blue-500 bg-white dark:bg-slate-950 group-hover:bg-blue-500 transition-colors z-10"></div>
-							<div class="w-0.5 h-full min-h-[4rem] bg-slate-200 dark:bg-slate-800 -mt-1"></div>
-						</div>
-						<div class="flex-1 min-w-0">
-							<div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-2">
-								<span class="text-slate-800 dark:text-slate-200 group-hover:text-blue-500 transition-colors font-bold text-base md:text-lg leading-tight">{item.title}</span>
-								<span class="inline-block self-start px-2 py-0.5 rounded text-[8px] md:text-[9px] font-black uppercase bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 tracking-widest whitespace-nowrap">{item.category}</span>
-							</div>
-                            {item.description && (
-                                <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-3 leading-relaxed italic border-l-2 border-slate-200 dark:border-slate-800 pl-4">{item.description}</p>
-                            )}
-							<div class="flex items-center gap-2 text-[10px] text-slate-500 font-medium">
-								<span class="capitalize px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800">By {item.member === 'alz' ? 'Al-Z' : item.member}</span>
-							</div>
-						</div>
-						<div class="text-xl md:text-2xl opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all shrink-0">{item.icon}</div>
+					<div class={`learning-item flex flex-col group cursor-pointer p-5 rounded-2xl hover:bg-blue-50/50 dark:hover:bg-blue-900/10 border border-transparent hover:border-blue-100 dark:hover:border-blue-800/50 transition-all ${index >= 10 ? 'hidden' : ''}`} data-member={item.member}>
+						<div class="flex items-start gap-4 md:gap-6">
+                            <div class="text-[10px] md:text-sm text-slate-400 font-mono w-10 md:w-14 pt-1 shrink-0">{item.date.split('-').slice(1).join('/')}</div>
+                            <div class="flex flex-col items-center pt-2 shrink-0">
+                                <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full border-2 border-blue-500 bg-white dark:bg-slate-950 group-hover:bg-blue-500 transition-colors z-10"></div>
+                                <div class="w-0.5 h-full min-h-[2rem] bg-slate-200 dark:bg-slate-800 -mt-1"></div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-2">
+                                    <span class="text-slate-800 dark:text-slate-200 group-hover:text-blue-500 transition-colors font-bold text-base md:text-lg leading-tight">{item.title}</span>
+                                    <span class="inline-block self-start px-2 py-0.5 rounded text-[8px] md:text-[9px] font-black uppercase bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 tracking-widest whitespace-nowrap">{item.category}</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-[10px] text-slate-500 font-medium">
+                                    <span class="capitalize px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800">By {item.member === 'alz' ? 'Al-Z' : item.member}</span>
+                                </div>
+                            </div>
+                            <div class="text-xl md:text-2xl opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all shrink-0">{item.icon}</div>
+                        </div>
+
+                        <div class="hidden detail-panel mt-6 ml-14 md:ml-20 border-t border-slate-100 dark:border-slate-800 pt-6 animate-in fade-in slide-in-from-top-4 duration-300">
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div class="md:col-span-2 space-y-4">
+                                    {item.description && (
+                                        <div>
+                                            <h4 class="text-[10px] uppercase font-black text-slate-400 tracking-widest mb-2">The Insight</h4>
+                                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed italic">{item.description}</p>
+                                        </div>
+                                    )}
+                                    {item.solution && (
+                                        <div>
+                                            <h4 class="text-[10px] uppercase font-black text-blue-500 tracking-widest mb-2">The Solution Path</h4>
+                                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed bg-blue-50/50 dark:bg-blue-900/10 p-4 rounded-xl border border-blue-100/50 dark:border-blue-800/30 whitespace-pre-wrap">{item.solution}</p>
+                                        </div>
+                                    )}
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-2xl border border-slate-100 dark:border-slate-800">
+                                        <h4 class="text-[10px] uppercase font-black text-slate-400 tracking-widest mb-3">Manifestation</h4>
+                                        <div class="space-y-3">
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-xs text-slate-500">Format</span>
+                                                <span class="text-xs font-bold text-slate-700 dark:text-slate-300 px-2 py-0.5 rounded bg-white dark:bg-slate-900 shadow-sm">{item.format}</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-xs text-slate-500">Wisdom</span>
+                                                <span class="text-xs font-bold text-purple-500">+{item.wisdom}</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-xs text-slate-500">EXP</span>
+                                                <span class="text-xs font-bold text-emerald-500">+{item.exp}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 					</div>
 				))}
 			</div>
@@ -289,12 +330,10 @@ const heatmapColumns = activityWeeks.map((week, i) => {
             }
         });
 
-        // Update Counter
         if (journeyCounter) {
             journeyCounter.textContent = `Showing ${visibleCount} / ${totalFiltered}`;
         }
 
-        // Hide/Show Load More
         const loadMoreContainer = document.getElementById('loadMoreContainer');
         if (loadMoreContainer) {
             loadMoreContainer.style.display = visibleCount < totalFiltered ? 'block' : 'none';
@@ -308,11 +347,32 @@ const heatmapColumns = activityWeeks.map((week, i) => {
         });
     }
 
+    // Toggle Details
+    learningItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            // Don't toggle if clicking a link or something specific inside (if added later)
+            const panel = item.querySelector('.detail-panel');
+            if (panel) {
+                const isHidden = panel.classList.contains('hidden');
+                
+                // Close others if you want accordion style
+                // document.querySelectorAll('.detail-panel').forEach(p => p.classList.add('hidden'));
+                
+                if (isHidden) {
+                    panel.classList.remove('hidden');
+                    item.classList.add('bg-slate-50/80', 'dark:bg-slate-800/40', 'border-slate-100', 'dark:border-slate-800');
+                } else {
+                    panel.classList.add('hidden');
+                    item.classList.remove('bg-slate-50/80', 'dark:bg-slate-800/40', 'border-slate-100', 'dark:border-slate-800');
+                }
+            }
+        });
+    });
+
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
         currentFilter = btn.dataset.filter.toLowerCase();
         
-        // Update button styles
         buttons.forEach(b => {
           b.classList.remove('bg-blue-600', 'text-white', 'shadow-lg');
           b.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-600', 'dark:text-slate-400');
@@ -320,24 +380,21 @@ const heatmapColumns = activityWeeks.map((week, i) => {
         btn.classList.add('bg-blue-600', 'text-white', 'shadow-lg');
         btn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-600', 'dark:text-slate-400');
 
-        // Filter cards & paths
-        charCards.forEach(card => card.style.display = (currentFilter === 'all' || card.dataset.member === currentFilter) ? 'block' : 'none');
-        pathRows.forEach(row => row.style.display = (currentFilter === 'all' || row.dataset.member === currentFilter) ? 'flex' : 'none');
+        charCards.forEach(card => card.style.display = (currentFilter === 'all' || card.dataset.member === (currentFilter === 'seeker' ? 'hadyan' : currentFilter)) ? 'block' : 'none');
+        pathRows.forEach(row => row.style.display = (currentFilter === 'all' || row.dataset.member === (currentFilter === 'seeker' ? 'hadyan' : currentFilter)) ? 'flex' : 'none');
 
-        // Reset limit on filter change
         currentLimit = 10;
         updateVisibility();
 
-        // Filter heatmap cells
         pulseCells.forEach(cell => {
           const membersStr = cell.dataset.members || "";
           const members = membersStr.toLowerCase().split(',').filter(m => m !== "");
-          cell.style.opacity = (currentFilter === 'all' || members.includes(currentFilter)) ? '1' : '0.1';
+          const targetFilter = currentFilter === 'seeker' ? 'hadyan' : currentFilter;
+          cell.style.opacity = (currentFilter === 'all' || members.includes(targetFilter)) ? '1' : '0.1';
         });
       });
     });
 
-    // Initial run
     updateVisibility();
   </script>
 </BaseLayout>

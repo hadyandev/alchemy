@@ -68,7 +68,9 @@ async function syncAtelier() {
                 exp: props["EXP"]?.number || 0,
                 wisdom: props["Wisdom"]?.number || 0,
                 path: props["Alchemist Path"]?.multi_select?.[0]?.name || "General",
-                member: props["Alchemist"]?.select?.name?.toLowerCase() || "hadyan"
+                member: props["Alchemist"]?.select?.name?.toLowerCase() || "hadyan",
+                format: props["Format"]?.select?.name || "Insight",
+                solution: props["Solution Path"]?.rich_text?.[0]?.plain_text || ""
             };
         }).sort((a, b) => new Date(b.date) - new Date(a.date));
 

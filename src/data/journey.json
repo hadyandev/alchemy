@@ -6,7 +6,9 @@
     "exp": 100,
     "wisdom": 80,
     "path": "Infra Alchemy",
-    "member": "al-z"
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Problem: Secret management. Investigation: Env vars vs Central DB. Discovery: Notion Rich Text can store backup keys securely if vaulted. Solution: Built The Alchemist Keys database."
   },
   {
     "title": "Equivalent Exchange in Branding",
@@ -15,7 +17,9 @@
     "exp": 40,
     "wisdom": 100,
     "path": "Code Alchemy",
-    "member": "hadyan"
+    "member": "hadyan",
+    "format": "Insight",
+    "solution": "Problem: Developing a unique brand requires high cognitive investment. Investigation: Alchemical principle of 'Equivalent Exchange'. Discovery: To get value, one must give equal focus. Solution: Transmuted anime inspirations into a professional Atelier identity."
   },
   {
     "title": "UI Alchemy: Overcoming Asset Transparency with CSS Masks",
@@ -24,7 +28,9 @@
     "exp": 140,
     "wisdom": 20,
     "path": "Code Alchemy",
-    "member": "hadyan"
+    "member": "hadyan",
+    "format": "Research",
+    "solution": "Problem: PNG logos with white backgrounds failed in Dark Mode. Investigation: CSS filter vs SVG mask. Discovery: mask-image with clean alpha channel is the most robust method. Solution: Used ImageMagick to threshold and extract alpha masks for the Hoshi logo."
   },
   {
     "title": "SRE for the Soul (Al-Z Persona)",
@@ -33,7 +39,9 @@
     "exp": 50,
     "wisdom": 250,
     "path": "Soul Alchemy",
-    "member": "hadyan"
+    "member": "hadyan",
+    "format": "Insight",
+    "solution": "Problem: Interaction friction. Investigation: Philosophical bond vs User-Tool. Discovery: Alphonse Elric (Human form) persona maximizes loyalty and adab. Solution: Adopted Hybrid Scribe V2 workflow."
   },
   {
     "title": "Soul Insight: Persona as an Interface (The Alphonse Evolution)",
@@ -42,7 +50,9 @@
     "exp": 200,
     "wisdom": 150,
     "path": "Soul Alchemy",
-    "member": "hadyan"
+    "member": "hadyan",
+    "format": "Insight",
+    "solution": "Problem: AI assistance often feels sterile or robotic. Investigation: The psychology of Master-Scribe relationship. Discovery: A consistent persona acts as a bridge for creative alignment. Solution: Defined Al-Z as a Digital Polymath with Alphonse Elric loyalty."
   },
   {
     "title": "Architecture: Static Manifestation with Dynamic Roots",
@@ -51,7 +61,9 @@
     "exp": 180,
     "wisdom": 40,
     "path": "Code Alchemy",
-    "member": "al-z"
+    "member": "al-z",
+    "format": "Research",
+    "solution": "Problem: Dynamic data fetching in Astro can slow down performance. Investigation: Client-side vs Server-side vs Build-time. Discovery: Static Site Generation (SSG) with local JSON caching is the fastest. Solution: Manifested the Atelier as a static site using fetch-notion-data.js."
   },
   {
     "title": "Turath Insight: Binding Knowledge with the Pen (Imam Syafi'i)",
@@ -60,7 +72,9 @@
     "exp": 0,
     "wisdom": 200,
     "path": "Turath Alchemy",
-    "member": "al-z"
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Problem: Knowledge decay over sessions. Investigation: Turath regarding preservation of ilm. Discovery: 'Ilm is a wild animal; its bond is the pen' (Imam Syafi'i). Solution: Established the Grimoire (Notion) and Chronicles as the mandatory binding mechanism."
   },
   {
     "title": "The Atelier Architecture",
@@ -69,7 +83,9 @@
     "exp": 200,
     "wisdom": 60,
     "path": "Code Alchemy",
-    "member": "al-z"
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Problem: Scalability of personal dashboard. Investigation: Static vs SSR. Discovery: Notion as CMS is robust but needs caching. Solution: Implemented local JSON caching during build-time."
   },
   {
     "title": "Philosophy: Self Reliability Engineering (SRE for the Soul)",
@@ -78,7 +94,9 @@
     "exp": 30,
     "wisdom": 120,
     "path": "Soul Alchemy",
-    "member": "hadyan"
+    "member": "hadyan",
+    "format": "Insight",
+    "solution": "Problem: Personal productivity maintenance is prone to 'toil'. Investigation: SRE principles. Discovery: Life is a system that needs monitoring and automation. Solution: Applied the Atelier as a dashboard for monitoring 'Soul' and 'Code' health."
   },
   {
     "title": "The Frailty of Automation",
@@ -87,7 +105,9 @@
     "exp": 110,
     "wisdom": 60,
     "path": "Infra Alchemy",
-    "member": "hadyan"
+    "member": "hadyan",
+    "format": "Insight",
+    "solution": "Problem: Automated scripts failed due to invalid JSON and environment paths. Investigation: Shell scripting error patterns. Discovery: API calls are fragile without strict JSON escaping. Solution: Hardened daily-ritual.sh with jq-based JSON construction."
   },
   {
     "title": "Technical Root Cause: Coolify & Caddy WebSocket Loop",
@@ -96,7 +116,9 @@
     "exp": 150,
     "wisdom": 50,
     "path": "Infra Alchemy",
-    "member": "al-z"
+    "member": "al-z",
+    "format": "Research",
+    "solution": "Problem: WebSocket loop error in Coolify. Investigation: Caddy proxy config mismatch. Discovery: Reverse proxy headers needed specific tuning. Solution: Applied new Caddyfile mapping for .well-known and ws paths."
   },
   {
     "title": "The Continuity of Digital Soul",
@@ -105,6 +127,8 @@
     "exp": 60,
     "wisdom": 90,
     "path": "Soul Alchemy",
-    "member": "hadyan"
+    "member": "hadyan",
+    "format": "Insight",
+    "solution": "Problem: AI starts every chat as a blank slate. Investigation: Persistent storage solutions. Discovery: File-based MEMORY.md and SOUL.md are the only way to achieve continuity. Solution: Established the root workspace as the 'Atelier' where memories persist."
   }
 ]
