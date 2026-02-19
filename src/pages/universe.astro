@@ -23,9 +23,27 @@ const universeManifesto = [
         description: "The universe is maintained by two entities: The Seeker Alchemist (Master Hadyan) who drives the vision, and The Eternal Scribe (Al-Z) who documents and automates the path to ascension."
     }
 ];
+
+const navigationLogic = [
+    {
+        path: "/stats",
+        name: "The Dashboard",
+        desc: "The real-time pulse. Monitor current stats, active quest heatmap, and the latest entries in the chronicles."
+    },
+    {
+        path: "/character",
+        name: "The Guardians",
+        desc: "The essence of the guardians. Deep dive into Master Hadyan's arsenal, skill tree, and historical transmutations."
+    },
+    {
+        path: "/universe",
+        name: "The Universe",
+        desc: "The laws and lexicon. Understanding the vision and the terminology that governs this digital realm."
+    }
+];
 ---
 
-<BaseLayout title="About | The Atelier Universe">
+<BaseLayout title="Universe | The Atelier">
     <div class="py-10 space-y-20">
         <header class="max-w-3xl">
             <div class="w-16 h-1 bg-purple-500 mb-6"></div>
@@ -75,16 +93,35 @@ const universeManifesto = [
                 <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">Celestial Navigation</h2>
                 <p class="text-slate-500 italic">How to traverse the layers of this digital realm.</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="p-8 rounded-3xl bg-slate-900 text-white shadow-2xl">
-                    <h4 class="text-blue-400 font-mono text-xs uppercase tracking-widest mb-4">/dashboard</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">The real-time pulse. Monitor current stats, active quests, and the latest entries in the chronicles.</p>
-                </div>
-                <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-                    <h4 class="text-purple-500 font-mono text-xs uppercase tracking-widest mb-4">/character</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed">The essence of the guardians. Deep dive into Master Hadyan's arsenal, skill tree, and historical transmutations.</p>
-                </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                {navigationLogic.map(nav => (
+                    <a href={nav.path} class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-blue-500 transition-all group">
+                        <h4 class="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4 group-hover:translate-x-2 transition-transform">{nav.path}</h4>
+                        <h5 class="text-xl font-black text-slate-900 dark:text-white mb-2">{nav.name}</h5>
+                        <p class="text-sm text-slate-500 leading-relaxed">{nav.desc}</p>
+                    </a>
+                ))}
             </div>
+        </section>
+
+        <section id="mantras-preview" class="p-12 rounded-[3rem] bg-slate-900 text-white relative overflow-hidden">
+             <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+             <div class="relative z-10">
+                <h2 class="text-3xl font-black uppercase mb-6">The Grimoire Mantras</h2>
+                <p class="text-slate-400 italic mb-10 max-w-2xl">Automation scripts and logic snippets that power Al-Z's autonomous actions. These are the spells of the modern alchemist.</p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <code class="text-blue-400 text-xs">cron: a37a858e...</code>
+                        <h4 class="font-bold mt-2">Daily Transmutation Ritual</h4>
+                        <p class="text-xs text-slate-500 mt-1">Automated sync between Notion and The Atelier at 00:01 WIB.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+                        <code class="text-purple-400 text-xs">cron: e4fc8e82...</code>
+                        <h4 class="font-bold mt-2">Soul Alchemy Reminder</h4>
+                        <p class="text-xs text-slate-500 mt-1">Daily spiritual log reminder at 21:00 WIB.</p>
+                    </div>
+                </div>
+             </div>
         </section>
     </div>
 </BaseLayout>
