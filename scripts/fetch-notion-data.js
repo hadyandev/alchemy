@@ -163,7 +163,8 @@ async function syncAtelier() {
                 author: props["Orator / Author"]?.rich_text?.[0]?.plain_text || "Unknown",
                 origin: props["Origin / Source"]?.select?.name || "General Wisdom",
                 alignment: props["Path Alignment"]?.select?.name || "Soul Alchemy",
-                reflection: props["Context / Reflection"]?.rich_text?.[0]?.plain_text || ""
+                reflection: props["Context / Reflection"]?.rich_text?.[0]?.plain_text || "",
+                reference: props["Citation / Reference"]?.rich_text?.[0]?.plain_text || ""
             };
         });
 

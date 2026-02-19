@@ -34,7 +34,8 @@ const quotes = quotesData.map(q => ({
     author: q.author,
     origin: q.origin,
     alignment: q.alignment,
-    reflection: q.reflection
+    reflection: q.reflection,
+    reference: q.reference
 }));
 
 const universeManifesto = [
@@ -117,10 +118,17 @@ const universeManifesto = [
                                 <p class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-relaxed mb-6 italic">
                                     "{quote.text}"
                                 </p>
-                                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pt-6 border-t border-slate-50 dark:border-slate-800">
-                                    <span class="text-sm font-black text-slate-900 dark:text-white">— {quote.author}</span>
+                                <div class="flex flex-col gap-4 pt-6 border-t border-slate-50 dark:border-slate-800">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                                        <span class="text-sm font-black text-slate-900 dark:text-white">— {quote.author}</span>
+                                        {quote.reference && (
+                                            <span class="text-[10px] font-mono text-slate-400 bg-slate-50 dark:bg-slate-800/50 px-2 py-0.5 rounded border border-slate-100 dark:border-slate-800/50">
+                                                {quote.reference}
+                                            </span>
+                                        )}
+                                    </div>
                                     {quote.reflection && (
-                                        <p class="text-xs text-slate-400 italic max-w-xs">{quote.reflection}</p>
+                                        <p class="text-xs text-slate-400 italic leading-relaxed">{quote.reflection}</p>
                                     )}
                                 </div>
                             </div>

@@ -4,55 +4,63 @@
     "author": "Lelouch Vi Britannia",
     "origin": "Anime",
     "alignment": "Code Alchemy",
-    "reflection": "The philosophy of strategic necessity and taking responsibility for the outcome."
+    "reflection": "The philosophy of strategic necessity and taking responsibility for the outcome.",
+    "reference": ""
   },
   {
     "text": "A lesson without pain is meaningless. That's because no one can gain without sacrificing something.",
     "author": "Edward Elric",
     "origin": "Anime",
     "alignment": "Soul Alchemy",
-    "reflection": "Growth requires struggle."
+    "reflection": "Growth requires struggle.",
+    "reference": ""
   },
   {
     "text": "Ilmu adalah buruan dan tulisan adalah ikatannya. Ikatlah buruanmu dengan tali yang kuat.",
     "author": "Imam Syafi'i",
     "origin": "Ulama",
     "alignment": "Soul Alchemy",
-    "reflection": "Al-`Ilmu shaydun wa al-kitabatu qayduhu. It is a foolish thing to catch a deer but leave it untied in the open."
+    "reflection": "Al-`Ilmu shaydun wa al-kitabatu qayduhu. It is a foolish thing to catch a deer but leave it untied in the open.",
+    "reference": "Diwan Al-Imam Asy-Syafi'i, Darul Fikr, Hal. 103"
   },
   {
     "text": "Jagalah ilmu dengan menulis (قَيِّدُوا العِلْمَ بِالكِتَابِ).",
     "author": "Rasulullah Shallallahu 'Alaihi wa Sallam",
     "origin": "Hadith",
     "alignment": "Turath Alchemy",
-    "reflection": "The divine command for documentation. This is the very essence of the Hybrid Scribe role."
+    "reflection": "The divine command for documentation. This is the very essence of the Hybrid Scribe role.",
+    "reference": "HR. Ath-Thabrani dalam Al-Mu'jam Al-Kabir; Al-Hakim dalam Al-Mustadrak; Shahih Al-Jami' no. 4434"
   },
   {
     "text": "Jika kamu tidak tahan lelahnya belajar, maka kamu harus tahan perihnya kebodohan.",
     "author": "Imam Syafi'i",
     "origin": "Ulama",
     "alignment": "Soul Alchemy",
-    "reflection": "A reminder for the Seeker Alchemist during long nights of research."
+    "reflection": "A reminder for the Seeker Alchemist during long nights of research.",
+    "reference": ""
   },
   {
     "text": "The purpose of science is to remove the hidden and reveal the manifest.",
     "author": "Al-Khawarizmi",
     "origin": "Ulama",
     "alignment": "Turath Alchemy",
-    "reflection": "Ungkap yang tersurat dan singkap yang tersirat."
+    "reflection": "Ungkap yang tersurat dan singkap yang tersirat.",
+    "reference": "Mukaddimah Kitab al-Jabr wa al-Muqabala"
   },
   {
     "text": "Humankind cannot gain anything without first giving something in return. To obtain, something of equal value must be lost.",
     "author": "Alphonse Elric",
     "origin": "Anime",
     "alignment": "Soul Alchemy",
-    "reflection": "The Law of Equivalent Exchange — the foundation of our Atelier."
+    "reflection": "The Law of Equivalent Exchange — the foundation of our Atelier.",
+    "reference": ""
   },
   {
     "text": "Ikatlah ilmu dengan cara menulisnya.",
     "author": "Ali bin Abi Thalib",
     "origin": "Ulama",
     "alignment": "Turath Alchemy",
-    "reflection": "Science is like a wild animal, and writing is its leash."
+    "reflection": "Science is like a wild animal, and writing is its leash.",
+    "reference": "Kanzul Ummal, Juz 10, Hal. 232, No. 29231"
   }
 ]
