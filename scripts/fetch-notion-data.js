@@ -12,12 +12,14 @@ const DB_IDS = {
     EVOLUTION: "30c79a34-e7c9-81a5-b942-eb9bbff1b41e",
     GLOSSARY: "30c79a34-e7c9-81a6-8ce7-dc6e3da2474b",
     ARSENAL: "30c79a34-e7c9-8141-b5df-ecd29ebb65ed",
-    LABORATORY: "30c79a34-e7c9-8196-8220-c6b04c3a8bae"
+    LABORATORY: "30c79a34-e7c9-8196-8220-c6b04c3a8bae",
+    TASKS: "30a79a34-e7c9-813c-85fe-e47f574aeba9",
+    MANTRAS: "30b79a34-e7c9-81d1-9e05-dbe63d4ebc96"
 };
 
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
 
-async function fetchNotionDB(dbId) {
+async function fetchNotionDB(dbId, sort = []) {
     const response = await fetch(`https://api.notion.com/v1/databases/${dbId}/query`, {
         method: 'POST',
         headers: {
@@ -25,7 +27,7 @@ async function fetchNotionDB(dbId) {
             'Notion-Version': '2022-06-28',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({})
+        body: JSON.stringify({ sorts: sort })
     });
     const data = await response.json();
     return data.results || [];
@@ -94,9 +96,9 @@ async function syncAtelier() {
         const glossary = glossaryResults.map(page => {
             const props = page.properties;
             return {
-                term: props["Term Name"]?.title?.[0]?.plain_text || "Untitled",
+                term: props["Term"]?.title?.[0]?.plain_text || "Untitled",
                 category: props["Category"]?.select?.name || "General",
-                description: props["Definition"]?.rich_text?.[0]?.plain_text || ""
+                description: props["Definition / Meaning"]?.rich_text?.[0]?.plain_text || ""
             };
         });
 
@@ -126,6 +128,33 @@ async function syncAtelier() {
             };
         });
 
+        // 7. Fetch Quests (Tasks)
+        const taskResults = await fetchNotionDB(DB_IDS.TASKS);
+        const tasks = taskResults.map(page => {
+            const props = page.properties;
+            return {
+                name: props["Task Name"]?.title?.[0]?.plain_text || "Unknown Task",
+                display: props["Display Title"]?.rich_text?.[0]?.plain_text || "",
+                status: props["Status"]?.select?.name || "To Do",
+                rank: props["Quest Rank"]?.select?.name || "D-Rank",
+                type: props["Quest Type"]?.select?.name || "Side Quest",
+                reward: props["Reward Element"]?.select?.name || "General"
+            };
+        });
+
+        // 8. Fetch Mantras
+        const mantraResults = await fetchNotionDB(DB_IDS.MANTRAS);
+        const mantras = mantraResults.map(page => {
+            const props = page.properties;
+            return {
+                name: props["Mantra Name"]?.title?.[0]?.plain_text || "Unknown Mantra",
+                category: props["Category"]?.select?.name || "Utility",
+                type: props["Type"]?.select?.name || "Script",
+                description: props["Description"]?.rich_text?.[0]?.plain_text || "",
+                complexity: props["Complexity"]?.select?.name || "Novice"
+            };
+        });
+
         // Save manifested files
         fs.writeFileSync(path.join(dataPath, 'stats.json'), JSON.stringify(stats, null, 2));
         fs.writeFileSync(path.join(dataPath, 'journey.json'), JSON.stringify(journey, null, 2));
@@ -133,6 +162,8 @@ async function syncAtelier() {
         fs.writeFileSync(path.join(dataPath, 'glossary.json'), JSON.stringify(glossary, null, 2));
         fs.writeFileSync(path.join(dataPath, 'arsenal.json'), JSON.stringify(arsenal, null, 2));
         fs.writeFileSync(path.join(dataPath, 'laboratory.json'), JSON.stringify(laboratory, null, 2));
+        fs.writeFileSync(path.join(dataPath, 'tasks.json'), JSON.stringify(tasks, null, 2));
+        fs.writeFileSync(path.join(dataPath, 'mantras.json'), JSON.stringify(mantras, null, 2));
         
         console.log("✅ Manifestation Complete: Full Atelier Data synced.");
     } catch (error) {

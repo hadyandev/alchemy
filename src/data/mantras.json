@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Coolify PrivateKey DB Patch",
+    "category": "Infra Alchemy",
+    "type": "Shell Command",
+    "description": "Fixes 'No query results for model [App\\Models\\PrivateKey] 0' by mapping localhost server to the first available private key.",
+    "complexity": "Adept"
+  },
+  {
+    "name": "Caddyfile WebSocket Proxy for Coolify",
+    "category": "Infra Alchemy",
+    "type": "Docker Compose",
+    "description": "Configures Caddy to forward WebSocket traffic to the correct internal ports for Coolify realtime services.",
+    "complexity": "Adept"
+  },
+  {
+    "name": "The Great Reset: Force Sync Branch",
+    "category": "Code Alchemy",
+    "type": "Shell Command",
+    "description": "Memaksa branch lokal/remote untuk mengikuti branch target secara absolut. Berguna saat terjadi merge conflict buntu pada Astro Pages.",
+    "complexity": "Adept"
+  },
+  {
+    "name": "Image Forge: Adaptive Logo Inversion",
+    "category": "Code Alchemy",
+    "type": "Shell Command",
+    "description": "Perintah ImageMagick untuk membersihkan background logo dan memastikan transparansi sempurna untuk CSS masking.",
+    "complexity": "Adept"
+  },
+  {
+    "name": "The Daily Ritual Sync",
+    "category": "Utility",
+    "type": "Reproducible Script",
+    "description": "Skrip utama untuk sinkronisasi data dari Notion ke Astro Web, memicu build, dan melakukan Soul Backup ke GitHub.",
+    "complexity": "Adept"
+  },
+  {
+    "name": "Spirit Cleansing: Kill Ghost Processes",
+    "category": "Infra Alchemy",
+    "type": "Shell Command",
+    "description": "Mencari dan mematikan proses zombie atau proses yang tersangkut di background yang menggunakan port tertentu (misal: Astro port 4321).",
+    "complexity": "Novice"
+  },
+  {
+    "name": "Alchemist Audit: Disk Usage Analysis",
+    "category": "Infra Alchemy",
+    "type": "Shell Command",
+    "description": "Menganalisis penggunaan disk di workspace untuk mencegah kepenuhan cache yang bisa menggagalkan build.",
+    "complexity": "Novice"
+  },
+  {
+    "name": "Transmutation Circle: SVG Mask Forge",
+    "category": "Code Alchemy",
+    "type": "Shell Command",
+    "description": "Membuat mask SVG dari PNG dengan transparansi untuk efek transmutaion circle adaptif tema.",
+    "complexity": "Grandmaster"
+  },
+  {
+    "name": "Aether Routing Reset (Caddy)",
+    "category": "Infra Alchemy",
+    "type": "Shell Command",
+    "description": "Membersihkan dan me-reload konfigurasi Caddy untuk memperbaiki masalah WebSocket loop.",
+    "complexity": "Novice"
+  },
+  {
+    "name": "Oracle Status Check",
+    "category": "Infra Alchemy",
+    "type": "Shell Command",
+    "description": "Memeriksa kesehatan gateway OpenClaw dan status koneksi seluruh API (Telegram, Notion, GitHub).",
+    "complexity": "Novice"
+  },
+  {
+    "name": "Soul Backup: Manual Repository Push",
+    "category": "Defense Alchemy",
+    "type": "Shell Command",
+    "description": "Melakukan push manual seluruh memori dan konfigurasi workspace ke GitHub menggunakan PAT.",
+    "complexity": "Novice"
+  }
+]

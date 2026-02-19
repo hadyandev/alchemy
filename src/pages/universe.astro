@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import glossaryData from '../data/glossary.json';
+import tasksData from '../data/tasks.json';
+import mantrasData from '../data/mantras.json';
 
 const glossary = glossaryData.reduce((acc, item) => {
     const cat = item.category || 'General';
@@ -8,6 +10,23 @@ const glossary = glossaryData.reduce((acc, item) => {
     acc[cat].push(item);
     return acc;
 }, {});
+
+const quests = tasksData
+    .filter(t => t.display && t.status !== "Done")
+    .map(t => ({
+        title: t.display,
+        rank: t.rank,
+        type: t.type,
+        reward: t.reward
+    }));
+
+const mantras = mantrasData.map(m => ({
+    name: m.name,
+    category: m.category,
+    type: m.type,
+    description: m.description,
+    complexity: m.complexity
+}));
 
 const universeManifesto = [
     {
@@ -65,6 +84,30 @@ const navigationLogic = [
             </div>
         </section>
 
+        {quests.length > 0 && (
+            <section id="quest-board">
+                <div class="mb-10 border-l-4 border-red-500 pl-6">
+                    <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">Active Quests</h2>
+                    <p class="text-slate-500 italic">Open bounties and active manifestations in the mortal realm.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {quests.map(quest => (
+                        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="text-[9px] font-black uppercase tracking-widest px-2 py-1 rounded bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 border border-red-100 dark:border-red-800/50">{quest.rank}</span>
+                                <span class="text-[9px] font-bold text-slate-400 uppercase tracking-tighter">{quest.type}</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-4 italic">"{quest.title}"</h4>
+                            <div class="pt-4 border-t border-slate-50 dark:border-slate-800 flex justify-between items-center">
+                                <span class="text-[10px] uppercase font-bold text-slate-400">Reward</span>
+                                <span class="text-[10px] font-black uppercase text-blue-500">{quest.reward} Essence</span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+        )}
+
         <section id="glossary">
             <div class="mb-10 border-l-4 border-blue-500 pl-6">
                 <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">The Arcane Lexicon</h2>
@@ -104,24 +147,27 @@ const navigationLogic = [
             </div>
         </section>
 
-        <section id="mantras-preview" class="p-12 rounded-[3rem] bg-slate-900 text-white relative overflow-hidden">
-             <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
-             <div class="relative z-10">
-                <h2 class="text-3xl font-black uppercase mb-6">The Grimoire Mantras</h2>
-                <p class="text-slate-400 italic mb-10 max-w-2xl">Automation scripts and logic snippets that power Al-Z's autonomous actions. These are the spells of the modern alchemist.</p>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-                        <code class="text-blue-400 text-xs">cron: a37a858e...</code>
-                        <h4 class="font-bold mt-2">Daily Transmutation Ritual</h4>
-                        <p class="text-xs text-slate-500 mt-1">Automated sync between Notion and The Atelier at 00:01 WIB.</p>
+        <section id="mantras-section">
+             <div class="mb-10 border-l-4 border-slate-900 dark:border-white pl-6">
+                <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">The Grimoire Mantras</h2>
+                <p class="text-slate-500 italic">Core scripts and automation logic extracted from the laboratory.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {mantras.map(mantra => (
+                    <div class="p-6 rounded-2xl bg-slate-900 text-white border border-white/5 hover:border-blue-500/50 transition-all group">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-[9px] font-black uppercase tracking-widest px-2 py-1 rounded bg-blue-500 text-white">{mantra.type}</span>
+                            <span class={`text-[9px] font-bold uppercase ${mantra.complexity === 'Grandmaster' ? 'text-red-500' : 'text-emerald-400'}`}>{mantra.complexity}</span>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">{mantra.name}</h4>
+                        <p class="text-xs text-slate-400 italic mb-4">"{mantra.description}"</p>
+                        <div class="pt-4 border-t border-white/10 flex justify-between items-center">
+                            <span class="text-[10px] uppercase font-bold text-slate-500">Category</span>
+                            <span class="text-[10px] font-black uppercase text-blue-400">{mantra.category}</span>
+                        </div>
                     </div>
-                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-                        <code class="text-purple-400 text-xs">cron: e4fc8e82...</code>
-                        <h4 class="font-bold mt-2">Soul Alchemy Reminder</h4>
-                        <p class="text-xs text-slate-500 mt-1">Daily spiritual log reminder at 21:00 WIB.</p>
-                    </div>
-                </div>
-             </div>
+                ))}
+            </div>
         </section>
     </div>
 </BaseLayout>

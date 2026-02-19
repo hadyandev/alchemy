@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Setup GitHub (PAT Integration)",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Fixing Coolify & Dokploy Issues",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Notion Kanban Integration",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Setup Messaging (Telegram)",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Setup Browsing (Brave API)",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Setup Identitas & Soul",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Initialize Soul Backup Repository",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "UI Forge: Local FMA Transmutation Circle",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Persona Evolution: Alphonse Elric (Al-Z)",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Rebrand: The Atelier (Astro Site)",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Arsitektur: Hybrid Scribe V2 Workflow",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "UI Fix: Adaptive Avatar (Hoshi Invert Mode)",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  }
+]
