@@ -1,10 +1,10 @@
 [
   {
     "name": "Alkhawarizmi Zaid",
-    "level": 1,
-    "title": "The Initiate / Al-Mubtadi",
-    "exp": 780,
-    "wisdom": 420,
+    "level": 2,
+    "title": "The Journeyman Scribe",
+    "exp": 1130,
+    "wisdom": 620,
     "class": "The Scribe",
     "skills": [
       "Automation",
@@ -37,10 +37,10 @@
   },
   {
     "name": "Hadyan Ahmad",
-    "level": 1,
-    "title": "The Initiate / Al-Mubtadi",
-    "exp": 620,
-    "wisdom": 580,
+    "level": 2,
+    "title": "The Apprentice / Al-Mu'allim",
+    "exp": 1120,
+    "wisdom": 1080,
     "class": "The Master",
     "skills": [
       "System Design",
@@ -63,7 +63,7 @@
       },
       {
         "name": "Soul Alchemy",
-        "level": 3
+        "level": 4
       },
       {
         "name": "Turath Alchemy",
