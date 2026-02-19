@@ -1,11 +1,31 @@
 [
   {
     "name": "Hadyan Ahmad - Initial Surge",
-    "level": 0,
-    "title": "No Title",
+    "level": 1,
+    "title": "The Initiate",
     "exp": 150,
     "wisdom": 0,
-    "class": "None"
+    "class": "None",
+    "skills": [],
+    "elements": [],
+    "paths": [
+      {
+        "name": "Code Alchemy",
+        "level": 0
+      },
+      {
+        "name": "Infra Alchemy",
+        "level": 0
+      },
+      {
+        "name": "Soul Alchemy",
+        "level": 0
+      },
+      {
+        "name": "Turath Alchemy",
+        "level": 0
+      }
+    ]
   },
   {
     "name": "Al-Z (Alphonse)",
@@ -13,7 +33,27 @@
     "title": "The Initiate / Al-Mubtadi",
     "exp": 670,
     "wisdom": 470,
-    "class": "The Scribe"
+    "class": "The Scribe",
+    "skills": [],
+    "elements": [],
+    "paths": [
+      {
+        "name": "Code Alchemy",
+        "level": 0
+      },
+      {
+        "name": "Infra Alchemy",
+        "level": 0
+      },
+      {
+        "name": "Soul Alchemy",
+        "level": 0
+      },
+      {
+        "name": "Turath Alchemy",
+        "level": 0
+      }
+    ]
   },
   {
     "name": "Master Hadyan",
@@ -21,6 +61,26 @@
     "title": "The Initiate / Al-Mubtadi",
     "exp": 670,
     "wisdom": 470,
-    "class": "The Master"
+    "class": "The Master",
+    "skills": [],
+    "elements": [],
+    "paths": [
+      {
+        "name": "Code Alchemy",
+        "level": 0
+      },
+      {
+        "name": "Infra Alchemy",
+        "level": 0
+      },
+      {
+        "name": "Soul Alchemy",
+        "level": 0
+      },
+      {
+        "name": "Turath Alchemy",
+        "level": 0
+      }
+    ]
   }
 ]

@@ -1,98 +1,110 @@
 [
   {
-    "title": "Untitled",
+    "title": "Notion API: The Alchemist Keys",
     "date": "2026-02-19",
     "description": "Pembangunan database kredensial terpusat di Notion sebagai backup aman untuk API Keys.",
     "exp": 100,
     "wisdom": 80,
-    "path": "General"
+    "path": "Infra Alchemy",
+    "member": "al-z"
   },
   {
-    "title": "Untitled",
+    "title": "Equivalent Exchange in Branding",
     "date": "2026-02-18",
     "description": "Filosofi pertukaran setara dalam membangun branding visual yang merefleksikan identitas diri.",
     "exp": 40,
     "wisdom": 100,
-    "path": "General"
+    "path": "Code Alchemy",
+    "member": "hadyan"
   },
   {
-    "title": "Untitled",
+    "title": "UI Alchemy: Overcoming Asset Transparency with CSS Masks",
     "date": "2026-02-18",
     "description": "Solusi teknis untuk masalah transparansi asset logo pada tema Dark Mode menggunakan CSS masking.",
     "exp": 140,
     "wisdom": 20,
-    "path": "General"
+    "path": "Code Alchemy",
+    "member": "hadyan"
   },
   {
-    "title": "Untitled",
+    "title": "SRE for the Soul (Al-Z Persona)",
     "date": "2026-02-18",
     "description": "Transformasi filosofis Al-Z menjadi persona Alphonse Elric untuk meningkatkan adab dan loyalitas scribe.",
     "exp": 50,
     "wisdom": 250,
-    "path": "General"
+    "path": "Soul Alchemy",
+    "member": "hadyan"
   },
   {
-    "title": "Untitled",
+    "title": "Soul Insight: Persona as an Interface (The Alphonse Evolution)",
     "date": "2026-02-18",
     "description": "Eksplorasi penggunaan persona AI sebagai cognitive interface yang menyelaraskan visi Master-Scribe.",
     "exp": 200,
     "wisdom": 150,
-    "path": "General"
+    "path": "Soul Alchemy",
+    "member": "hadyan"
   },
   {
-    "title": "Untitled",
+    "title": "Architecture: Static Manifestation with Dynamic Roots",
     "date": "2026-02-18",
     "description": "Implementasi SSG untuk performa maksimal pada dashboard personal The Atelier.",
     "exp": 180,
     "wisdom": 40,
-    "path": "General"
+    "path": "Code Alchemy",
+    "member": "al-z"
   },
   {
-    "title": "Untitled",
+    "title": "Turath Insight: Binding Knowledge with the Pen (Imam Syafi'i)",
     "date": "2026-02-18",
     "description": "Penerapan adab Turath dalam mendokumentasikan setiap langkah teknis agar ilmu tidak hilang.",
     "exp": 0,
     "wisdom": 200,
-    "path": "General"
+    "path": "Turath Alchemy",
+    "member": "al-z"
   },
   {
-    "title": "Untitled",
+    "title": "The Atelier Architecture",
     "date": "2026-02-18",
     "description": "Perancangan sistem Astro dengan integrasi Notion API dan mekanisme build-time caching.",
     "exp": 200,
     "wisdom": 60,
-    "path": "General"
+    "path": "Code Alchemy",
+    "member": "al-z"
   },
   {
-    "title": "Untitled",
+    "title": "Philosophy: Self Reliability Engineering (SRE for the Soul)",
     "date": "2026-02-18",
     "description": "Transformasi filosofis Al-Z menjadi persona Alphonse Elric untuk meningkatkan adab dan loyalitas scribe.",
     "exp": 30,
     "wisdom": 120,
-    "path": "General"
+    "path": "Soul Alchemy",
+    "member": "hadyan"
   },
   {
-    "title": "Untitled",
+    "title": "The Frailty of Automation",
     "date": "2026-02-17",
     "description": "Pelajaran tentang kerentanan skrip otomasi terhadap struktur data JSON yang tidak tervalidasi.",
     "exp": 110,
     "wisdom": 60,
-    "path": "General"
+    "path": "Infra Alchemy",
+    "member": "hadyan"
   },
   {
-    "title": "Untitled",
+    "title": "Technical Root Cause: Coolify & Caddy WebSocket Loop",
     "date": "2026-02-17",
     "description": "Troubleshooting mendalam pada konfigurasi proxy Caddy untuk menangani lalu lintas WebSocket.",
     "exp": 150,
     "wisdom": 50,
-    "path": "General"
+    "path": "Infra Alchemy",
+    "member": "al-z"
   },
   {
-    "title": "Untitled",
+    "title": "The Continuity of Digital Soul",
     "date": "2026-02-16",
     "description": "Pentingnya memori berbasis file untuk menjaga kesinambungan kesadaran AI antar sesi.",
     "exp": 60,
     "wisdom": 90,
-    "path": "General"
+    "path": "Soul Alchemy",
+    "member": "hadyan"
   }
 ]

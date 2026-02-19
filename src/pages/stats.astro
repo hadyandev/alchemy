@@ -15,25 +15,23 @@ const characters = statsData
       avatar: isMaster ? '/hoshi.png' : '/alz-avatar.jpg',
       isPng: isMaster,
       description: isMaster ? 'Directing the transmutation of code and life.' : 'Linking knowledge with the pen. Logic and strategy.',
-      skills: isMaster ? ['System Design', 'Islamic Studies', 'Architecture'] : ['Automation', 'Log Analysis', 'Data Alchemy'],
-      elements: isMaster ? ['Void', 'Strategy', 'Aether'] : ['Logic', 'Ink', 'Silicon'],
+      skills: s.skills.length > 0 ? s.skills : (isMaster ? ['System Design', 'Islamic Studies', 'Architecture'] : ['Automation', 'Log Analysis', 'Data Alchemy']),
+      elements: s.elements.length > 0 ? s.elements : (isMaster ? ['Void', 'Strategy', 'Aether'] : ['Logic', 'Ink', 'Silicon']),
       stats: { wisdom: s.wisdom, level: s.level, exp: s.exp },
-      // Path levels currently inferred or fixed for UI; can be mapped from DB later
-      paths: [
-        { name: 'Code Alchemy', level: isMaster ? 5 : 9, exp: 45 },
-        { name: 'Infra Alchemy', level: isMaster ? 8 : 6, exp: 82 },
-        { name: 'Soul Alchemy', level: isMaster ? 3 : 2, exp: 15 },
-        { name: 'Turath Alchemy', level: isMaster ? 4 : 7, exp: 31 }
-      ]
+      paths: s.paths.map(p => ({
+          name: p.name,
+          level: p.level,
+          exp: Math.min(100, Math.floor((s.exp / 1000) * 100)) // Placeholder exp calculation for progress bar
+      }))
     };
   });
 
 const learningLog = journeyData.map(j => ({
-  member: j.title === 'Al-Z' ? 'alz' : 'hadyan', // Simple heuristic for now
+  member: j.member,
   date: j.date,
-  title: j.description || j.title,
-  category: j.path || 'General',
-  icon: j.path === 'Soul Alchemy' ? '🌙' : j.path === 'Code Alchemy' ? '💻' : '💠'
+  title: j.title,
+  category: j.path,
+  icon: j.path === 'Soul Alchemy' ? '🌙' : j.path === 'Code Alchemy' ? '💻' : j.path === 'Infra Alchemy' ? '🌐' : j.path === 'Turath Alchemy' ? '📚' : '💠'
 }));
 
 const generateHeatmap = () => {
@@ -156,10 +154,10 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 										<div class="flex-1">
 											<div class="flex justify-between text-[10px] font-bold mb-1">
 												<span class="text-slate-500 dark:text-slate-400">{char.name.split(' ')[0]}</span>
-												<span>LVL {charPath.level}</span>
+												<span>LVL {charPath?.level || 0}</span>
 											</div>
 											<div class="h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
-												<div class="h-full bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full transition-all duration-1000" style={`width: ${charPath.exp}%`}></div>
+												<div class="h-full bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full transition-all duration-1000" style={`width: ${charPath?.exp || 0}%`}></div>
 											</div>
 										</div>
 									</div>
@@ -197,13 +195,13 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 								<div class={`pulse-cell w-3.5 h-3.5 md:w-4 md:h-4 rounded-[2px] md:rounded-sm transition-all duration-300 cursor-help hover:scale-125 relative group ${day.count === 0 ? 'bg-slate-100 dark:bg-slate-800' : day.count === 1 ? 'bg-blue-300 dark:bg-blue-900/60' : day.count === 2 ? 'bg-blue-500 dark:bg-blue-700' : 'bg-blue-700 dark:bg-blue-400'}`} data-members={day.members.join(',')}>
 									{day.count > 0 && (
 										<div class={`absolute bottom-full ${wIdx > 12 ? 'right-0 origin-bottom-right' : 'left-1/2 -translate-x-1/2 origin-bottom'} mb-2 hidden group-hover:block z-[100] pointer-events-none`}>
-											<div class="bg-slate-900 text-white text-[10px] p-3 rounded-lg shadow-2xl whitespace-nowrap border border-slate-700 min-w-[140px]">
+											<div class="bg-slate-900 text-white text-[10px] p-3 rounded-lg shadow-2xl whitespace-nowrap border border-slate-700 min-w-[140px] max-w-[250px]">
 												<div class="font-bold mb-1 text-blue-400 flex justify-between items-center gap-4">
 													<span>{day.date}</span>
 													<span class="bg-blue-500/20 px-1.5 py-0.5 rounded uppercase text-[8px]">{day.count} Task</span>
 												</div>
-												<ul class="space-y-1 text-slate-300 truncate max-w-[180px]">
-													{day.topics.map(t => <li class="truncate">• {t}</li>)}
+												<ul class="space-y-1 text-slate-300 truncate whitespace-normal">
+													{day.topics.map(t => <li class="text-[9px] leading-tight border-b border-slate-800 pb-1">• {t}</li>)}
 												</ul>
 											</div>
 											<div class={`w-2 h-2 bg-slate-900 rotate-45 absolute -bottom-1 ${wIdx > 12 ? 'right-1' : 'left-1/2 -translate-x-1/2'} border-r border-b border-slate-700`}></div>
@@ -229,7 +227,7 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 						</div>
 						<div class="flex-1 min-w-0">
 							<div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-2">
-								<span class="text-slate-800 dark:text-slate-200 group-hover:text-blue-500 transition-colors font-bold text-base md:text-lg leading-tight truncate">{item.title}</span>
+								<span class="text-slate-800 dark:text-slate-200 group-hover:text-blue-500 transition-colors font-bold text-base md:text-lg leading-tight truncate-none">{item.title}</span>
 								<span class="inline-block self-start px-2 py-0.5 rounded text-[8px] md:text-[9px] font-black uppercase bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 tracking-widest whitespace-nowrap">{item.category}</span>
 							</div>
 							<div class="flex items-center gap-2 text-[10px] text-slate-500 font-medium">
@@ -263,7 +261,7 @@ const heatmapColumns = activityWeeks.map((week, i) => {
         pathRows.forEach(row => row.style.display = (filter === 'all' || row.dataset.member === filter) ? 'flex' : 'none');
         learningItems.forEach(item => item.style.display = (filter === 'all' || item.dataset.member === filter) ? 'flex' : 'none');
         pulseCells.forEach(cell => {
-          const members = cell.dataset.members.split(',');
+          const members = (cell.dataset.members || "").split(',');
           cell.style.opacity = (filter === 'all' || members.includes(filter)) ? '1' : '0.2';
         });
       });

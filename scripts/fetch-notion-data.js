@@ -10,7 +10,6 @@ const DB_IDS = {
     JOURNEY: "30b79a34-e7c9-8113-ae45-cbdce3efc096",
     STATS: "30b79a34-e7c9-8163-84e4-ef0946f39344",
     EVOLUTION: "30c79a34-e7c9-81a5-b942-eb9bbff1b41e",
-    IBADAH: "30b79a34-e7c9-81e7-a541-e8646b8d8282"
 };
 
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
@@ -42,11 +41,19 @@ async function syncAtelier() {
             const props = page.properties;
             return {
                 name: props["Stat Name"]?.title?.[0]?.plain_text || "Unknown",
-                level: props["Current Level"]?.number || 0,
-                title: props["Current Title"]?.rich_text?.[0]?.plain_text || "No Title",
+                level: props["Current Level"]?.number || 1,
+                title: props["Current Title"]?.rich_text?.[0]?.plain_text || "The Initiate",
                 exp: props["Total EXP"]?.number || 0,
                 wisdom: props["Total Wisdom"]?.number || 0,
-                class: props["Class"]?.select?.name || "None"
+                class: props["Class"]?.select?.name || "None",
+                skills: props["Skills"]?.multi_select?.map(s => s.name) || [],
+                elements: props["Elements"]?.multi_select?.map(e => e.name) || [],
+                paths: [
+                    { name: 'Code Alchemy', level: props["Code Level"]?.number || 0 },
+                    { name: 'Infra Alchemy', level: props["Infra Level"]?.number || 0 },
+                    { name: 'Soul Alchemy', level: props["Soul Level"]?.number || 0 },
+                    { name: 'Turath Alchemy', level: props["Turath Level"]?.number || 0 }
+                ]
             };
         });
 
@@ -55,12 +62,13 @@ async function syncAtelier() {
         const journey = journeyResults.map(page => {
             const props = page.properties;
             return {
-                title: props["Alchemist Path"]?.title?.[0]?.plain_text || "Untitled",
+                title: props["Title"]?.title?.[0]?.plain_text || "Untitled",
                 date: props["Date"]?.date?.start || "2026-02-18",
                 description: props["Description"]?.rich_text?.[0]?.plain_text || "",
                 exp: props["EXP"]?.number || 0,
                 wisdom: props["Wisdom"]?.number || 0,
-                path: props["Alchemist Path"]?.select?.name || "General"
+                path: props["Alchemist Path"]?.multi_select?.[0]?.name || "General",
+                member: props["Alchemist"]?.select?.name?.toLowerCase() || "hadyan"
             };
         }).sort((a, b) => new Date(b.date) - new Date(a.date));
 
@@ -81,7 +89,7 @@ async function syncAtelier() {
         fs.writeFileSync(path.join(dataPath, 'journey.json'), JSON.stringify(journey, null, 2));
         fs.writeFileSync(path.join(dataPath, 'evolution.json'), JSON.stringify(evolution, null, 2));
         
-        console.log("✅ Manifestation Complete: Stats, Journey, and Evolution data synced.");
+        console.log("✅ Manifestation Complete: Full Character Stats & Collaborative Journey synced.");
     } catch (error) {
         console.error("❌ Transmutation Failed:", error);
     }
