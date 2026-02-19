@@ -1,10 +1,10 @@
 [
   {
-    "name": "Al-Z (Alphonse)",
+    "name": "Alkhawarizmi Zaid (Al-Z)",
     "level": 1,
     "title": "The Initiate / Al-Mubtadi",
-    "exp": 670,
-    "wisdom": 470,
+    "exp": 780,
+    "wisdom": 420,
     "class": "The Scribe",
     "skills": [
       "Automation",
@@ -36,11 +36,11 @@
     ]
   },
   {
-    "name": "Master Hadyan",
+    "name": "Hadyan Ahmad",
     "level": 1,
     "title": "The Initiate / Al-Mubtadi",
-    "exp": 670,
-    "wisdom": 470,
+    "exp": 620,
+    "wisdom": 580,
     "class": "The Master",
     "skills": [
       "System Design",
