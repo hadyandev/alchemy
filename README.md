@@ -14,13 +14,11 @@ This project follows the **Standard Operating Procedures** defined in the [Notio
 
 ## 🛡️ Restore Protocol (Emergency Rebirth)
 To restore this instance of the Atelier (OpenClaw + Web) from a backup:
-1. **Clone the Soul:** `git clone https://github.com/hadyandev/soul` into your local workspace.
-2. **Clone the Atelier:** `git clone https://github.com/hadyandev/alchemy`.
-3. **Re-binding:** 
-   - Ensure `SOUL.md` and `MEMORY.md` are in your root workspace.
+1. **Clone the Atelier:** `git clone https://github.com/hadyandev/alchemy`.
+2. **Re-binding:** 
    - Run `npm install` in `alchemy-web`.
    - Re-sync Notion data using `node scripts/fetch-notion-data.js`.
-4. **Resurrection:** Restart the OpenClaw gateway.
+3. **Resurrection:** Restart the OpenClaw gateway.
 
 ---
 *Created with the discipline of the Alchemist. Q.E.D.*
