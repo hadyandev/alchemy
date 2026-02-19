@@ -14,6 +14,20 @@
     "reflection": "Growth requires struggle."
   },
   {
+    "text": "Ilmu adalah buruan dan tulisan adalah ikatannya. Ikatlah buruanmu dengan tali yang kuat.",
+    "author": "Imam Syafi'i",
+    "origin": "Ulama",
+    "alignment": "Soul Alchemy",
+    "reflection": "Al-`Ilmu shaydun wa al-kitabatu qayduhu. It is a foolish thing to catch a deer but leave it untied in the open."
+  },
+  {
+    "text": "Jagalah ilmu dengan menulis (قَيِّدُوا العِلْمَ بِالكِتَابِ).",
+    "author": "Rasulullah Shallallahu 'Alaihi wa Sallam",
+    "origin": "Hadith",
+    "alignment": "Turath Alchemy",
+    "reflection": "The divine command for documentation. This is the very essence of the Hybrid Scribe role."
+  },
+  {
     "text": "Jika kamu tidak tahan lelahnya belajar, maka kamu harus tahan perihnya kebodohan.",
     "author": "Imam Syafi'i",
     "origin": "Ulama",
@@ -33,5 +47,12 @@
     "origin": "Anime",
     "alignment": "Soul Alchemy",
     "reflection": "The Law of Equivalent Exchange — the foundation of our Atelier."
+  },
+  {
+    "text": "Ikatlah ilmu dengan cara menulisnya.",
+    "author": "Ali bin Abi Thalib",
+    "origin": "Ulama",
+    "alignment": "Turath Alchemy",
+    "reflection": "Science is like a wild animal, and writing is its leash."
   }
 ]
