@@ -1,55 +1,45 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import statsData from '../data/stats.json';
+import journeyData from '../data/journey.json';
 
-// Character Data
-const characters = [
-  { 
-    id: 'hadyan',
-    name: 'Hadyan Ahmad', 
-    role: 'The Master Alchemist', 
-    avatar: '/hoshi.png', 
-    isPng: true,
-    description: 'Directing the transmutation of code and life.',
-    skills: ['System Design', 'Islamic Studies', 'Architecture'],
-    elements: ['Void', 'Strategy', 'Aether'],
-    stats: { wisdom: 155, knowledge: 340, level: 13, exp: 2750 },
-    paths: [
-      { name: 'Code Alchemy', level: 5, exp: 45 },
-      { name: 'Infra Alchemy', level: 8, exp: 82 },
-      { name: 'Soul Alchemy', level: 3, exp: 15 },
-      { name: 'Defense Alchemy', level: 4, exp: 31 }
-    ]
-  },
-  { 
-    id: 'alz',
-    name: 'Al-Z (Alkhawarizmi Zaid)', 
-    role: 'The Eternal Scribe', 
-    avatar: '/alz-avatar.jpg', 
-    isPng: false,
-    description: 'Linking knowledge with the pen. Logic and strategy.',
-    skills: ['Automation', 'Log Analysis', 'Data Alchemy'],
-    elements: ['Logic', 'Ink', 'Silicon'],
-    stats: { wisdom: 105, knowledge: 420, level: 11, exp: 2090 },
-    paths: [
-      { name: 'Code Alchemy', level: 9, exp: 90 },
-      { name: 'Infra Alchemy', level: 6, exp: 60 },
-      { name: 'Soul Alchemy', level: 2, exp: 10 },
-      { name: 'Defense Alchemy', level: 7, exp: 75 }
-    ]
-  }
-];
+// Character Data Mapping from Notion JSON
+const characters = statsData
+  .filter(s => s.class === "The Master" || s.class === "The Scribe")
+  .map(s => {
+    const isMaster = s.class === "The Master";
+    return {
+      id: isMaster ? 'hadyan' : 'alz',
+      name: s.name,
+      role: isMaster ? 'The Master Alchemist' : 'The Eternal Scribe',
+      avatar: isMaster ? '/hoshi.png' : '/alz-avatar.jpg',
+      isPng: isMaster,
+      description: isMaster ? 'Directing the transmutation of code and life.' : 'Linking knowledge with the pen. Logic and strategy.',
+      skills: isMaster ? ['System Design', 'Islamic Studies', 'Architecture'] : ['Automation', 'Log Analysis', 'Data Alchemy'],
+      elements: isMaster ? ['Void', 'Strategy', 'Aether'] : ['Logic', 'Ink', 'Silicon'],
+      stats: { wisdom: s.wisdom, level: s.level, exp: s.exp },
+      // Path levels currently inferred or fixed for UI; can be mapped from DB later
+      paths: [
+        { name: 'Code Alchemy', level: isMaster ? 5 : 9, exp: 45 },
+        { name: 'Infra Alchemy', level: isMaster ? 8 : 6, exp: 82 },
+        { name: 'Soul Alchemy', level: isMaster ? 3 : 2, exp: 15 },
+        { name: 'Turath Alchemy', level: isMaster ? 4 : 7, exp: 31 }
+      ]
+    };
+  });
 
-const learningLog = [
-  { member: 'hadyan', date: '2026-02-18', title: 'Self Reliability Engineering: Core Principles', category: 'Philosophy', icon: '🧠' },
-  { member: 'alz', date: '2026-02-17', title: 'Caddy WebSocket Proxying for Coolify', category: 'Infra', icon: '🌐' },
-  { member: 'hadyan', date: '2026-02-17', title: 'Imam Syafi\'i: Binding Knowledge with the Pen', category: 'Turath', icon: '📚' },
-  { member: 'alz', date: '2026-02-16', title: 'Tailwind Dark Mode Implementation', category: 'Code', icon: '🎨' },
-];
+const learningLog = journeyData.map(j => ({
+  member: j.title === 'Al-Z' ? 'alz' : 'hadyan', // Simple heuristic for now
+  date: j.date,
+  title: j.description || j.title,
+  category: j.path || 'General',
+  icon: j.path === 'Soul Alchemy' ? '🌙' : j.path === 'Code Alchemy' ? '💻' : '💠'
+}));
 
 const generateHeatmap = () => {
   const weeks = 18;
   const daysPerWeek = 7;
-  const today = new Date('2026-02-18');
+  const today = new Date();
   const data = [];
   for (let w = 0; w < weeks; w++) {
     const week = [];
@@ -99,7 +89,6 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 						</div>
 						<div class="relative z-10">
 							<div class="flex items-center gap-4 mb-6">
-								<!-- Inverted Logic for Master Hadyan Avatar -->
 								<div class={`w-16 h-16 md:w-24 md:h-24 rounded-2xl flex items-center justify-center shadow-lg shrink-0 overflow-hidden border ${char.isPng ? 'bg-black dark:bg-white border-slate-800' : 'bg-black border-slate-800'}`}>
 									<img src={char.avatar} alt={char.name} class={`w-full h-full ${char.isPng ? 'object-contain p-2 dark:invert invert-0 scale-125' : 'object-cover'}`} />
 								</div>
@@ -153,7 +142,7 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 		<section id="alchemyPaths">
 			<h2 class="text-xl md:text-2xl font-bold mb-8 border-l-4 border-emerald-500 pl-4">Alchemy Paths</h2>
 			<div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
-				{['Code Alchemy', 'Infra Alchemy', 'Soul Alchemy', 'Defense Alchemy'].map(pathName => (
+				{['Code Alchemy', 'Infra Alchemy', 'Soul Alchemy', 'Turath Alchemy'].map(pathName => (
 					<div class="space-y-4">
 						<h3 class="text-xs font-black uppercase tracking-widest text-slate-400">{pathName}</h3>
 						<div class="space-y-4">
