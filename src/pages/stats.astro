@@ -75,17 +75,16 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 	<div class="py-6 md:py-10 space-y-12 md:space-y-16">
 		<header>
 			<h1 class="text-3xl md:text-4xl font-black tracking-tight mb-2 text-slate-900 dark:text-white">The Alchemist Dashboard</h1>
-			<p class="text-slate-500 text-sm md:text-base">Real-time pulse of the atelier and its guardians.</p>
+			<p class="text-slate-500 text-sm md:text-base italic">Centralized manifestation of the atelier's progress and the guardians' evolution.</p>
 		</header>
 
 		<section id="characters">
-			<div class="mb-8 border-l-4 border-blue-500 pl-4">
-				<h2 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">The Alchemists</h2>
-				<p class="text-xs md:text-sm text-slate-500">The guardians of the atelier and seekers of knowledge.</p>
-			</div>
-			
-			<div class="flex flex-col sm:flex-row justify-end items-start sm:items-center mb-8 gap-4">
-				<div class="flex gap-2 w-full sm:w-auto" id="memberFilters">
+			<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-6">
+				<div class="border-l-4 border-blue-500 pl-4">
+					<h2 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">The Alchemists</h2>
+					<p class="text-xs md:text-sm text-slate-500">The guardians of the atelier and seekers of knowledge.</p>
+				</div>
+				<div class="flex gap-2 w-full sm:w-auto self-end" id="memberFilters">
 					<button class="filter-btn active flex-1 sm:flex-none px-4 py-2 rounded-full text-xs font-bold bg-blue-600 text-white shadow-lg" data-filter="all">All</button>
 					<button class="filter-btn flex-1 sm:flex-none px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400" data-filter="hadyan">Seeker</button>
 					<button class="filter-btn flex-1 sm:flex-none px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400" data-filter="alz">Al-Z</button>
