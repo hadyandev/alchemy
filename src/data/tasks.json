@@ -72,6 +72,22 @@
     "reward": "General"
   },
   {
+    "name": "Daily Transmutation Monitoring",
+    "display": "Ritual 00:01 Verification Loop",
+    "status": "In Progress",
+    "rank": "B-Rank (Normal)",
+    "type": "Side Quest",
+    "reward": "Infra"
+  },
+  {
+    "name": "Portfolio & Technical Arsenal Expansion",
+    "display": "Manifesting the Guardian's Technical Arsenal",
+    "status": "In Progress",
+    "rank": "A-Rank (Hard)",
+    "type": "Main Quest",
+    "reward": "Code"
+  },
+  {
     "name": "Rebrand: The Atelier (Astro Site)",
     "display": "",
     "status": "Done",
@@ -86,6 +102,14 @@
     "rank": "D-Rank",
     "type": "Side Quest",
     "reward": "General"
+  },
+  {
+    "name": "Echoes of Wisdom Collection",
+    "display": "The Great Binding: Scholarly Citations",
+    "status": "In Progress",
+    "rank": "B-Rank (Normal)",
+    "type": "Main Quest",
+    "reward": "Soul"
   },
   {
     "name": "UI Fix: Adaptive Avatar (Hoshi Invert Mode)",
