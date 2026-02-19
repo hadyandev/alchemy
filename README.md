@@ -12,13 +12,5 @@ This project follows the **Standard Operating Procedures** defined in the [Notio
 - **00:01 Daily Transmutation:** Automated sync between memory, notion, and git.
 - **Equivalent Exchange:** Every gain in knowledge is documented.
 
-## 🛡️ Restore Protocol (Emergency Rebirth)
-To restore this instance of the Atelier (OpenClaw + Web) from a backup:
-1. **Clone the Atelier:** `git clone https://github.com/hadyandev/alchemy`.
-2. **Re-binding:** 
-   - Run `npm install` in `alchemy-web`.
-   - Re-sync Notion data using `node scripts/fetch-notion-data.js`.
-3. **Resurrection:** Restart the OpenClaw gateway.
-
 ---
 *Created with the discipline of the Alchemist. Q.E.D.*
