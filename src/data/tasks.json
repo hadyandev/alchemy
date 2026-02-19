@@ -72,9 +72,17 @@
     "reward": "General"
   },
   {
+    "name": "Security Hardening: VPS & SSH Audit",
+    "display": "Hardening the Digital Fortress",
+    "status": "To Do",
+    "rank": "S-Rank (Extreme)",
+    "type": "Main Quest",
+    "reward": "Defense"
+  },
+  {
     "name": "Daily Transmutation Monitoring",
     "display": "Ritual 00:01 Verification Loop",
-    "status": "In Progress",
+    "status": "Done",
     "rank": "B-Rank (Normal)",
     "type": "Side Quest",
     "reward": "Infra"
@@ -82,7 +90,7 @@
   {
     "name": "Portfolio & Technical Arsenal Expansion",
     "display": "Manifesting the Guardian's Technical Arsenal",
-    "status": "In Progress",
+    "status": "Done",
     "rank": "A-Rank (Hard)",
     "type": "Main Quest",
     "reward": "Code"
@@ -96,6 +104,14 @@
     "reward": "General"
   },
   {
+    "name": "OpenClaw Migration: v2026.2.17",
+    "display": "Vessel Upgrade: OpenClaw Update",
+    "status": "To Do",
+    "rank": "B-Rank (Normal)",
+    "type": "Side Quest",
+    "reward": "Infra"
+  },
+  {
     "name": "Arsitektur: Hybrid Scribe V2 Workflow",
     "display": "",
     "status": "Done",
@@ -106,7 +122,7 @@
   {
     "name": "Echoes of Wisdom Collection",
     "display": "The Great Binding: Scholarly Citations",
-    "status": "In Progress",
+    "status": "Done",
     "rank": "B-Rank (Normal)",
     "type": "Main Quest",
     "reward": "Soul"
