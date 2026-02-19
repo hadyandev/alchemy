@@ -20,16 +20,6 @@
     "date": "2023-12-31"
   },
   {
-    "name": "Disaster Recovery & Phylactery Backup",
-    "stability": "Crystalized (Done)",
-    "elements": [
-      "Defense Alchemy",
-      "Infra Alchemy"
-    ],
-    "repo": "",
-    "date": "2026-02-19"
-  },
-  {
     "name": "The Library Alchemist (Atelier)",
     "stability": "Bubbling (WIP)",
     "elements": [
@@ -48,24 +38,5 @@
     ],
     "repo": "",
     "date": "2023-12-31"
-  },
-  {
-    "name": "Riyadhah Al-Qalb Schema Expansion",
-    "stability": "Crystalized (Done)",
-    "elements": [
-      "Soul Alchemy"
-    ],
-    "repo": "",
-    "date": "2026-02-19"
-  },
-  {
-    "name": "Grand Atelier UI & Branch Sync",
-    "stability": "Crystalized (Done)",
-    "elements": [
-      "Code Alchemy",
-      "Infra Alchemy"
-    ],
-    "repo": "https://github.com/hadyandev/alchemy",
-    "date": "2026-02-19"
   }
 ]
