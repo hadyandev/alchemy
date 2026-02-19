@@ -1,5 +1,16 @@
 [
   {
+    "title": "Riyadhah Al-Qalb Schema Expansion",
+    "date": "2026-02-19",
+    "description": "Integrated Puasa, Tarawih, and Walking steps into the daily spiritual tracker.",
+    "exp": 0,
+    "wisdom": 200,
+    "path": "Soul Alchemy",
+    "member": "hadyan",
+    "format": "Insight",
+    "solution": ""
+  },
+  {
     "title": "Notion API: The Alchemist Keys",
     "date": "2026-02-19",
     "description": "Pembangunan database kredensial terpusat di Notion sebagai backup aman untuk API Keys.",
@@ -9,6 +20,17 @@
     "member": "al-z",
     "format": "Insight",
     "solution": "Problem: Secret management. Investigation: Env vars vs Central DB. Discovery: Notion Rich Text can store backup keys securely if vaulted. Solution: Built The Alchemist Keys database."
+  },
+  {
+    "title": "Disaster Recovery & Phylactery Implementation",
+    "date": "2026-02-19",
+    "description": "Implemented emergency rebirth protocols using GitHub as the soul phylactery.",
+    "exp": 150,
+    "wisdom": 0,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": ""
   },
   {
     "title": "Equivalent Exchange in Branding",
