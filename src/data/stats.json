@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Hadyan Ahmad - Initial Surge",
+    "level": 0,
+    "title": "No Title",
+    "exp": 150,
+    "wisdom": 0,
+    "class": "None"
+  },
+  {
+    "name": "Al-Z (Alphonse)",
+    "level": 1,
+    "title": "The Initiate / Al-Mubtadi",
+    "exp": 670,
+    "wisdom": 470,
+    "class": "The Scribe"
+  },
+  {
+    "name": "Master Hadyan",
+    "level": 1,
+    "title": "The Initiate / Al-Mubtadi",
+    "exp": 670,
+    "wisdom": 470,
+    "class": "The Master"
+  }
+]
