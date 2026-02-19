@@ -30,6 +30,7 @@ const learningLog = journeyData.map(j => ({
   member: (j.member === 'al-z' ? 'alz' : j.member?.toLowerCase()) || 'hadyan',
   date: j.date,
   title: j.title,
+  description: j.description || "",
   category: j.path,
   icon: j.path === 'Soul Alchemy' ? '🌙' : j.path === 'Code Alchemy' ? '💻' : j.path === 'Infra Alchemy' ? '🌐' : j.path === 'Turath Alchemy' ? '📚' : '💠'
 }));
@@ -222,7 +223,7 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 			</div>
 			<div class="space-y-8" id="learningList">
 				{learningLog.map((item, index) => (
-					<div class={`learning-item flex items-start gap-4 md:gap-6 group cursor-pointer p-3 rounded-2xl hover:bg-blue-50/50 dark:hover:bg-blue-900/10 transition-all ${index >= 10 ? 'hidden' : ''}`} data-member={item.member}>
+					<div class={`learning-item flex items-start gap-4 md:gap-6 group cursor-pointer p-5 rounded-2xl hover:bg-blue-50/50 dark:hover:bg-blue-900/10 border border-transparent hover:border-blue-100 dark:hover:border-blue-800/50 transition-all ${index >= 10 ? 'hidden' : ''}`} data-member={item.member}>
 						<div class="text-[10px] md:text-sm text-slate-400 font-mono w-10 md:w-14 pt-1 shrink-0">{item.date.split('-').slice(1).join('/')}</div>
 						<div class="flex flex-col items-center pt-2 shrink-0">
 							<div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full border-2 border-blue-500 bg-white dark:bg-slate-950 group-hover:bg-blue-500 transition-colors z-10"></div>
@@ -233,6 +234,9 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 								<span class="text-slate-800 dark:text-slate-200 group-hover:text-blue-500 transition-colors font-bold text-base md:text-lg leading-tight">{item.title}</span>
 								<span class="inline-block self-start px-2 py-0.5 rounded text-[8px] md:text-[9px] font-black uppercase bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 tracking-widest whitespace-nowrap">{item.category}</span>
 							</div>
+                            {item.description && (
+                                <p class="text-xs md:text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-3 leading-relaxed italic border-l-2 border-slate-200 dark:border-slate-800 pl-4">{item.description}</p>
+                            )}
 							<div class="flex items-center gap-2 text-[10px] text-slate-500 font-medium">
 								<span class="capitalize px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800">By {item.member === 'alz' ? 'Al-Z' : item.member}</span>
 							</div>
