@@ -14,7 +14,8 @@ const DB_IDS = {
     ARSENAL: "30c79a34-e7c9-8141-b5df-ecd29ebb65ed",
     LABORATORY: "30c79a34-e7c9-8196-8220-c6b04c3a8bae",
     TASKS: "30a79a34-e7c9-813c-85fe-e47f574aeba9",
-    MANTRAS: "30b79a34-e7c9-81d1-9e05-dbe63d4ebc96"
+    SCRIPTS: "30b79a34-e7c9-81d1-9e05-dbe63d4ebc96",
+    QUOTES: "30c79a34-e7c9-81e9-bcd5-d03ccf7d37a5"
 };
 
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
@@ -40,9 +41,23 @@ async function syncAtelier() {
         const dataPath = path.join(__dirname, '../src/data');
         if (!fs.existsSync(dataPath)) fs.mkdirSync(dataPath, { recursive: true });
 
-        // 1. Fetch Stats
-        const statsResults = await fetchNotionDB(DB_IDS.STATS);
-        const stats = statsResults.map(page => {
+        // Fetch all datasets in parallel for speed
+        const [
+            statsRes, journeyRes, evolutionRes, glossaryRes, 
+            arsenalRes, laboratoryRes, taskRes, scriptRes, quoteRes
+        ] = await Promise.all([
+            fetchNotionDB(DB_IDS.STATS),
+            fetchNotionDB(DB_IDS.JOURNEY),
+            fetchNotionDB(DB_IDS.EVOLUTION),
+            fetchNotionDB(DB_IDS.GLOSSARY),
+            fetchNotionDB(DB_IDS.ARSENAL),
+            fetchNotionDB(DB_IDS.LABORATORY),
+            fetchNotionDB(DB_IDS.TASKS),
+            fetchNotionDB(DB_IDS.SCRIPTS),
+            fetchNotionDB(DB_IDS.QUOTES)
+        ]);
+
+        const stats = statsRes.map(page => {
             const props = page.properties;
             return {
                 name: props["Stat Name"]?.title?.[0]?.plain_text || "Unknown",
@@ -62,9 +77,7 @@ async function syncAtelier() {
             };
         });
 
-        // 2. Fetch Journey
-        const journeyResults = await fetchNotionDB(DB_IDS.JOURNEY);
-        const journey = journeyResults.map(page => {
+        const journey = journeyRes.map(page => {
             const props = page.properties;
             return {
                 title: props["Title"]?.title?.[0]?.plain_text || "Untitled",
@@ -79,9 +92,7 @@ async function syncAtelier() {
             };
         }).sort((a, b) => new Date(b.date) - new Date(a.date));
 
-        // 3. Fetch Evolution
-        const evolutionResults = await fetchNotionDB(DB_IDS.EVOLUTION);
-        const evolution = evolutionResults.map(page => {
+        const evolution = evolutionRes.map(page => {
             const props = page.properties;
             return {
                 level: props["Rank / Level"]?.title?.[0]?.plain_text || "N/A",
@@ -91,9 +102,7 @@ async function syncAtelier() {
             };
         }).sort((a, b) => (a.reqExp || 0) - (b.reqExp || 0));
 
-        // 4. Fetch Glossary
-        const glossaryResults = await fetchNotionDB(DB_IDS.GLOSSARY);
-        const glossary = glossaryResults.map(page => {
+        const glossary = glossaryRes.map(page => {
             const props = page.properties;
             return {
                 term: props["Term"]?.title?.[0]?.plain_text || "Untitled",
@@ -102,9 +111,7 @@ async function syncAtelier() {
             };
         });
 
-        // 5. Fetch Arsenal
-        const arsenalResults = await fetchNotionDB(DB_IDS.ARSENAL);
-        const arsenal = arsenalResults.map(page => {
+        const arsenal = arsenalRes.map(page => {
             const props = page.properties;
             return {
                 name: props["Artifact Name"]?.title?.[0]?.plain_text || "Unknown Artifact",
@@ -115,9 +122,7 @@ async function syncAtelier() {
             };
         });
 
-        // 6. Fetch Laboratory
-        const laboratoryResults = await fetchNotionDB(DB_IDS.LABORATORY);
-        const laboratory = laboratoryResults.map(page => {
+        const laboratory = laboratoryRes.map(page => {
             const props = page.properties;
             return {
                 name: props["Project Name"]?.title?.[0]?.plain_text || "Untitled Project",
@@ -128,9 +133,7 @@ async function syncAtelier() {
             };
         });
 
-        // 7. Fetch Quests (Tasks)
-        const taskResults = await fetchNotionDB(DB_IDS.TASKS);
-        const tasks = taskResults.map(page => {
+        const tasks = taskRes.map(page => {
             const props = page.properties;
             return {
                 name: props["Task Name"]?.title?.[0]?.plain_text || "Unknown Task",
@@ -142,16 +145,25 @@ async function syncAtelier() {
             };
         });
 
-        // 8. Fetch Mantras
-        const mantraResults = await fetchNotionDB(DB_IDS.MANTRAS);
-        const mantras = mantraResults.map(page => {
+        const scripts = scriptRes.map(page => {
             const props = page.properties;
             return {
-                name: props["Mantra Name"]?.title?.[0]?.plain_text || "Unknown Mantra",
+                name: props["Mantra Name"]?.title?.[0]?.plain_text || "Unknown Script",
                 category: props["Category"]?.select?.name || "Utility",
-                type: props["Type"]?.select?.name || "Script",
+                type: props["Type"]?.select?.name || "Shell",
                 description: props["Description"]?.rich_text?.[0]?.plain_text || "",
                 complexity: props["Complexity"]?.select?.name || "Novice"
+            };
+        });
+
+        const quotes = quoteRes.map(page => {
+            const props = page.properties;
+            return {
+                text: props["Quote / Mantra"]?.title?.[0]?.plain_text || "Untitled Quote",
+                author: props["Orator / Author"]?.rich_text?.[0]?.plain_text || "Unknown",
+                origin: props["Origin / Source"]?.select?.name || "General Wisdom",
+                alignment: props["Path Alignment"]?.select?.name || "Soul Alchemy",
+                reflection: props["Context / Reflection"]?.rich_text?.[0]?.plain_text || ""
             };
         });
 
@@ -163,7 +175,8 @@ async function syncAtelier() {
         fs.writeFileSync(path.join(dataPath, 'arsenal.json'), JSON.stringify(arsenal, null, 2));
         fs.writeFileSync(path.join(dataPath, 'laboratory.json'), JSON.stringify(laboratory, null, 2));
         fs.writeFileSync(path.join(dataPath, 'tasks.json'), JSON.stringify(tasks, null, 2));
-        fs.writeFileSync(path.join(dataPath, 'mantras.json'), JSON.stringify(mantras, null, 2));
+        fs.writeFileSync(path.join(dataPath, 'scripts.json'), JSON.stringify(scripts, null, 2));
+        fs.writeFileSync(path.join(dataPath, 'quotes.json'), JSON.stringify(quotes, null, 2));
         
         console.log("✅ Manifestation Complete: Full Atelier Data synced.");
     } catch (error) {

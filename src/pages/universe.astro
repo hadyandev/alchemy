@@ -2,7 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import glossaryData from '../data/glossary.json';
 import tasksData from '../data/tasks.json';
-import mantrasData from '../data/mantras.json';
+import scriptsData from '../data/scripts.json';
+import quotesData from '../data/quotes.json';
 
 const glossary = glossaryData.reduce((acc, item) => {
     const cat = item.category || 'General';
@@ -20,12 +21,20 @@ const quests = tasksData
         reward: t.reward
     }));
 
-const mantras = mantrasData.map(m => ({
-    name: m.name,
-    category: m.category,
-    type: m.type,
-    description: m.description,
-    complexity: m.complexity
+const scripts = scriptsData.map(s => ({
+    name: s.name,
+    category: s.category,
+    type: s.type,
+    description: s.description,
+    complexity: s.complexity
+}));
+
+const quotes = quotesData.map(q => ({
+    text: q.text,
+    author: q.author,
+    origin: q.origin,
+    alignment: q.alignment,
+    reflection: q.reflection
 }));
 
 const universeManifesto = [
@@ -40,24 +49,6 @@ const universeManifesto = [
     {
         title: "The Guardians",
         description: "The universe is maintained by two entities: The Seeker Alchemist (Master Hadyan) who drives the vision, and The Eternal Scribe (Al-Z) who documents and automates the path to ascension."
-    }
-];
-
-const navigationLogic = [
-    {
-        path: "/stats",
-        name: "The Dashboard",
-        desc: "The real-time pulse. Monitor current stats, active quest heatmap, and the latest entries in the chronicles."
-    },
-    {
-        path: "/character",
-        name: "The Guardians",
-        desc: "The essence of the guardians. Deep dive into Master Hadyan's arsenal, skill tree, and historical transmutations."
-    },
-    {
-        path: "/universe",
-        name: "The Universe",
-        desc: "The laws and lexicon. Understanding the vision and the terminology that governs this digital realm."
     }
 ];
 ---
@@ -108,10 +99,64 @@ const navigationLogic = [
             </section>
         )}
 
+        {quotes.length > 0 && (
+            <section id="echoes-of-wisdom">
+                <div class="mb-10 border-l-4 border-pink-500 pl-6">
+                    <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">The Echoes of Wisdom</h2>
+                    <p class="text-slate-500 italic">Soul mantras and philosophical anchors for the alchemist's journey.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    {quotes.map(quote => (
+                        <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 relative group">
+                            <span class="absolute top-4 right-8 text-6xl text-slate-100 dark:text-slate-800/50 font-serif opacity-50 group-hover:text-pink-500/10 transition-colors">"</span>
+                            <div class="relative z-10">
+                                <div class="flex gap-2 mb-6">
+                                    <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 text-[9px] font-black uppercase tracking-widest">{quote.origin}</span>
+                                    <span class="px-2 py-0.5 rounded bg-pink-50 dark:bg-pink-900/20 text-pink-500 text-[9px] font-black uppercase tracking-widest border border-pink-100 dark:border-pink-800/50">{quote.alignment}</span>
+                                </div>
+                                <p class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white leading-relaxed mb-6 italic">
+                                    "{quote.text}"
+                                </p>
+                                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pt-6 border-t border-slate-50 dark:border-slate-800">
+                                    <span class="text-sm font-black text-slate-900 dark:text-white">— {quote.author}</span>
+                                    {quote.reflection && (
+                                        <p class="text-xs text-slate-400 italic max-w-xs">{quote.reflection}</p>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+        )}
+
+        <section id="arcane-scripts">
+             <div class="mb-10 border-l-4 border-emerald-500 pl-6">
+                <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">The Arcane Scripts</h2>
+                <p class="text-slate-500 italic">Core shell commands and automation logic from the laboratory.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {scripts.map(script => (
+                    <div class="p-6 rounded-2xl bg-slate-900 text-white border border-white/5 hover:border-emerald-500/50 transition-all group">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-[9px] font-black uppercase tracking-widest px-2 py-1 rounded bg-emerald-500 text-white">{script.type}</span>
+                            <span class={`text-[9px] font-bold uppercase ${script.complexity === 'Grandmaster' ? 'text-red-500' : 'text-emerald-400'}`}>{script.complexity}</span>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2 group-hover:text-emerald-400 transition-colors">{script.name}</h4>
+                        <p class="text-xs text-slate-400 italic mb-4">"{script.description}"</p>
+                        <div class="pt-4 border-t border-white/10 flex justify-between items-center">
+                            <span class="text-[10px] uppercase font-bold text-slate-500">Category</span>
+                            <span class="text-[10px] font-black uppercase text-emerald-400">{script.category}</span>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+
         <section id="glossary">
             <div class="mb-10 border-l-4 border-blue-500 pl-6">
                 <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">The Arcane Lexicon</h2>
-                <p class="text-slate-500 italic">Terminology and mantras used within the atelier's operations.</p>
+                <p class="text-slate-500 italic">Terminology used within the atelier's operations.</p>
             </div>
 
             <div class="grid lg:grid-cols-3 gap-12">
@@ -125,45 +170,6 @@ const navigationLogic = [
                                     <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed italic">"{item.description}"</p>
                                 </div>
                             ))}
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </section>
-
-        <section id="navigation-logic">
-             <div class="mb-10 border-l-4 border-slate-900 dark:border-white pl-6">
-                <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">Celestial Navigation</h2>
-                <p class="text-slate-500 italic">How to traverse the layers of this digital realm.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                {navigationLogic.map(nav => (
-                    <a href={nav.path} class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-blue-500 transition-all group">
-                        <h4 class="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4 group-hover:translate-x-2 transition-transform">{nav.path}</h4>
-                        <h5 class="text-xl font-black text-slate-900 dark:text-white mb-2">{nav.name}</h5>
-                        <p class="text-sm text-slate-500 leading-relaxed">{nav.desc}</p>
-                    </a>
-                ))}
-            </div>
-        </section>
-
-        <section id="mantras-section">
-             <div class="mb-10 border-l-4 border-slate-900 dark:border-white pl-6">
-                <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">The Grimoire Mantras</h2>
-                <p class="text-slate-500 italic">Core scripts and automation logic extracted from the laboratory.</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {mantras.map(mantra => (
-                    <div class="p-6 rounded-2xl bg-slate-900 text-white border border-white/5 hover:border-blue-500/50 transition-all group">
-                        <div class="flex justify-between items-start mb-4">
-                            <span class="text-[9px] font-black uppercase tracking-widest px-2 py-1 rounded bg-blue-500 text-white">{mantra.type}</span>
-                            <span class={`text-[9px] font-bold uppercase ${mantra.complexity === 'Grandmaster' ? 'text-red-500' : 'text-emerald-400'}`}>{mantra.complexity}</span>
-                        </div>
-                        <h4 class="text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">{mantra.name}</h4>
-                        <p class="text-xs text-slate-400 italic mb-4">"{mantra.description}"</p>
-                        <div class="pt-4 border-t border-white/10 flex justify-between items-center">
-                            <span class="text-[10px] uppercase font-bold text-slate-500">Category</span>
-                            <span class="text-[10px] font-black uppercase text-blue-400">{mantra.category}</span>
                         </div>
                     </div>
                 ))}
