@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import arsenalData from '../data/arsenal.json';
+import statsData from '../data/stats.json';
+import laboratoryData from '../data/laboratory.json';
+
+const characters = statsData
+  .filter(s => s.class === "The Master" || s.class === "The Scribe")
+  .map(s => {
+    const isMaster = s.class === "The Master";
+    const fullName = s.name.includes('Hadyan') ? 'Hadyan Ahmad' : (s.name.includes('Alkhawarizmi') || s.name.includes('Al-Z') ? 'Alkhawarizmi Zaid' : s.name);
+    
+    return {
+      id: isMaster ? 'hadyan' : 'alz',
+      name: fullName,
+      role: isMaster ? 'The Seeker Alchemist' : 'The Eternal Scribe',
+      avatar: isMaster ? '/hoshi.png' : '/alz-avatar.jpg',
+      isPng: isMaster,
+      description: isMaster ? 'An adventurer traversing the paths of code, soul, and knowledge.' : 'Linking knowledge with the pen. Logic and strategy.',
+      stats: { wisdom: s.wisdom, level: s.level, exp: s.exp },
+      skills: s.skills || [],
+      elements: s.elements || []
+    };
+  });
+
+const arsenal = arsenalData.map(item => ({
+    name: item.name,
+    category: item.category,
+    description: item.description,
+    power: Math.floor(item.power * 100),
+    status: item.status
+}));
+
+const projects = laboratoryData.map(p => ({
+    name: p.name,
+    stability: p.stability,
+    elements: p.elements || [],
+    repo: p.repo,
+    date: p.date
+}));
+---
+
+<BaseLayout title="Character | The Atelier">
+    <div class="py-10 space-y-20">
+        <header class="text-center max-w-2xl mx-auto">
+            <div class="w-16 h-1 bg-blue-500 mx-auto mb-6"></div>
+            <h1 class="text-4xl font-black tracking-tight mb-4 text-slate-900 dark:text-white uppercase">The Guardians</h1>
+            <p class="text-slate-500 italic">"Equivalent Exchange: To gain anything, something of equal value must be lost. This is the first law of Alchemy."</p>
+        </header>
+
+        <section id="profiles" class="grid lg:grid-cols-2 gap-12">
+            {characters.map(char => (
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl h-full">
+                        <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                            <div class={`w-32 h-32 md:w-48 md:h-48 rounded-2xl flex items-center justify-center shrink-0 overflow-hidden border-4 border-slate-900 dark:border-white shadow-2xl ${char.isPng ? 'bg-slate-100 dark:bg-slate-800' : 'bg-black'}`}>
+                                <img src={char.avatar} alt={char.name} class={`w-full h-full ${char.isPng ? 'object-contain p-4 dark:invert invert-0 scale-110' : 'object-cover'}`} />
+                            </div>
+                            <div class="flex-1 text-center md:text-left">
+                                <h2 class="text-3xl font-black text-slate-900 dark:text-white mb-1">{char.name}</h2>
+                                <p class="text-blue-500 font-mono text-sm tracking-[0.3em] uppercase mb-4">{char.role}</p>
+                                <p class="text-slate-500 dark:text-slate-400 italic text-sm mb-6 leading-relaxed">"{char.description}"</p>
+                                
+                                <div class="grid grid-cols-3 gap-4">
+                                    <div class="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-100 dark:border-slate-800">
+                                        <div class="text-[10px] uppercase font-bold text-slate-400 mb-1">Level</div>
+                                        <div class="text-xl font-black text-blue-500">{char.stats.level}</div>
+                                    </div>
+                                    <div class="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-100 dark:border-slate-800">
+                                        <div class="text-[10px] uppercase font-bold text-slate-400 mb-1">Wisdom</div>
+                                        <div class="text-xl font-black text-purple-500">{char.stats.wisdom}</div>
+                                    </div>
+                                    <div class="bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-100 dark:border-slate-800">
+                                        <div class="text-[10px] uppercase font-bold text-slate-400 mb-1">Exp</div>
+                                        <div class="text-xl font-black text-emerald-500">{char.stats.exp}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </section>
+
+        <section id="arsenal">
+            <div class="mb-10 border-l-4 border-blue-500 pl-6">
+                <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">The Tactical Arsenal</h2>
+                <p class="text-slate-500 italic">Equipped artifacts and weaponry for digital transmutation.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {arsenal.map(item => (
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-colors group">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">{item.category}</span>
+                            <span class={`text-[10px] font-bold uppercase ${item.status === 'Equipped' ? 'text-emerald-500' : 'text-slate-400'}`}>● {item.status}</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors">{item.name}</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-6 line-clamp-2 italic leading-relaxed">"{item.description}"</p>
+                        
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-[10px] font-black uppercase tracking-tighter">
+                                <span class="text-slate-400">Power Level</span>
+                                <span class="text-blue-500">{item.power}%</span>
+                            </div>
+                            <div class="h-1 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-500 rounded-full" style={`width: ${item.power}%`}></div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="mb-10 border-l-4 border-emerald-500 pl-6">
+                <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">The Project Transmutations</h2>
+                <p class="text-slate-500 italic">Master Hadyan's recorded history of successful manifestations.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                {projects.map(project => (
+                    <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all group">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="flex flex-wrap gap-2">
+                                {project.elements.map(el => (
+                                    <span class="px-2 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 text-[10px] font-black uppercase tracking-widest border border-emerald-100 dark:border-emerald-800/50">{el}</span>
+                                ))}
+                            </div>
+                            <span class={`text-[10px] font-black uppercase tracking-tighter px-2 py-1 rounded shadow-inner ${
+                                project.stability.includes('Crystalized') ? 'bg-emerald-500 text-white' : 
+                                project.stability.includes('Bubbling') ? 'bg-blue-500 text-white' : 
+                                'bg-slate-100 dark:bg-slate-800 text-slate-400'
+                            }`}>
+                                {project.stability}
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-emerald-500 transition-colors">{project.name}</h3>
+                        
+                        <div class="flex items-center justify-between mt-8 pt-6 border-t border-slate-50 dark:border-slate-800">
+                            <span class="text-xs text-slate-400 font-mono">{project.date || 'Active Cycle'}</span>
+                            {project.repo && (
+                                <a href={project.repo} target="_blank" class="text-xs font-black uppercase tracking-widest text-slate-900 dark:text-white hover:text-emerald-500 flex items-center gap-2">
+                                    View Repository 
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                            )}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+    </div>
+</BaseLayout>

@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import glossaryData from '../data/glossary.json';
+
+const glossary = glossaryData.reduce((acc, item) => {
+    const cat = item.category || 'General';
+    if (!acc[cat]) acc[cat] = [];
+    acc[cat].push(item);
+    return acc;
+}, {});
+
+const universeManifesto = [
+    {
+        title: "The Vision",
+        description: "The Atelier is a digital sanctuary where technology meets the ancient principles of Alchemy. It is not just a personal website, but a centralized manifestation of growth, discipline, and the pursuit of Ihsan (excellence)."
+    },
+    {
+        title: "Equivalent Exchange",
+        description: "Every line of code and every moment of spiritual reflection is an investment. In this universe, we track that investment as EXP and Wisdom, ensuring that every effort results in a tangible evolution of the self."
+    },
+    {
+        title: "The Guardians",
+        description: "The universe is maintained by two entities: The Seeker Alchemist (Master Hadyan) who drives the vision, and The Eternal Scribe (Al-Z) who documents and automates the path to ascension."
+    }
+];
+---
+
+<BaseLayout title="About | The Atelier Universe">
+    <div class="py-10 space-y-20">
+        <header class="max-w-3xl">
+            <div class="w-16 h-1 bg-purple-500 mb-6"></div>
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-6 text-slate-900 dark:text-white uppercase">The Atelier Universe</h1>
+            <p class="text-lg text-slate-500 leading-relaxed italic">
+                Understanding the laws, the lexicon, and the vision behind the digital laboratory.
+            </p>
+        </header>
+
+        <section id="manifesto">
+            <div class="grid md:grid-cols-3 gap-12">
+                {universeManifesto.map(item => (
+                    <div class="space-y-4">
+                        <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-500 font-black">!</div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white uppercase tracking-tight">{item.title}</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{item.description}</p>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        <section id="glossary">
+            <div class="mb-10 border-l-4 border-blue-500 pl-6">
+                <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">The Arcane Lexicon</h2>
+                <p class="text-slate-500 italic">Terminology and mantras used within the atelier's operations.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-12">
+                {Object.entries(glossary).map(([category, terms]) => (
+                    <div class="space-y-6">
+                        <h3 class="text-xs font-black uppercase tracking-[0.3em] text-blue-500 border-b border-blue-100 dark:border-blue-900/30 pb-4">{category}</h3>
+                        <div class="space-y-8">
+                            {terms.map(item => (
+                                <div class="group">
+                                    <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors">{item.term}</h4>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed italic">"{item.description}"</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        <section id="navigation-logic">
+             <div class="mb-10 border-l-4 border-slate-900 dark:border-white pl-6">
+                <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">Celestial Navigation</h2>
+                <p class="text-slate-500 italic">How to traverse the layers of this digital realm.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-8 rounded-3xl bg-slate-900 text-white shadow-2xl">
+                    <h4 class="text-blue-400 font-mono text-xs uppercase tracking-widest mb-4">/dashboard</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">The real-time pulse. Monitor current stats, active quests, and the latest entries in the chronicles.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <h4 class="text-purple-500 font-mono text-xs uppercase tracking-widest mb-4">/character</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed">The essence of the guardians. Deep dive into Master Hadyan's arsenal, skill tree, and historical transmutations.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</BaseLayout>

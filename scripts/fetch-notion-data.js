@@ -10,6 +10,9 @@ const DB_IDS = {
     JOURNEY: "30b79a34-e7c9-8113-ae45-cbdce3efc096",
     STATS: "30b79a34-e7c9-8163-84e4-ef0946f39344",
     EVOLUTION: "30c79a34-e7c9-81a5-b942-eb9bbff1b41e",
+    GLOSSARY: "30c79a34-e7c9-81a6-8ce7-dc6e3da2474b",
+    ARSENAL: "30c79a34-e7c9-8141-b5df-ecd29ebb65ed",
+    LABORATORY: "30c79a34-e7c9-8196-8220-c6b04c3a8bae"
 };
 
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
@@ -86,12 +89,52 @@ async function syncAtelier() {
             };
         }).sort((a, b) => (a.reqExp || 0) - (b.reqExp || 0));
 
+        // 4. Fetch Glossary
+        const glossaryResults = await fetchNotionDB(DB_IDS.GLOSSARY);
+        const glossary = glossaryResults.map(page => {
+            const props = page.properties;
+            return {
+                term: props["Term Name"]?.title?.[0]?.plain_text || "Untitled",
+                category: props["Category"]?.select?.name || "General",
+                description: props["Definition"]?.rich_text?.[0]?.plain_text || ""
+            };
+        });
+
+        // 5. Fetch Arsenal
+        const arsenalResults = await fetchNotionDB(DB_IDS.ARSENAL);
+        const arsenal = arsenalResults.map(page => {
+            const props = page.properties;
+            return {
+                name: props["Artifact Name"]?.title?.[0]?.plain_text || "Unknown Artifact",
+                category: props["Category"]?.select?.name || "Tool",
+                description: props["Description"]?.rich_text?.[0]?.plain_text || "",
+                power: props["Power Level"]?.number || 0,
+                status: props["Status"]?.select?.name || "Stored"
+            };
+        });
+
+        // 6. Fetch Laboratory
+        const laboratoryResults = await fetchNotionDB(DB_IDS.LABORATORY);
+        const laboratory = laboratoryResults.map(page => {
+            const props = page.properties;
+            return {
+                name: props["Project Name"]?.title?.[0]?.plain_text || "Untitled Project",
+                stability: props["Stability"]?.select?.name || "Unstable",
+                elements: props["Element"]?.multi_select?.map(e => e.name) || [],
+                repo: props["Repository"]?.url || "",
+                date: props["Completion Date"]?.date?.start || ""
+            };
+        });
+
         // Save manifested files
         fs.writeFileSync(path.join(dataPath, 'stats.json'), JSON.stringify(stats, null, 2));
         fs.writeFileSync(path.join(dataPath, 'journey.json'), JSON.stringify(journey, null, 2));
         fs.writeFileSync(path.join(dataPath, 'evolution.json'), JSON.stringify(evolution, null, 2));
+        fs.writeFileSync(path.join(dataPath, 'glossary.json'), JSON.stringify(glossary, null, 2));
+        fs.writeFileSync(path.join(dataPath, 'arsenal.json'), JSON.stringify(arsenal, null, 2));
+        fs.writeFileSync(path.join(dataPath, 'laboratory.json'), JSON.stringify(laboratory, null, 2));
         
-        console.log("✅ Manifestation Complete: Full Character Stats & Collaborative Journey synced.");
+        console.log("✅ Manifestation Complete: Full Atelier Data synced.");
     } catch (error) {
         console.error("❌ Transmutation Failed:", error);
     }
