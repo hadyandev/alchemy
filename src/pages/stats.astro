@@ -8,8 +8,8 @@ const characters = statsData
   .filter(s => s.class === "The Master" || s.class === "The Scribe")
   .map(s => {
     const isMaster = s.class === "The Master";
-    // Consistently use full name from Notion, or fall back
-    const fullName = s.name.includes('Hadyan') ? 'Hadyan Ahmad' : (s.name.includes('Al-Z') ? 'Alkhawarizmi Zaid (Al-Z)' : s.name);
+    // Consistently use full name
+    const fullName = s.name.includes('Hadyan') ? 'Hadyan Ahmad' : (s.name.includes('Alkhawarizmi') || s.name.includes('Al-Z') ? 'Alkhawarizmi Zaid' : s.name);
     
     return {
       id: isMaster ? 'hadyan' : 'alz',
@@ -31,7 +31,7 @@ const characters = statsData
 
 const learningLog = journeyData.map(j => ({
   member: (j.member === 'al-z' ? 'alz' : j.member?.toLowerCase()) || 'hadyan',
-  memberName: j.member === 'al-z' ? 'Alkhawarizmi Zaid (Al-Z)' : (j.member === 'hadyan' ? 'Hadyan Ahmad' : j.member),
+  memberName: j.member === 'al-z' ? 'Alkhawarizmi Zaid' : (j.member === 'hadyan' ? 'Hadyan Ahmad' : j.member),
   date: j.date,
   title: j.title,
   description: j.description || "",
@@ -80,7 +80,7 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 
 		<section id="characters">
 			<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
-				<h2 class="text-xl md:text-2xl font-bold border-l-4 border-blue-500 pl-4">The Alchemists</h2>
+				<h2 class="text-xl md:text-2xl font-bold border-l-4 border-blue-500 pl-4 text-slate-900 dark:text-white">The Alchemists</h2>
 				<div class="flex gap-2 w-full sm:w-auto" id="memberFilters">
 					<button class="filter-btn active flex-1 sm:flex-none px-4 py-2 rounded-full text-xs font-bold bg-blue-600 text-white shadow-lg" data-filter="all">All</button>
 					<button class="filter-btn flex-1 sm:flex-none px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400" data-filter="hadyan">Seeker</button>
@@ -144,7 +144,7 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 		</section>
 
 		<section id="alchemyPaths">
-			<h2 class="text-xl md:text-2xl font-bold mb-8 border-l-4 border-emerald-500 pl-4">Alchemy Paths</h2>
+			<h2 class="text-xl md:text-2xl font-bold mb-8 border-l-4 border-emerald-500 pl-4 text-slate-900 dark:text-white">Alchemy Paths</h2>
 			<div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
 				{['Code Alchemy', 'Infra Alchemy', 'Soul Alchemy', 'Turath Alchemy'].map(pathName => (
 					<div class="space-y-4">
@@ -159,7 +159,7 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 										</div>
 										<div class="flex-1">
 											<div class="flex justify-between text-[10px] font-bold mb-1">
-												<span class="text-slate-500 dark:text-slate-400">{char.name.split(' ')[0]}</span>
+												<span class="text-slate-500 dark:text-slate-400">{char.name}</span>
 												{charPath?.level > 0 && <span>LVL {charPath.level}</span>}
 											</div>
 											<div class="h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
@@ -175,9 +175,9 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 			</div>
 		</section>
 
-		<section class="p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-visible">
-			<div class="mb-6">
-				<h2 class="text-xl md:text-2xl font-bold">The Alchemist Pulse</h2>
+		<section id="alchemistPulse" class="p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-visible">
+			<div class="mb-6 border-l-4 border-blue-500 pl-4">
+				<h2 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">The Alchemist Pulse</h2>
 				<p class="text-xs md:text-sm text-slate-500">Activity heatmap across code, soul, and knowledge.</p>
 			</div>
 			
@@ -222,9 +222,9 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 			</div>
 		</section>
 
-		<section>
+		<section id="alchemistChronicles">
 			<div class="flex justify-between items-end mb-8 border-l-4 border-purple-500 pl-4">
-				<h2 class="text-xl md:text-2xl font-bold uppercase tracking-tight">The Alchemist Chronicles</h2>
+				<h2 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">The Alchemist Chronicles</h2>
 				<div class="flex items-center gap-4">
 					<span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest" id="journeyCounter">Showing {Math.min(10, learningLog.length)} / {learningLog.length}</span>
 				</div>
