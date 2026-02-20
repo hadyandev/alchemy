@@ -166,16 +166,16 @@ const personas = [
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {scripts.map(script => (
-                    <div class="p-6 rounded-2xl bg-slate-900 text-white border border-white/5 hover:border-emerald-500/50 transition-all group">
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-white/5 hover:border-emerald-500/50 transition-all group shadow-sm">
                         <div class="flex justify-between items-start mb-4">
                             <span class="text-[9px] font-black uppercase tracking-widest px-2 py-1 rounded bg-emerald-500 text-white">{script.type}</span>
-                            <span class={`text-[9px] font-bold uppercase ${script.complexity === 'Grandmaster' ? 'text-red-500' : 'text-emerald-400'}`}>{script.complexity}</span>
+                            <span class={`text-[9px] font-bold uppercase ${script.complexity === 'Grandmaster' ? 'text-red-500' : 'text-emerald-500 dark:text-emerald-400'}`}>{script.complexity}</span>
                         </div>
-                        <h4 class="text-lg font-bold mb-2 group-hover:text-emerald-400 transition-colors">{script.name}</h4>
-                        <p class="text-xs text-slate-400 italic mb-4">"{script.description}"</p>
-                        <div class="pt-4 border-t border-white/10 flex justify-between items-center">
-                            <span class="text-[10px] uppercase font-bold text-slate-500">Category</span>
-                            <span class="text-[10px] font-black uppercase text-emerald-400">{script.category}</span>
+                        <h4 class="text-lg font-bold mb-2 group-hover:text-emerald-500 transition-colors">{script.name}</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 italic mb-4">"{script.description}"</p>
+                        <div class="pt-4 border-t border-slate-100 dark:border-white/10 flex justify-between items-center">
+                            <span class="text-[10px] uppercase font-bold text-slate-400">Category</span>
+                            <span class="text-[10px] font-black uppercase text-emerald-500 dark:text-emerald-400">{script.category}</span>
                         </div>
                     </div>
                 ))}
