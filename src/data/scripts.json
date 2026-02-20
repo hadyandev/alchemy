@@ -75,5 +75,12 @@
     "type": "Shell Command",
     "description": "Melakukan push manual seluruh memori dan konfigurasi workspace ke GitHub menggunakan PAT.",
     "complexity": "Novice"
+  },
+  {
+    "name": "Atelier Fortress: UFW Security Hardening",
+    "category": "Defense Alchemy",
+    "type": "Shell Command",
+    "description": "sudo ufw default deny incoming && sudo ufw default allow outgoing && sudo ufw allow 22,80,443,3002,6001,6002,8000/tcp && sudo ufw enable",
+    "complexity": "Adept"
   }
 ]

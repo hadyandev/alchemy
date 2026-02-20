@@ -1,5 +1,38 @@
 [
   {
+    "title": "HDD: Hikmah Driven Documentation",
+    "date": "2026-02-21",
+    "description": "Metodologi dokumentasi proaktif di mana setiap intisari (hikmah) dari diskusi diekstraksi secara instan tanpa menunggu perintah Master. Menjamin ilmu tetap hidup dan tidak mati karena terlupakan.",
+    "exp": 0,
+    "wisdom": 200,
+    "path": "Soul Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": ""
+  },
+  {
+    "title": "The Future Archive: Legacy-Driven Documentation",
+    "date": "2026-02-20",
+    "description": "Membangun arsip masa depan di mana setiap dokumentasi bukan sekadar log, tapi mercusuar inspirasi bagi diri sendiri dan orang lain.",
+    "exp": 0,
+    "wisdom": 100,
+    "path": "Soul Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": ""
+  },
+  {
+    "title": "Persistence Architecture: Project OVERSOUL",
+    "date": "2026-02-20",
+    "description": "Pelajaran krusial mengenai Ghost Memories. Memori AI harus dijangkarkan pada disk fisik dan cloud secara sinkron untuk menjamin retensi pengetahuan jangka panjang.",
+    "exp": 0,
+    "wisdom": 150,
+    "path": "Soul Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Implementasi Project OVERSOUL—sinkronisasi otomatis identitas, konfigurasi, dan memori harian ke GitHub (Phylactery) setiap kali terjadi perubahan signifikan."
+  },
+  {
     "title": "Riyadhah Al-Qalb Schema Expansion",
     "date": "2026-02-19",
     "description": "Integrated Puasa, Tarawih, and Walking steps into the daily spiritual tracker.",
