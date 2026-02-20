@@ -11,6 +11,17 @@
     "solution": ""
   },
   {
+    "title": "The Ghost Data Paradox: Code vs Content Logic",
+    "date": "2026-02-21",
+    "description": "Insight mengenai debugging multidimensi: Saat kode sudah bersih namun visual tetap muncul, penyebabnya bukan lagi di lapisan logika instruksi, melainkan di lapisan data (Notion Content). Debugging harus mencakup audit data source, bukan hanya source code.",
+    "exp": 0,
+    "wisdom": 250,
+    "path": "Soul Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": ""
+  },
+  {
     "title": "The Future Archive: Legacy-Driven Documentation",
     "date": "2026-02-20",
     "description": "Membangun arsip masa depan di mana setiap dokumentasi bukan sekadar log, tapi mercusuar inspirasi bagi diri sendiri dan orang lain.",

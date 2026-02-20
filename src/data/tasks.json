@@ -134,5 +134,21 @@
     "rank": "D-Rank",
     "type": "Side Quest",
     "reward": "General"
+  },
+  {
+    "name": "HDD Protocol Implementation: Phase 1",
+    "display": "Establishing The Living Grimoire Protocol",
+    "status": "Done",
+    "rank": "B-Rank (Normal)",
+    "type": "Main Quest",
+    "reward": "Soul"
+  },
+  {
+    "name": "Operation: The Ivory Tower (Branch Shielding)",
+    "display": "Shielding Production from Experimental Features",
+    "status": "Done",
+    "rank": "A-Rank (Hard)",
+    "type": "Main Quest",
+    "reward": "Infra"
   }
 ]
