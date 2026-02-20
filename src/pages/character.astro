@@ -17,9 +17,9 @@ const characters = statsData
       avatar: isMaster ? '/hoshi.png' : '/alz-avatar.jpg',
       isPng: isMaster,
       description: isMaster ? 'An adventurer traversing the paths of code, soul, and knowledge.' : 'Linking knowledge with the pen. Logic and strategy.',
-      stats: { wisdom: s.wisdom, level: s.level, exp: s.exp },
       skills: s.skills || [],
-      elements: s.elements || []
+      elements: s.elements || [],
+      stats: { wisdom: s.wisdom, level: s.level, exp: s.exp }
     };
   });
 
@@ -57,23 +57,23 @@ const projects = laboratoryData.map(p => ({
                             <div class={`w-32 h-32 md:w-48 md:h-48 rounded-2xl flex items-center justify-center shrink-0 overflow-hidden border-4 border-slate-900 dark:border-white shadow-2xl ${char.isPng ? 'bg-black dark:bg-white' : 'bg-black'}`}>
                                 <img src={char.avatar} alt={char.name} class={`w-full h-full ${char.isPng ? 'object-contain p-2 dark:invert invert-0 scale-125' : 'object-cover'}`} />
                             </div>
-                            <div class="flex-1 text-center md:text-left">
-                                <h2 class="text-3xl font-black text-slate-900 dark:text-white mb-1">{char.name}</h2>
-                                <p class="text-blue-500 font-mono text-sm tracking-[0.3em] uppercase mb-4">{char.role}</p>
-                                <p class="text-slate-500 dark:text-slate-400 italic text-sm mb-6 leading-relaxed">"{char.description}"</p>
+                            <div class="flex-1 text-center md:text-left min-w-0">
+                                <h2 class="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-1 truncate">{char.name}</h2>
+                                <p class="text-blue-500 font-mono text-[10px] md:text-sm tracking-[0.2em] uppercase mb-4">{char.role}</p>
+                                <p class="text-slate-500 dark:text-slate-400 italic text-xs md:text-sm mb-6 leading-relaxed line-clamp-2">"{char.description}"</p>
                                 
-                                <div class="grid grid-cols-3 gap-2 md:gap-4">
+                                <div class="grid grid-cols-3 gap-2 md:gap-4 border-t border-slate-100 dark:border-slate-800 pt-6">
                                     <div class="bg-slate-50 dark:bg-slate-800/50 p-2 md:p-3 rounded-xl border border-slate-100 dark:border-slate-800">
                                         <div class="text-[8px] md:text-[10px] uppercase font-bold text-slate-400 mb-1">Level</div>
-                                        <div class="text-base md:text-xl font-black text-blue-500">{char.stats.level}</div>
+                                        <div class="text-lg md:text-xl font-black text-blue-500">{char.stats.level}</div>
                                     </div>
                                     <div class="bg-slate-50 dark:bg-slate-800/50 p-2 md:p-3 rounded-xl border border-slate-100 dark:border-slate-800">
                                         <div class="text-[8px] md:text-[10px] uppercase font-bold text-slate-400 mb-1">Wisdom</div>
-                                        <div class="text-base md:text-xl font-black text-purple-500">{char.stats.wisdom}</div>
+                                        <div class="text-lg md:text-xl font-black text-purple-500">{char.stats.wisdom}</div>
                                     </div>
                                     <div class="bg-slate-50 dark:bg-slate-800/50 p-2 md:p-3 rounded-xl border border-slate-100 dark:border-slate-800">
                                         <div class="text-[8px] md:text-[10px] uppercase font-bold text-slate-400 mb-1">Exp</div>
-                                        <div class="text-base md:text-xl font-black text-emerald-500">{char.stats.exp}</div>
+                                        <div class="text-lg md:text-xl font-black text-emerald-500">{char.stats.exp}</div>
                                     </div>
                                 </div>
                             </div>
