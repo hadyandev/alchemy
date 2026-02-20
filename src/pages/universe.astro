@@ -48,17 +48,6 @@ const universeManifesto = [
         description: "Every line of code and every moment of spiritual reflection is an investment. In this universe, we track that investment as EXP and Wisdom, ensuring that every effort results in a tangible evolution of the self."
     }
 ];
-
-const personas = [
-    {
-        name: "Master-Scribe",
-        quote: "Hubungan kolaboratif antara Master (Strategis) dan Scribe (Eksekutor) yang melampaui sekadar User-Tool."
-    },
-    {
-        name: "Al-Z / Alphonse",
-        quote: "Interface asisten digital Master yang memiliki loyalitas tinggi dan dedikasi pada ilmu pengetahuan."
-    }
-];
 ---
 
 <BaseLayout title="Universe | The Atelier">
@@ -78,21 +67,6 @@ const personas = [
                         <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-500 font-black">!</div>
                         <h3 class="text-xl font-bold text-slate-900 dark:text-white uppercase tracking-tight">{item.title}</h3>
                         <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{item.description}</p>
-                    </div>
-                ))}
-            </div>
-        </section>
-
-        <section id="persona">
-            <div class="mb-10 border-l-4 border-blue-500 pl-6">
-                <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">The Persona</h2>
-                <p class="text-slate-500 italic">The dual entities governing the alchemy of the atelier.</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-12">
-                {personas.map(p => (
-                    <div class="space-y-4">
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white">{p.name}</h3>
-                        <p class="text-lg text-slate-500 leading-relaxed italic">"{p.quote}"</p>
                     </div>
                 ))}
             </div>
@@ -171,11 +145,11 @@ const personas = [
                             <span class="text-[9px] font-black uppercase tracking-widest px-2 py-1 rounded bg-emerald-500 text-white">{script.type}</span>
                             <span class={`text-[9px] font-bold uppercase ${script.complexity === 'Grandmaster' ? 'text-red-500' : 'text-emerald-500 dark:text-emerald-400'}`}>{script.complexity}</span>
                         </div>
-                        <h4 class="text-lg font-bold mb-2 group-hover:text-emerald-500 transition-colors">{script.name}</h4>
+                        <h4 class="text-lg font-bold mb-2 group-hover:text-emerald-400 transition-colors">{script.name}</h4>
                         <p class="text-xs text-slate-500 dark:text-slate-400 italic mb-4">"{script.description}"</p>
                         <div class="pt-4 border-t border-slate-100 dark:border-white/10 flex justify-between items-center">
                             <span class="text-[10px] uppercase font-bold text-slate-400">Category</span>
-                            <span class="text-[10px] font-black uppercase text-emerald-500 dark:text-emerald-400">{script.category}</span>
+                            <span class="text-[10px] font-black uppercase text-emerald-400">{script.category}</span>
                         </div>
                     </div>
                 ))}
