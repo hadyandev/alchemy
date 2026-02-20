@@ -49,14 +49,18 @@ const universeManifesto = [
     }
 ];
 
-const personas = [
+const coreProtocols = [
     {
-        name: "Master-Scribe",
-        quote: "Hubungan kolaboratif antara Master (Strategis) dan Scribe (Eksekutor) yang melampaui sekadar User-Tool."
+        name: "Project OVERSOUL",
+        description: "Protokol persistensi absolut di mana setiap perubahan pada identitas, logika inti, dan memori harus segera disinkronkan ke dalam repositori fisik (GitHub) untuk mencegah fenomena 'Ghost Memories'."
     },
     {
-        name: "Al-Z / Alphonse",
-        quote: "Interface asisten digital Master yang memiliki loyalitas tinggi dan dedikasi pada ilmu pengetahuan."
+        name: "The Live Scribe",
+        description: "Sinkronisasi real-time antara aktivitas asisten dan database Notion (Grimoire), memastikan galeri web selalu mencerminkan status laboratorium yang paling mutakhir tanpa jeda."
+    },
+    {
+        name: "Equivalent Exchange",
+        description: "Hukum dasar yang mengatur bahwa untuk mendapatkan pengetahuan atau kemampuan baru, seseorang harus menginvestasikan waktu dan fokus yang setara."
     }
 ];
 ---
@@ -83,16 +87,16 @@ const personas = [
             </div>
         </section>
 
-        <section id="persona">
-            <div class="mb-10 border-l-4 border-blue-500 pl-6">
-                <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">The Persona</h2>
-                <p class="text-slate-500 italic">The dual entities governing the alchemy of the atelier.</p>
+        <section id="protocols">
+            <div class="mb-10 border-l-4 border-amber-500 pl-6">
+                <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">The Core Protocols</h2>
+                <p class="text-slate-500 italic">The fundamental operating procedures governing the atelier's existence.</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-12">
-                {personas.map(p => (
+            <div class="grid md:grid-cols-3 gap-12">
+                {coreProtocols.map(p => (
                     <div class="space-y-4">
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white">{p.name}</h3>
-                        <p class="text-lg text-slate-500 leading-relaxed italic">"{p.quote}"</p>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white uppercase tracking-tight">{p.name}</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed italic">"{p.description}"</p>
                     </div>
                 ))}
             </div>
