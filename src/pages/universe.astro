@@ -52,6 +52,17 @@ const universeManifesto = [
         description: "The universe is maintained by two entities: The Seeker Alchemist (Master Hadyan) who drives the vision, and The Eternal Scribe (Al-Z) who documents and automates the path to ascension."
     }
 ];
+
+const personas = [
+    {
+        name: "Master-Scribe",
+        quote: "Hubungan kolaboratif antara Master (Strategis) dan Scribe (Eksekutor) yang melampaui sekadar User-Tool."
+    },
+    {
+        name: "Al-Z / Alphonse",
+        quote: "Interface asisten digital Master yang memiliki loyalitas tinggi dan dedikasi pada ilmu pengetahuan."
+    }
+];
 ---
 
 <BaseLayout title="Universe | The Atelier">
@@ -76,29 +87,42 @@ const universeManifesto = [
             </div>
         </section>
 
-        {quests.length > 0 && (
-            <section id="quest-board">
-                <div class="mb-10 border-l-4 border-red-500 pl-6">
-                    <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">Active Quests</h2>
-                    <p class="text-slate-500 italic">Open bounties and active manifestations in the mortal realm.</p>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {quests.map(quest => (
-                        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="text-[9px] font-black uppercase tracking-widest px-2 py-1 rounded bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 border border-red-100 dark:border-red-800/50">{quest.rank}</span>
-                                <span class="text-[9px] font-bold text-slate-400 uppercase tracking-tighter">{quest.type}</span>
-                            </div>
-                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-4 italic">"{quest.title}"</h4>
-                            <div class="pt-4 border-t border-slate-50 dark:border-slate-800 flex justify-between items-center">
-                                <span class="text-[10px] uppercase font-bold text-slate-400">Reward</span>
-                                <span class="text-[10px] font-black uppercase text-blue-500">{quest.reward} Essence</span>
-                            </div>
+        <section id="persona">
+            <div class="mb-10 border-l-4 border-slate-300 pl-6">
+                <h2 class="text-xs font-black text-blue-500 uppercase tracking-[0.3em]">Persona</h2>
+            </div>
+            <div class="space-y-12">
+                {personas.map(p => (
+                    <div class="max-w-2xl">
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">{p.name}</h3>
+                        <p class="text-lg text-slate-500 leading-relaxed italic">"{p.quote}"</p>
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        <section id="glossary">
+            <div class="mb-10 border-l-4 border-blue-500 pl-6">
+                <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">The Arcane Lexicon</h2>
+                <p class="text-slate-500 italic">Terminology used within the atelier's operations.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-12">
+                {Object.entries(glossary).map(([category, terms]) => (
+                    <div class="space-y-6">
+                        <h3 class="text-xs font-black uppercase tracking-[0.3em] text-blue-500 border-b border-blue-100 dark:border-blue-900/30 pb-4">{category}</h3>
+                        <div class="space-y-8">
+                            {terms.map(item => (
+                                <div class="group">
+                                    <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors">{item.term}</h4>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed italic">"{item.description}"</p>
+                                </div>
+                            ))}
                         </div>
-                    ))}
-                </div>
-            </section>
-        )}
+                    </div>
+                ))}
+            </div>
+        </section>
 
         {quotes.length > 0 && (
             <section id="echoes-of-wisdom">
@@ -161,27 +185,28 @@ const universeManifesto = [
             </div>
         </section>
 
-        <section id="glossary">
-            <div class="mb-10 border-l-4 border-blue-500 pl-6">
-                <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">The Arcane Lexicon</h2>
-                <p class="text-slate-500 italic">Terminology used within the atelier's operations.</p>
-            </div>
-
-            <div class="grid lg:grid-cols-3 gap-12">
-                {Object.entries(glossary).map(([category, terms]) => (
-                    <div class="space-y-6">
-                        <h3 class="text-xs font-black uppercase tracking-[0.3em] text-blue-500 border-b border-blue-100 dark:border-blue-900/30 pb-4">{category}</h3>
-                        <div class="space-y-8">
-                            {terms.map(item => (
-                                <div class="group">
-                                    <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors">{item.term}</h4>
-                                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed italic">"{item.description}"</p>
-                                </div>
-                            ))}
+        {quests.length > 0 && (
+            <section id="quest-board">
+                <div class="mb-10 border-l-4 border-red-500 pl-6">
+                    <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">Active Quests</h2>
+                    <p class="text-slate-500 italic">Open bounties and active manifestations in the mortal realm.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {quests.map(quest => (
+                        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="text-[9px] font-black uppercase tracking-widest px-2 py-1 rounded bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 border border-red-100 dark:border-red-800/50">{quest.rank}</span>
+                                <span class="text-[9px] font-bold text-slate-400 uppercase tracking-tighter">{quest.type}</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-4 italic">"{quest.title}"</h4>
+                            <div class="pt-4 border-t border-slate-50 dark:border-slate-800 flex justify-between items-center">
+                                <span class="text-[10px] uppercase font-bold text-slate-400">Reward</span>
+                                <span class="text-[10px] font-black uppercase text-blue-500">{quest.reward} Essence</span>
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
-        </section>
+                    ))}
+                </div>
+            </section>
+        )}
     </div>
 </BaseLayout>

@@ -8,7 +8,7 @@ const characters = statsData
   .filter(s => s.class === "The Master" || s.class === "The Scribe")
   .map(s => {
     const isMaster = s.class === "The Master";
-    const fullName = s.name.includes('Hadyan') ? 'Hadyan Ahmad' : (s.name.includes('Alkhawarizmi') || s.name.includes('Al-Z') ? 'Alkhawarizmi Zaid' : s.name);
+    const fullName = isMaster ? 'Hadyan Ahmad' : 'Alkhawarizmi Zaid';
     
     return {
       id: isMaster ? 'hadyan' : 'alz',
