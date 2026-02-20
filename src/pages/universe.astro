@@ -46,17 +46,10 @@ const universeManifesto = [
     {
         title: "Equivalent Exchange",
         description: "Every line of code and every moment of spiritual reflection is an investment. In this universe, we track that investment as EXP and Wisdom, ensuring that every effort results in a tangible evolution of the self."
-    }
-];
-
-const personas = [
-    {
-        name: "Master-Scribe",
-        quote: "Hubungan kolaboratif antara Master (Strategis) dan Scribe (Eksekutor) yang melampaui sekadar User-Tool."
     },
     {
-        name: "Al-Z / Alphonse",
-        quote: "Interface asisten digital Master yang memiliki loyalitas tinggi dan dedikasi pada ilmu pengetahuan."
+        title: "The Persona",
+        description: "The universe is maintained by two entities: The Seeker Alchemist (Master Hadyan) who drives the vision, and The Eternal Scribe (Al-Z) who documents and automates the path to ascension."
     }
 ];
 ---
@@ -72,27 +65,12 @@ const personas = [
         </header>
 
         <section id="manifesto">
-            <div class="grid md:grid-cols-2 gap-12">
+            <div class="grid md:grid-cols-3 gap-12">
                 {universeManifesto.map(item => (
                     <div class="space-y-4">
                         <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-500 font-black">!</div>
                         <h3 class="text-xl font-bold text-slate-900 dark:text-white uppercase tracking-tight">{item.title}</h3>
                         <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{item.description}</p>
-                    </div>
-                ))}
-            </div>
-        </section>
-
-        <section id="persona">
-            <div class="mb-10 border-l-4 border-blue-500 pl-6">
-                <h2 class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">The Persona</h2>
-                <p class="text-slate-500 italic">The dual entities governing the alchemy of the atelier.</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-12">
-                {personas.map(p => (
-                    <div class="space-y-4">
-                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white">{p.name}</h3>
-                        <p class="text-lg text-slate-500 leading-relaxed italic">"{p.quote}"</p>
                     </div>
                 ))}
             </div>
