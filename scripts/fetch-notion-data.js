@@ -23,6 +23,18 @@ const DB_IDS = {
 
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
 
+function slugify(text) {
+    return text
+        .toString()
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, '-')     // Replace spaces with -
+        .replace(/[^\w-]+/g, '')  // Remove all non-word chars
+        .replace(/--+/g, '-')     // Replace multiple - with single -
+        .replace(/^-+/, '')       // Trim - from start of text
+        .replace(/-+$/, '');      // Trim - from end of text
+}
+
 async function fetchPageBlocks(pageId) {
     const response = await fetch(`https://api.notion.com/v1/blocks/${pageId}/children`, {
         headers: {
@@ -76,10 +88,12 @@ async function syncAtelier() {
 
         const techventure = await Promise.all(techventureRes.map(async page => {
             const props = page.properties;
+            const title = props["Title"]?.title?.[0]?.plain_text || "Untitled";
             const blocks = await fetchPageBlocks(page.id);
             return {
                 id: page.id,
-                title: props["Title"]?.title?.[0]?.plain_text || "Untitled",
+                slug: slugify(title),
+                title: title,
                 date: props["Event Date"]?.date?.start || "",
                 status: props["Status"]?.select?.name || "Draft",
                 category: props["Category"]?.select?.name || "Experiment",
@@ -93,10 +107,12 @@ async function syncAtelier() {
 
         const sre = await Promise.all(sreRes.map(async page => {
             const props = page.properties;
+            const title = props["Title"]?.title?.[0]?.plain_text || "Untitled";
             const blocks = await fetchPageBlocks(page.id);
             return {
                 id: page.id,
-                title: props["Title"]?.title?.[0]?.plain_text || "Untitled",
+                slug: slugify(title),
+                title: title,
                 date: props["Incident / Kajian Date"]?.date?.start || "",
                 severity: props["Severity"]?.select?.name || "Low",
                 status: props["Status"]?.select?.name || "Draft",
@@ -112,10 +128,12 @@ async function syncAtelier() {
 
         const storymode = await Promise.all(storyRes.map(async page => {
             const props = page.properties;
+            const title = props["Title"]?.title?.[0]?.plain_text || "Untitled";
             const blocks = await fetchPageBlocks(page.id);
             return {
                 id: page.id,
-                title: props["Title"]?.title?.[0]?.plain_text || "Untitled",
+                slug: slugify(title),
+                title: title,
                 date: props["Reflection Date"]?.date?.start || "",
                 medium: props["Medium"]?.select?.name || "Life Experience",
                 status: props["Status"]?.select?.name || "Draft",

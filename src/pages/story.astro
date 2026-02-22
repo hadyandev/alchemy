@@ -19,7 +19,7 @@ const storyPosts = storyData
 
         <div class="grid md:grid-cols-2 gap-8">
             {storyPosts.map(post => (
-                <a href={`/story/${post.id}`} class="group">
+                <a href={`/story/${post.slug}`} class="group">
                     <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-purple-500/50 transition-all h-full flex flex-col">
                         <div class="flex justify-between items-start mb-6">
                             <span class="px-2 py-0.5 rounded bg-purple-600 text-white text-[9px] font-black uppercase tracking-widest">{post.medium}</span>
