@@ -71,7 +71,11 @@ const isPng = author === "Hadyan";
                     <a href={post.link} class="group">
                         <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-all flex flex-col h-full shadow-sm">
                             <div class="flex justify-between items-start mb-4">
-                                <span class={`px-2 py-0.5 rounded text-white text-[9px] font-black uppercase tracking-widest bg-${post.color}-500`}>{post.type}</span>
+                                <span class={`px-2 py-0.5 rounded text-white text-[9px] font-black uppercase tracking-widest ${
+                                    post.color === 'emerald' ? 'bg-emerald-500' :
+                                    post.color === 'red' ? 'bg-red-500' :
+                                    'bg-purple-500'
+                                }`}>{post.type}</span>
                                 <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">{post.date}</span>
                             </div>
                             <h3 class="text-xl font-black text-slate-900 dark:text-white uppercase leading-tight mb-4 group-hover:text-blue-500 transition-colors">
