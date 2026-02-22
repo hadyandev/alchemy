@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import techventureData from '../../data/techventure.json';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import techventureData from '../../../data/techventure.json';
 
 export async function getStaticPaths() {
     const allTags = [...new Set(techventureData.flatMap(post => post.tags))];

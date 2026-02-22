@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import sreData from '../../data/sre.json';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import sreData from '../../../data/sre.json';
 
 export async function getStaticPaths() {
     const allTags = [...new Set(sreData.flatMap(post => post.tags))];

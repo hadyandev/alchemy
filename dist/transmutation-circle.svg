@@ -1,0 +1,23 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer Double Circles -->
+  <circle cx="300" cy="300" r="280" stroke="currentColor" stroke-width="4"/>
+  <circle cx="300" cy="300" r="265" stroke="currentColor" stroke-width="2"/>
+  
+  <!-- Inner Pentagram/Geometries -->
+  <path d="M300 35 L565 225 L465 540 L135 540 L35 225 Z" stroke="currentColor" stroke-width="3"/>
+  <path d="M300 35 L465 540 L35 225 L565 225 L135 540 Z" stroke="currentColor" stroke-width="2"/>
+  
+  <!-- Center Core -->
+  <circle cx="300" cy="300" r="80" stroke="currentColor" stroke-width="3"/>
+  <circle cx="300" cy="300" r="70" stroke="currentColor" stroke-width="1" stroke-dasharray="8 4"/>
+  
+  <!-- Radial Lines -->
+  <path d="M300 35 V220 M565 225 L415 300 M465 540 L350 380 M135 540 L250 380 M35 225 L185 300" stroke="currentColor" stroke-width="2"/>
+  
+  <!-- Small Orbs on vertices -->
+  <circle cx="300" cy="35" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+  <circle cx="565" cy="225" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+  <circle cx="465" cy="540" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+  <circle cx="135" cy="540" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+  <circle cx="35" cy="225" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+</svg>

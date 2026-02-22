@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import storyData from '../../data/storymode.json';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import storyData from '../../../data/storymode.json';
 
 export async function getStaticPaths() {
     const allTags = [...new Set(storyData.flatMap(post => post.tags))];
