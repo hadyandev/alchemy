@@ -46,7 +46,7 @@ function renderBlock(block) {
                 Back to Repository
             </a>
             
-            <div class="flex gap-2 mb-6">
+            <div class="flex flex-wrap gap-2 mb-6">
                 <span class={`px-2 py-0.5 rounded text-white text-[10px] font-black uppercase tracking-widest ${
                     post.severity === 'Critical' ? 'bg-red-600' : 
                     post.severity === 'High' ? 'bg-orange-500' : 
@@ -56,6 +56,7 @@ function renderBlock(block) {
                     {post.severity}
                 </span>
                 <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] font-black uppercase tracking-widest">{post.date}</span>
+                <span class="px-2 py-0.5 rounded bg-blue-500 text-white text-[10px] font-black uppercase tracking-widest">Alchemist: {post.author}</span>
                 <span class="px-2 py-0.5 rounded bg-red-50 dark:bg-red-900/10 text-red-600 dark:text-red-400 text-[10px] font-black uppercase tracking-widest border border-red-100 dark:border-red-800/50">{post.protocol}</span>
             </div>
             
@@ -69,12 +70,18 @@ function renderBlock(block) {
                 ))}
             </div>
 
-            {post.polish && (
-                <div class="p-8 rounded-3xl bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30">
-                    <span class="text-[10px] font-black uppercase tracking-[0.2em] text-red-600 mb-3 block">Post-Mortem Insight</span>
-                    <p class="text-sm text-red-800 dark:text-red-400 italic leading-relaxed">"{post.polish}"</p>
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <div class="p-6 rounded-2xl bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+                    <span class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-3 block">Raw Observation (Master)</span>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 italic leading-relaxed">"{post.source}"</p>
                 </div>
-            )}
+                {post.polish && (
+                    <div class="p-6 rounded-2xl bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30">
+                        <span class="text-[10px] font-black uppercase tracking-[0.2em] text-red-600 mb-3 block">Post-Mortem Insight (Al-Z)</span>
+                        <p class="text-sm text-red-800 dark:text-red-400 italic leading-relaxed">"{post.polish}"</p>
+                    </div>
+                )}
+            </div>
         </header>
 
         <div class="prose dark:prose-invert max-w-none">

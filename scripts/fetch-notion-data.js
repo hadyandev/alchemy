@@ -86,6 +86,7 @@ async function syncAtelier() {
                 tags: props["Tags"]?.multi_select?.map(t => t.name) || [],
                 summary: props["Raw Notes"]?.rich_text?.[0]?.plain_text || "",
                 polish: props["Alchemical Polish"]?.rich_text?.[0]?.plain_text || "",
+                author: props["Alchemist"]?.select?.name || "Hadyan",
                 content: blocks
             };
         }));
@@ -104,6 +105,7 @@ async function syncAtelier() {
                 source: props["Source"]?.rich_text?.[0]?.plain_text || "",
                 strategy: props["Response Strategy"]?.rich_text?.[0]?.plain_text || "",
                 polish: props["Alchemical Polish"]?.rich_text?.[0]?.plain_text || "",
+                author: props["Alchemist"]?.select?.name || "Hadyan",
                 content: blocks
             };
         }));
@@ -122,6 +124,7 @@ async function syncAtelier() {
                 narrative: props["The Narrative"]?.rich_text?.[0]?.plain_text || "",
                 catalyst: props["Catalyst"]?.rich_text?.[0]?.plain_text || "",
                 polish: props["Alchemical Polish"]?.rich_text?.[0]?.plain_text || "",
+                author: props["Alchemist"]?.select?.name || "Hadyan",
                 content: blocks
             };
         }));
