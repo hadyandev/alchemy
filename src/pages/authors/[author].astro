@@ -1,9 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import statsData from '../data/stats.json';
-import techData from '../data/techventure.json';
-import sreData from '../data/sre.json';
-import storyData from '../data/storymode.json';
+import statsData from '../../data/stats.json';
+import techData from '../../data/techventure.json';
+import sreData from '../../data/sre.json';
+import storyData from '../../data/storymode.json';
 
 export async function getStaticPaths() {
     const authors = statsData.filter(s => s.class === "The Master" || s.class === "The Scribe");
