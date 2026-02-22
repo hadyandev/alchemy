@@ -51,12 +51,12 @@ const { title, hideNav = false } = Astro.props;
 					<div class="flex items-center space-x-4 md:space-x-6 text-sm font-medium">
 						<div class="hidden md:flex items-center space-x-6">
 							<a href="/" class="hover:text-blue-500 transition-colors">Home</a>
-							<a href="/stats" class="hover:text-blue-500 transition-colors">Stats</a>
 							<a href="/techventure" class="hover:text-blue-500 transition-colors">Techventure</a>
+							<a href="/story" class="hover:text-blue-500 transition-colors">Story Mode</a>
 							<a href="/sre" class="hover:text-blue-500 transition-colors">SRE</a>
-							<a href="/story" class="hover:text-blue-500 transition-colors">Story</a>
-							<a href="/guardian" class="hover:text-blue-500 transition-colors">Guardian</a>
 							<a href="/universe" class="hover:text-blue-500 transition-colors">Universe</a>
+							<a href="/guardian" class="hover:text-blue-500 transition-colors">Guardian</a>
+							<a href="/stats" class="hover:text-blue-500 transition-colors">Stats</a>
 						</div>
 						<button class="theme-toggle p-2 rounded-lg bg-slate-100 dark:bg-slate-800" aria-label="Toggle theme">
 							<span class="dark:hidden">🌙</span>
@@ -67,35 +67,31 @@ const { title, hideNav = false } = Astro.props;
 			</nav>
 
 			<!-- Mobile Bottom Nav -->
-			<nav class="md:hidden fixed bottom-0 left-0 right-0 z-[60] bg-white/95 dark:bg-slate-950/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 px-6 py-3">
+			<nav class="md:hidden fixed bottom-0 left-0 right-0 z-[60] bg-white/95 dark:bg-slate-950/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 px-2 py-3">
 				<div class="flex justify-around items-center">
 					<a href="/" class="flex flex-col items-center gap-1 text-slate-500 hover:text-blue-500 transition-colors">
 						<span class="text-xl">🏠</span>
-						<span class="text-[9px] font-bold uppercase tracking-widest">Home</span>
-					</a>
-					<a href="/stats" class="flex flex-col items-center gap-1 text-slate-500 hover:text-blue-500 transition-colors">
-						<span class="text-xl">📊</span>
-						<span class="text-[9px] font-bold uppercase tracking-widest">Stats</span>
+						<span class="text-[9px] font-bold uppercase tracking-widest text-center leading-tight">Home</span>
 					</a>
 					<a href="/techventure" class="flex flex-col items-center gap-1 text-slate-500 hover:text-blue-500 transition-colors">
 						<span class="text-xl">🚀</span>
-						<span class="text-[9px] font-bold uppercase tracking-widest">Tech</span>
-					</a>
-					<a href="/sre" class="flex flex-col items-center gap-1 text-slate-500 hover:text-blue-500 transition-colors">
-						<span class="text-xl">🕋</span>
-						<span class="text-[9px] font-bold uppercase tracking-widest">SRE</span>
+						<span class="text-[9px] font-bold uppercase tracking-widest text-center leading-tight">Tech</span>
 					</a>
 					<a href="/story" class="flex flex-col items-center gap-1 text-slate-500 hover:text-blue-500 transition-colors">
 						<span class="text-xl">🎭</span>
-						<span class="text-[9px] font-bold uppercase tracking-widest">Story</span>
+						<span class="text-[9px] font-bold uppercase tracking-widest text-center leading-tight">Story</span>
 					</a>
-					<a href="/guardian" class="flex flex-col items-center gap-1 text-slate-500 hover:text-blue-500 transition-colors">
-						<span class="text-xl">👤</span>
-						<span class="text-[9px] font-bold uppercase tracking-widest">Guardian</span>
+					<a href="/sre" class="flex flex-col items-center gap-1 text-slate-500 hover:text-blue-500 transition-colors">
+						<span class="text-xl">🕋</span>
+						<span class="text-[9px] font-bold uppercase tracking-widest text-center leading-tight">SRE</span>
 					</a>
 					<a href="/universe" class="flex flex-col items-center gap-1 text-slate-500 hover:text-blue-500 transition-colors">
 						<span class="text-xl">🌌</span>
-						<span class="text-[9px] font-bold uppercase tracking-widest">Universe</span>
+						<span class="text-[9px] font-bold uppercase tracking-widest text-center leading-tight">Univ</span>
+					</a>
+					<a href="/stats" class="flex flex-col items-center gap-1 text-slate-500 hover:text-blue-500 transition-colors">
+						<span class="text-xl">📊</span>
+						<span class="text-[9px] font-bold uppercase tracking-widest text-center leading-tight">Stats</span>
 					</a>
 				</div>
 			</nav>
