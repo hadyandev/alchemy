@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import sreData from '../../data/sre.json';
+
+export async function getStaticPaths() {
+    const allTags = [...new Set(sreData.flatMap(post => post.tags))];
+    return allTags.map(tag => ({
+        params: { tag: tag.toLowerCase() },
+        props: { tag, posts: sreData.filter(post => post.tags.includes(tag)) }
+    }));
+}
+
+const { tag, posts } = Astro.props;
+---
+
+<BaseLayout title={`Tag: ${tag} | SRE Repository`}>
+    <div class="py-10 space-y-20">
+        <header class="max-w-4xl">
+            <a href="/sre" class="text-xs font-black uppercase tracking-widest text-red-500 hover:text-red-600 transition-colors flex items-center gap-2 mb-8">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                Back to SRE Repository
+            </a>
+            <div class="w-16 h-1 bg-red-600 mb-6"></div>
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-6 text-slate-900 dark:text-white uppercase">Reports Tagged: #{tag}</h1>
+        </header>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            {posts.map(post => (
+                <a href={`/sre/${post.slug}`} class="group">
+                    <div class="p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-red-500/50 transition-all h-full flex flex-col">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class={`px-2 py-0.5 rounded text-white text-[9px] font-black uppercase tracking-widest ${
+                                post.severity === 'Critical' ? 'bg-red-600' : 
+                                post.severity === 'High' ? 'bg-orange-500' : 
+                                post.severity === 'Medium' ? 'bg-yellow-500 text-slate-900' : 
+                                'bg-blue-500'
+                            }`}>
+                                {post.severity}
+                            </span>
+                            <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">{post.date}</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-900 dark:text-white uppercase leading-tight mb-4 group-hover:text-red-500 transition-colors">
+                            {post.title}
+                        </h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-3 mb-8 italic leading-relaxed">
+                            "{post.strategy}"
+                        </p>
+                    </div>
+                </a>
+            ))}
+        </div>
+    </div>
+</BaseLayout>
