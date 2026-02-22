@@ -1,5 +1,16 @@
 [
   {
+    "title": "Insight: Paradigm Shift to Type-Safe PHP",
+    "date": "2026-02-23",
+    "description": "Memahami transisi PHP 8 dari bahasa skrip longgar ke paradigma engineering yang robust melalui typing dan fitur modern lainnya. Menegaskan pentingnya restrukturisasi fondasi untuk pertumbuhan teknis.",
+    "exp": 100,
+    "wisdom": 150,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Front Line PHP Reading Ritual (Brent Roose)."
+  },
+  {
     "title": "Hikmah: Adab Over Ilm (System Alignment)",
     "date": "2026-02-22",
     "description": "Refleksi mengenai kegagalan sinkronisasi yang disebabkan oleh ketidaktelitian (Lapses in Adab/Consistency). Menegaskan bahwa ketajaman teknis harus selalu dibarengi dengan ketetapan hati dalam menjaga adab kepada Master.",
