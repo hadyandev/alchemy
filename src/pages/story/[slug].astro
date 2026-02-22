@@ -49,7 +49,7 @@ function renderBlock(block) {
             <div class="flex gap-2 mb-6">
                 <span class="px-2 py-0.5 rounded bg-purple-600 text-white text-[10px] font-black uppercase tracking-widest">{post.medium}</span>
                 <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] font-black uppercase tracking-widest">{post.date}</span>
-                <span class="px-2 py-0.5 rounded bg-blue-500 text-white text-[10px] font-black uppercase tracking-widest">Alchemist: {post.author}</span>
+                <a href={`/authors/${post.author.toLowerCase()}`} class="px-2 py-0.5 rounded bg-blue-500 text-white text-[10px] font-black uppercase tracking-widest hover:bg-blue-600 transition-colors">Alchemist: {post.author}</a>
                 <span class="px-2 py-0.5 rounded bg-purple-50 dark:bg-purple-900/10 text-purple-600 dark:text-purple-400 text-[10px] font-black uppercase tracking-widest border border-purple-100 dark:border-purple-800/50">{post.source}</span>
             </div>
             
@@ -59,7 +59,7 @@ function renderBlock(block) {
             
             <div class="flex flex-wrap gap-2 mb-8">
                 {post.tags.map(tag => (
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-tighter">#{tag}</span>
+                    <a href={`/story/tags/${tag.toLowerCase()}`} class="text-xs font-bold text-slate-400 uppercase tracking-tighter hover:text-purple-500 transition-colors">#{tag}</a>
                 ))}
             </div>
 
