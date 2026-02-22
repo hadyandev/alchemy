@@ -99,6 +99,7 @@ async function syncAtelier() {
                 category: props["Category"]?.select?.name || "Experiment",
                 tags: props["Tags"]?.multi_select?.map(t => t.name) || [],
                 summary: props["Raw Notes"]?.rich_text?.[0]?.plain_text || "",
+                source: props["Source"]?.rich_text?.[0]?.plain_text || "",
                 polish: props["Alchemical Polish"]?.rich_text?.[0]?.plain_text || "",
                 author: props["Alchemist"]?.select?.name || "Hadyan",
                 content: blocks

@@ -50,6 +50,7 @@ function renderBlock(block) {
                 <a href={`/techventure/category/${post.category.toLowerCase().replace(/\s+/g, '-')}`} class="px-2 py-0.5 rounded bg-emerald-500 text-white text-[10px] font-black uppercase tracking-widest hover:bg-emerald-600 transition-colors">{post.category}</a>
                 <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] font-black uppercase tracking-widest">{post.date}</span>
                 <a href={`/authors/${post.author.toLowerCase()}`} class="px-2 py-0.5 rounded bg-blue-500 text-white text-[10px] font-black uppercase tracking-widest hover:bg-blue-600 transition-colors">Alchemist: {post.author}</a>
+                {post.source && <span class="px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400 text-[10px] font-black uppercase tracking-widest border border-amber-200 dark:border-amber-800/50">Source: {post.source}</span>}
             </div>
             
             <h1 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white uppercase tracking-tight leading-none mb-8">
