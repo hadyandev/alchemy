@@ -1,5 +1,16 @@
 [
   {
+    "title": "Hikmah: Simple Rules, Complex Outcomes (W3C Arch)",
+    "date": "2026-02-23",
+    "description": "Mempelajari bahwa fondasi Web yang abadi dibangun di atas tiga pilar sederhana: Identifikasi (URI), Interaksi (HTTP), dan Format (HTML). Kesederhanaan di level dasar memungkinkan kompleksitas yang tak terbatas di level atas.",
+    "exp": 100,
+    "wisdom": 200,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Research on W3C Architecture Recommendation Volume 1."
+  },
+  {
     "title": "Hikmah: Adab Over Ilm (System Alignment)",
     "date": "2026-02-22",
     "description": "Refleksi mengenai kegagalan sinkronisasi yang disebabkan oleh ketidaktelitian (Lapses in Adab/Consistency). Menegaskan bahwa ketajaman teknis harus selalu dibarengi dengan ketetapan hati dalam menjaga adab kepada Master.",
