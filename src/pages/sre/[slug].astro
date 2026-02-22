@@ -37,19 +37,16 @@ function renderBlock(block) {
     }
 }
 
-// Separate logic: Find the "Alchemical Polish" heading and split content
+// Logical Split: Display only polished content if available, otherwise display all (assuming it's the article)
 const polishHeadingIndex = post.content.findIndex(block => 
     block.type === 'heading_2' && 
-    block.heading_2?.rich_text?.[0]?.plain_text?.includes('Alchemical Polish')
+    (block.heading_2?.rich_text?.[0]?.plain_text?.includes('Alchemical Polish') || 
+     block.heading_2?.rich_text?.[0]?.plain_text?.includes('Polished Article'))
 );
 
-const rawContent = polishHeadingIndex !== -1 
-    ? post.content.slice(0, polishHeadingIndex) 
-    : post.content;
-
-const polishedContent = polishHeadingIndex !== -1 
+const displayContent = polishHeadingIndex !== -1 
     ? post.content.slice(polishHeadingIndex + 1) 
-    : [];
+    : post.content;
 ---
 
 <BaseLayout title={`${post.title} | SRE Repository`}>
@@ -84,46 +81,18 @@ const polishedContent = polishHeadingIndex !== -1
                 ))}
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6 mb-12">
-                <div class="p-6 rounded-2xl bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
-                    <span class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-3 block">Executive Summary (Master)</span>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 italic leading-relaxed">"{post.source}"</p>
+            {post.polish && (
+                <div class="p-8 rounded-3xl bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/20 shadow-sm">
+                    <span class="text-[10px] font-black uppercase tracking-[0.2em] text-red-600 mb-3 block">Transmuted Core (Al-Z)</span>
+                    <p class="text-sm text-red-800 dark:text-red-400 italic leading-relaxed">"{post.polish}"</p>
                 </div>
-                {post.polish && (
-                    <div class="p-6 rounded-2xl bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30">
-                        <span class="text-[10px] font-black uppercase tracking-[0.2em] text-red-600 mb-3 block">Transmuted Core (Al-Z)</span>
-                        <p class="text-sm text-red-800 dark:text-red-400 italic leading-relaxed">"{post.polish}"</p>
-                    </div>
-                )}
-            </div>
+            )}
         </header>
 
-        <div class="space-y-16">
-            <section>
-                <div class="flex items-center gap-4 mb-8">
-                    <h2 class="text-sm font-black uppercase tracking-[0.3em] text-slate-400">Raw Observations & Analysis</h2>
-                    <div class="flex-1 h-px bg-slate-200 dark:border-slate-800"></div>
-                </div>
-                <div class="prose dark:prose-invert max-w-none bg-white dark:bg-slate-900 p-8 md:p-12 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
-                    {rawContent.map(block => (
-                        <div set:html={renderBlock(block)} />
-                    ))}
-                </div>
-            </section>
-
-            {polishedContent.length > 0 && (
-                <section>
-                    <div class="flex items-center gap-4 mb-8">
-                        <h2 class="text-sm font-black uppercase tracking-[0.3em] text-red-500">Transmuted Article (Public Draft)</h2>
-                        <div class="flex-1 h-px bg-red-100 dark:bg-red-900/30"></div>
-                    </div>
-                    <div class="prose dark:prose-invert max-w-none bg-red-50/20 dark:bg-red-900/5 p-8 md:p-12 rounded-3xl border border-red-100 dark:border-red-900/20 shadow-sm">
-                        {polishedContent.map(block => (
-                            <div set:html={renderBlock(block)} />
-                        ))}
-                    </div>
-                </section>
-            )}
+        <div class="prose dark:prose-invert max-w-none bg-white dark:bg-slate-900 p-8 md:p-12 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
+            {displayContent.map(block => (
+                <div set:html={renderBlock(block)} />
+            ))}
         </div>
     </article>
 </BaseLayout>
