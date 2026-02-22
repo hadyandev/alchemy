@@ -1,5 +1,16 @@
 [
   {
+    "title": "Insight: UI/UX Scalability & Data Interconnectivity",
+    "date": "2026-02-23",
+    "description": "Membangun ekosistem informasi yang saling terhubung melalui Dynamic Routing, Slug SEO, dan Cross-Database atribusi. Menegaskan bahwa struktur data yang baik adalah fondasi dari navigasi semesta yang intuitif.",
+    "exp": 150,
+    "wisdom": 250,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Architecture overhaul for Techventure, SRE, and Story Mode pages."
+  },
+  {
     "title": "Insight: Paradigm Shift to Type-Safe PHP",
     "date": "2026-02-23",
     "description": "Memahami transisi PHP 8 dari bahasa skrip longgar ke paradigma engineering yang robust melalui typing dan fitur modern lainnya. Menegaskan pentingnya restrukturisasi fondasi untuk pertumbuhan teknis.",
