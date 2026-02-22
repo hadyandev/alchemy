@@ -17,7 +17,8 @@ const DB_IDS = {
     SCRIPTS: "30b79a34-e7c9-81d1-9e05-dbe63d4ebc96",
     QUOTES: "30c79a34-e7c9-81e9-bcd5-d03ccf7d37a5",
     TECHVENTURE: "30e79a34-e7c9-818e-8af9-e9cd347d9293",
-    SRE: "30e79a34-e7c9-8177-b36e-cc25c70c25b9"
+    SRE: "30e79a34-e7c9-8177-b36e-cc25c70c25b9",
+    STORYMODE: "30e79a34-e7c9-81b5-baa1-d05f2e22389b"
 };
 
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
@@ -57,7 +58,7 @@ async function syncAtelier() {
         // Fetch all datasets in parallel for speed
         const [
             statsRes, journeyRes, evolutionRes, glossaryRes, 
-            arsenalRes, laboratoryRes, taskRes, scriptRes, quoteRes, techventureRes, sreRes
+            arsenalRes, laboratoryRes, taskRes, scriptRes, quoteRes, techventureRes, sreRes, storyRes
         ] = await Promise.all([
             fetchNotionDB(DB_IDS.STATS),
             fetchNotionDB(DB_IDS.JOURNEY),
@@ -69,7 +70,8 @@ async function syncAtelier() {
             fetchNotionDB(DB_IDS.SCRIPTS),
             fetchNotionDB(DB_IDS.QUOTES),
             fetchNotionDB(DB_IDS.TECHVENTURE),
-            fetchNotionDB(DB_IDS.SRE)
+            fetchNotionDB(DB_IDS.SRE),
+            fetchNotionDB(DB_IDS.STORYMODE)
         ]);
 
         const techventure = await Promise.all(techventureRes.map(async page => {
@@ -101,6 +103,24 @@ async function syncAtelier() {
                 tags: props["Tags"]?.multi_select?.map(t => t.name) || [],
                 source: props["Source"]?.rich_text?.[0]?.plain_text || "",
                 strategy: props["Response Strategy"]?.rich_text?.[0]?.plain_text || "",
+                polish: props["Alchemical Polish"]?.rich_text?.[0]?.plain_text || "",
+                content: blocks
+            };
+        }));
+
+        const storymode = await Promise.all(storyRes.map(async page => {
+            const props = page.properties;
+            const blocks = await fetchPageBlocks(page.id);
+            return {
+                id: page.id,
+                title: props["Title"]?.title?.[0]?.plain_text || "Untitled",
+                date: props["Reflection Date"]?.date?.start || "",
+                medium: props["Medium"]?.select?.name || "Life Experience",
+                status: props["Status"]?.select?.name || "Draft",
+                source: props["Source Title"]?.rich_text?.[0]?.plain_text || "",
+                tags: props["Tags"]?.multi_select?.map(t => t.name) || [],
+                narrative: props["The Narrative"]?.rich_text?.[0]?.plain_text || "",
+                catalyst: props["Catalyst"]?.rich_text?.[0]?.plain_text || "",
                 polish: props["Alchemical Polish"]?.rich_text?.[0]?.plain_text || "",
                 content: blocks
             };
@@ -229,6 +249,7 @@ async function syncAtelier() {
         fs.writeFileSync(path.join(dataPath, 'quotes.json'), JSON.stringify(quotes, null, 2));
         fs.writeFileSync(path.join(dataPath, 'techventure.json'), JSON.stringify(techventure, null, 2));
         fs.writeFileSync(path.join(dataPath, 'sre.json'), JSON.stringify(sre, null, 2));
+        fs.writeFileSync(path.join(dataPath, 'storymode.json'), JSON.stringify(storymode, null, 2));
         
         console.log("✅ Manifestation Complete: Full Atelier Data synced.");
     } catch (error) {
