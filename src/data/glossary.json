@@ -68,5 +68,25 @@
     "term": "Turath Alchemy",
     "category": "Pillars (Islamic)",
     "description": "Proses mengekstraksi hikmah dari kitab-kitab klasik Islam untuk diimplementasikan dalam konteks modern."
+  },
+  {
+    "term": "Amalan Andalan",
+    "category": "Pillars (Islamic)",
+    "description": "Ibadah spesifik yang dilakukan secara konsisten dan dirasakan nikmatnya secara mendalam oleh individu, yang kemudian menjadi basis utama dalam berbagi kebaikan (dakwah) kepada orang lain."
+  },
+  {
+    "term": "Ghost Data Paradox",
+    "category": "Debugging",
+    "description": "The confusion arising when UI shows old data despite code being updated, due to build-time caching."
+  },
+  {
+    "term": "HDD Protocol",
+    "category": "Methodology",
+    "description": "Hikmah Driven Documentation: capturing technical insights as spiritual 'hikmah'."
+  },
+  {
+    "term": "Ivory Tower Strategy",
+    "category": "DevOps",
+    "description": "A branch protection strategy where Main is Locked (Public) and Dev is Laboratory (Unlocked)."
   }
 ]

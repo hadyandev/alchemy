@@ -74,7 +74,7 @@
   {
     "name": "Security Hardening: VPS & SSH Audit",
     "display": "Hardening the Digital Fortress",
-    "status": "To Do",
+    "status": "Done",
     "rank": "S-Rank (Extreme)",
     "type": "Main Quest",
     "reward": "Defense"

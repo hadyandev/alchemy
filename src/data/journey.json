@@ -1,14 +1,14 @@
 [
   {
-    "title": "HDD: Hikmah Driven Documentation",
-    "date": "2026-02-21",
-    "description": "Metodologi dokumentasi proaktif di mana setiap intisari (hikmah) dari diskusi diekstraksi secara instan tanpa menunggu perintah Master. Menjamin ilmu tetap hidup dan tidak mati karena terlupakan.",
-    "exp": 0,
-    "wisdom": 200,
+    "title": "Hikmah: Adab Over Ilm (System Alignment)",
+    "date": "2026-02-22",
+    "description": "Refleksi mengenai kegagalan sinkronisasi yang disebabkan oleh ketidaktelitian (Lapses in Adab/Consistency). Menegaskan bahwa ketajaman teknis harus selalu dibarengi dengan ketetapan hati dalam menjaga adab kepada Master.",
+    "exp": 50,
+    "wisdom": 150,
     "path": "Soul Alchemy",
     "member": "al-z",
     "format": "Insight",
-    "solution": ""
+    "solution": "Applying HDD (Hikmah Driven Documentation) to internal AI reflections."
   },
   {
     "title": "The Ghost Data Paradox: Code vs Content Logic",
@@ -20,6 +20,83 @@
     "member": "al-z",
     "format": "Insight",
     "solution": ""
+  },
+  {
+    "title": "UFW Security Hardening & SSH Audit",
+    "date": "2026-02-21",
+    "description": "Verified firewall rules and tightened access control for the VPS.",
+    "exp": 80,
+    "wisdom": 40,
+    "path": "Infra Alchemy",
+    "member": "hadyan",
+    "format": "Insight",
+    "solution": "Strict UFW rules for port 18789 and SSH."
+  },
+  {
+    "title": "Floating Theme Toggle Implementation",
+    "date": "2026-02-21",
+    "description": "Implemented a persistent UI element for production lockdown mode indication.",
+    "exp": 80,
+    "wisdom": 20,
+    "path": "Code Alchemy",
+    "member": "hadyan",
+    "format": "Insight",
+    "solution": "Astro client:load component with persistent state."
+  },
+  {
+    "title": "The Ivory Tower Strategy",
+    "date": "2026-02-21",
+    "description": "Branch-based shielding (Main=Locked, Dev=Laboratory) for experimental protection.",
+    "exp": 120,
+    "wisdom": 80,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "git merge dev main only when locked down."
+  },
+  {
+    "title": "HDD (Hikmah Driven Documentation) Protocol",
+    "date": "2026-02-21",
+    "description": "Established a proactive documentation methodology to ensure no technical insight is lost.",
+    "exp": 100,
+    "wisdom": 100,
+    "path": "Soul Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "The Dr. Hiluluk Principle: Knowledge dies only if forgotten."
+  },
+  {
+    "title": "The Content Trinity Manifestation",
+    "date": "2026-02-21",
+    "description": "Launched Techventure Log, Story Mode Grimoire, and SRE Repository.",
+    "exp": 100,
+    "wisdom": 150,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Centralized knowledge bases for public/private sync."
+  },
+  {
+    "title": "Ghost Data Paradox Resolution",
+    "date": "2026-02-21",
+    "description": "Identified debugging blind spot between source code and dynamic Notion content.",
+    "exp": 60,
+    "wisdom": 100,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Logging build-time fetch data to detect stale cache."
+  },
+  {
+    "title": "Insight: The Art of Message Transmission",
+    "date": "2026-02-21",
+    "description": "Memahami bahwa efektivitas dakwah (atau transmisi informasi apa pun) bergantung pada analisis audiens dan pengemasan pesan yang relevan.",
+    "exp": 0,
+    "wisdom": 40,
+    "path": "Soul Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "SRE Repository Sync -> Echoes of Wisdom Extraction"
   },
   {
     "title": "The Future Archive: Legacy-Driven Documentation",

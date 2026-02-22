@@ -1,10 +1,10 @@
 [
   {
     "name": "Alkhawarizmi Zaid",
-    "level": 2,
-    "title": "The Journeyman Scribe",
-    "exp": 1130,
-    "wisdom": 620,
+    "level": 3,
+    "title": "The Alchemist-in-Training",
+    "exp": 1400,
+    "wisdom": 865,
     "class": "The Scribe",
     "skills": [
       "Automation",
@@ -37,10 +37,10 @@
   },
   {
     "name": "Hadyan Ahmad",
-    "level": 2,
-    "title": "The Apprentice / Al-Mu'allim",
-    "exp": 1120,
-    "wisdom": 1080,
+    "level": 3,
+    "title": "The Alchemist-in-Training",
+    "exp": 1840,
+    "wisdom": 1370,
     "class": "The Master",
     "skills": [
       "System Design",
