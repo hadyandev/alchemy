@@ -77,17 +77,6 @@
     "solution": "Centralized knowledge bases for public/private sync."
   },
   {
-    "title": "Ghost Data Paradox Resolution",
-    "date": "2026-02-21",
-    "description": "Identified debugging blind spot between source code and dynamic Notion content.",
-    "exp": 60,
-    "wisdom": 100,
-    "path": "Code Alchemy",
-    "member": "al-z",
-    "format": "Insight",
-    "solution": "Logging build-time fetch data to detect stale cache."
-  },
-  {
     "title": "Insight: The Art of Message Transmission",
     "date": "2026-02-21",
     "description": "Memahami bahwa efektivitas dakwah (atau transmisi informasi apa pun) bergantung pada analisis audiens dan pengemasan pesan yang relevan.",
