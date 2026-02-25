@@ -43,19 +43,34 @@ const learningLog = journeyData.map(j => ({
 }));
 
 const generateHeatmap = () => {
-  const weeks = 22; // Extended for better desktop fill
+  const weeks = 22; // Back to 22 weeks to reduce horizontal width
   const daysPerWeek = 7;
   const today = new Date();
+  
+  // Create a copy of today to find the start/end of the current week safely
+  // Start from Sunday (0) to Saturday (6)
+  const currentDay = today.getDay(); // 0-6
+  
+  // Align to end of current week (Saturday)
   const lastDay = new Date(today);
-  lastDay.setDate(today.getDate() + (6 - today.getDay()));
+  lastDay.setDate(today.getDate() + (6 - currentDay));
+  lastDay.setHours(0, 0, 0, 0); // Normalize time
   
   const data = [];
   for (let w = 0; w < weeks; w++) {
     const week = [];
     for (let d = 0; d < daysPerWeek; d++) {
       const targetDate = new Date(lastDay);
+      // Logic: (weeks - 1 - w) is how many weeks back we are from current week
+      // (6 - d) is how many days back we are from Saturday of that week
       targetDate.setDate(lastDay.getDate() - ((weeks - 1 - w) * 7 + (6 - d)));
-      const dateString = targetDate.toISOString().split('T')[0];
+      
+      // Use localized date string for mapping to avoid timezone shift issues
+      const year = targetDate.getFullYear();
+      const month = String(targetDate.getMonth() + 1).padStart(2, '0');
+      const date = String(targetDate.getDate()).padStart(2, '0');
+      const dateString = `${year}-${month}-${date}`;
+
       const activities = learningLog.filter(log => log.date === dateString);
       week.push({ 
         date: dateString, 
@@ -81,20 +96,19 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 <BaseLayout title="Alchemist Dashboard">
 	<div class="py-6 md:py-10 space-y-12 md:space-y-16">
 		<header>
-			<h1 class="text-3xl md:text-4xl font-black tracking-tight mb-2 text-slate-900 dark:text-white">The Alchemist Dashboard</h1>
-			<p class="text-slate-500 text-sm md:text-base italic">Centralized manifestation of the atelier's progress and the guardians' evolution.</p>
+			<h1 class="text-3xl md:text-4xl font-black tracking-tight mb-2 text-slate-900 dark:text-white uppercase">The Dashboard</h1>
+			<p class="text-slate-500 text-sm italic border-l-2 border-slate-200 dark:border-slate-800 pl-4">Centralized manifestation of the atelier's progress and the guardians' evolution.</p>
 		</header>
 
 		<section id="characters">
 			<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-6">
 				<div class="border-l-4 border-blue-500 pl-4">
-					<h2 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">The Alchemists</h2>
-					<p class="text-xs md:text-sm text-slate-500 italic">The guardians of the atelier and seekers of knowledge.</p>
+					<h2 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white uppercase tracking-tight">The Alchemists</h2>
 				</div>
-				<div class="flex gap-2 w-full sm:w-auto self-end" id="memberFilters">
-					<button class="filter-btn active flex-1 sm:flex-none px-4 py-2 rounded-full text-xs font-bold bg-blue-600 text-white shadow-lg" data-filter="all">All</button>
-					<button class="filter-btn flex-1 sm:flex-none px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400" data-filter="hadyan">Seeker</button>
-					<button class="filter-btn flex-1 sm:flex-none px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400" data-filter="alz">Al-Z</button>
+				<div class="flex gap-2 w-full sm:w-auto" id="memberFilters">
+					<button class="filter-btn active flex-1 sm:flex-none px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest bg-blue-600 text-white shadow-lg" data-filter="all">All</button>
+					<button class="filter-btn flex-1 sm:flex-none px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500" data-filter="hadyan">Seeker</button>
+					<button class="filter-btn flex-1 sm:flex-none px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500" data-filter="alz">Al-Z</button>
 				</div>
 			</div>
 
@@ -103,39 +117,39 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 					<div class="char-card p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl relative overflow-hidden group transition-all duration-300" data-member={char.id}>
 						<div class="relative z-10">
 							<div class="flex items-center gap-4 mb-6">
-								<div class={`w-16 h-16 md:w-24 md:h-24 rounded-2xl flex items-center justify-center shadow-lg shrink-0 overflow-hidden border ${char.isPng ? 'bg-black dark:bg-white border-slate-800' : 'bg-black border-slate-800'}`}>
+								<div class={`w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center shadow-lg shrink-0 overflow-hidden border ${char.isPng ? 'bg-black dark:bg-white border-slate-800' : 'bg-black border-slate-800'}`}>
 									<img src={char.avatar} alt={char.name} class={`w-full h-full ${char.isPng ? 'object-contain p-2 dark:invert invert-0 scale-125' : 'object-cover'}`} />
 								</div>
 								<div>
 									<h3 class="text-xl md:text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tighter leading-none">{char.name}</h3>
-									<p class="text-xs font-bold text-blue-500 dark:text-blue-400 uppercase tracking-widest mt-1">{char.role}</p>
+									<p class="text-[10px] font-bold text-blue-500 dark:text-blue-400 uppercase tracking-widest mt-1">{char.role}</p>
 								</div>
 							</div>
 							
-							<div class="grid grid-cols-3 gap-2 md:gap-4 mb-8">
-								<div class="p-3 md:p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 text-center">
-									<span class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Level</span>
-									<span class="text-lg md:text-2xl font-black text-blue-600">{char.stats.level}</span>
+							<div class="grid grid-cols-3 gap-2 md:gap-4 mb-8 text-center uppercase tracking-widest">
+								<div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+									<span class="block text-[8px] font-black text-slate-400 mb-1">Level</span>
+									<span class="text-lg md:text-xl font-black text-blue-600">{char.stats.level}</span>
 								</div>
-								<div class="p-3 md:p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 text-center">
-									<span class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Wisdom</span>
-									<span class="text-lg md:text-2xl font-black text-purple-600">{char.stats.wisdom}</span>
+								<div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+									<span class="block text-[8px] font-black text-slate-400 mb-1">Wisdom</span>
+									<span class="text-lg md:text-xl font-black text-purple-600">{char.stats.wisdom}</span>
 								</div>
-								<div class="p-3 md:p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 text-center">
-									<span class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">EXP</span>
-									<span class="text-lg md:text-2xl font-black text-emerald-600">{char.stats.exp}</span>
+								<div class="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+									<span class="block text-[8px] font-black text-slate-400 mb-1">EXP</span>
+									<span class="text-lg md:text-xl font-black text-emerald-600">{char.stats.exp}</span>
 								</div>
 							</div>
 
 							<div class="space-y-4">
-								<span class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Alchemy Paths</span>
+								<span class="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400">Alchemy Paths</span>
 								{char.paths.map(path => (
 									<div class="space-y-1.5">
-										<div class="flex justify-between text-[10px] font-bold uppercase tracking-widest">
+										<div class="flex justify-between text-[9px] font-bold uppercase tracking-widest">
 											<span>{path.name}</span>
 											<span>Lvl {path.level}</span>
 										</div>
-										<div class="h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+										<div class="h-1 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
 											<div class="h-full bg-blue-500 rounded-full transition-all duration-1000" style={`width: ${path.exp}%`}></div>
 										</div>
 									</div>
@@ -148,61 +162,50 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 		</section>
 
 		<section id="contribution-heatmap">
-			<div class="border-l-4 border-blue-500 dark:border-blue-400 pl-4 mb-8">
-				<h2 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">Alchemist Activity</h2>
-				<p class="text-xs md:text-sm text-slate-500 italic">Historical manifestation of the atelier's growth across the timeline.</p>
+			<div class="border-l-4 border-emerald-500 pl-4 mb-8">
+				<h2 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white uppercase tracking-tight">Alchemist Activity</h2>
 			</div>
 
-			<div class="p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl overflow-x-auto">
-				<div class="min-w-[800px]">
-					<div class="flex text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">
+			<div class="p-6 md:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl overflow-x-auto scrollbar-hide">
+				<div class="min-w-[700px]">
+					<div class="flex text-[9px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-4">
 						<div class="w-8"></div>
 						{heatmapColumns.map(col => (
 							<div class="flex-1 text-center">{col.monthLabel}</div>
 						))}
 					</div>
 					
-					<div class="flex gap-1.5">
-						<div class="flex flex-col gap-1.5 text-[8px] font-black text-slate-300 dark:text-slate-700 uppercase w-8 pt-0.5">
-							<div class="h-3 flex items-center">Sun</div>
-							<div class="h-3 flex items-center">Mon</div>
-							<div class="h-3 flex items-center">Tue</div>
-							<div class="h-3 flex items-center">Wed</div>
-							<div class="h-3 flex items-center">Thu</div>
-							<div class="h-3 flex items-center">Fri</div>
-							<div class="h-3 flex items-center">Sat</div>
+					<div class="flex gap-1">
+						<div class="flex flex-col gap-1 text-[7px] md:text-[8px] font-black text-slate-300 dark:text-slate-700 uppercase w-6 md:w-8 pt-0.5">
+							<div class="h-1.5 md:h-2 flex items-center">S</div>
+							<div class="h-1.5 md:h-2 flex items-center">M</div>
+							<div class="h-1.5 md:h-2 flex items-center">T</div>
+							<div class="h-1.5 md:h-2 flex items-center">W</div>
+							<div class="h-1.5 md:h-2 flex items-center">T</div>
+							<div class="h-1.5 md:h-2 flex items-center">F</div>
+							<div class="h-1.5 md:h-2 flex items-center">S</div>
 						</div>
 						
-						<div class="flex flex-1 gap-1.5">
+						<div class="flex gap-1">
 							{activityWeeks.map(week => (
-								<div class="flex-1 flex flex-col gap-1.5">
+								<div class="flex flex-col gap-1 w-2 md:w-2.5">
 									{week.map(day => (
 										<div 
-											class={`aspect-square w-full rounded-sm transition-all duration-300 cursor-pointer hover:ring-2 hover:ring-blue-500 relative group
+											class={`aspect-square w-full rounded-[1px] transition-all duration-300 cursor-pointer hover:ring-1 hover:ring-blue-500 relative group
 												${day.count === 0 ? 'bg-slate-100 dark:bg-slate-800/50' : 
 												  day.count === 1 ? 'bg-blue-200 dark:bg-blue-900/30' : 
 												  day.count === 2 ? 'bg-blue-400 dark:bg-blue-700/50' : 
 												  'bg-blue-600 dark:bg-blue-500'}`}
-											title={`${day.date}: ${day.count} activities`}
 											data-date={day.date}
 										>
-											<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-3 rounded-xl bg-slate-900 text-white text-[10px] font-medium leading-relaxed opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 shadow-2xl pointer-events-none">
-												<p class="font-black text-blue-400 mb-1">{new Date(day.date).toLocaleDateString('default', { dateStyle: 'long' })}</p>
-												
-                                                <div class="mobile-tooltip-only md:hidden">
-                                                    <p>{day.count} Learning items</p>
+											<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-40 p-2 rounded-lg bg-slate-900 text-white text-[9px] font-medium leading-tight opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 shadow-2xl pointer-events-none">
+												<p class="font-black text-blue-400 mb-1">{new Date(day.date + 'T00:00:00').toLocaleDateString('default', { month: 'short', day: 'numeric', year: 'numeric' })}</p>
+												<p>{day.count} Activities Recorded</p>
+                                                <div class="hidden md:block mt-2 border-t border-white/10 pt-2">
+                                                    {day.topics.slice(0, 3).map(t => <div class="truncate opacity-70">• {t}</div>)}
+                                                    {day.topics.length > 3 && <div class="opacity-50 italic">+ {day.topics.length - 3} more</div>}
                                                 </div>
-                                                
-                                                <div class="desktop-tooltip hidden md:block">
-                                                    {day.topics.length > 0 ? (
-                                                        <ul class="list-disc ml-3 space-y-1">
-                                                            {day.topics.map(t => <li>{t}</li>)}
-                                                        </ul>
-                                                    ) : (
-                                                        <p class="italic opacity-50">No activity recorded</p>
-                                                    )}
-                                                </div>
-												<div class="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-slate-900"></div>
+												<div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-slate-900"></div>
 											</div>
 										</div>
 									))}
@@ -211,13 +214,13 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 						</div>
 					</div>
 					
-					<div class="flex items-center justify-end gap-2 mt-6 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+					<div class="flex items-center justify-end gap-2 mt-6 text-[8px] font-bold text-slate-400 uppercase tracking-widest">
 						<span>Less</span>
-						<div class="flex gap-1.5">
-							<div class="aspect-square w-3 rounded-sm bg-slate-100 dark:bg-slate-800/50"></div>
-							<div class="aspect-square w-3 rounded-sm bg-blue-200 dark:bg-blue-900/30"></div>
-							<div class="aspect-square w-3 rounded-sm bg-blue-400 dark:bg-blue-700/50"></div>
-							<div class="aspect-square w-3 rounded-sm bg-blue-600 dark:bg-blue-500"></div>
+						<div class="flex gap-1">
+							<div class="w-1.5 h-1.5 md:w-2 md:h-2 rounded-[1px] bg-slate-100 dark:bg-slate-800/50"></div>
+							<div class="w-1.5 h-1.5 md:w-2 md:h-2 rounded-[1px] bg-blue-200 dark:bg-blue-900/30"></div>
+							<div class="w-1.5 h-1.5 md:w-2 md:h-2 rounded-[1px] bg-blue-400 dark:bg-blue-700/50"></div>
+							<div class="w-1.5 h-1.5 md:w-2 md:h-2 rounded-[1px] bg-blue-600 dark:bg-blue-500"></div>
 						</div>
 						<span>More</span>
 					</div>
@@ -228,20 +231,9 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 		<section id="learning-path">
 			<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10 border-l-4 border-purple-500 pl-4">
 				<div>
-					<h2 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white uppercase tracking-tight">The Journey of Al-Mubtadi</h2>
-					<p class="text-xs md:text-sm text-slate-500 italic uppercase tracking-widest mt-1">Archive of manifested knowledge and spiritual growth.</p>
+					<h2 class="text-xl md:text-2xl font-bold text-slate-900 dark:text-white uppercase tracking-tight">The Journey</h2>
+					<p id="totalCounter" class="text-[9px] font-black uppercase tracking-widest text-slate-400 mt-1"></p>
 				</div>
-                <div class="flex items-center gap-4">
-                    <span id="paginationInfo" class="text-[10px] font-black uppercase tracking-widest text-slate-400"></span>
-                    <div class="flex gap-2">
-                        <button id="prevPage" class="p-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-400 hover:text-purple-500 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
-                        </button>
-                        <button id="nextPage" class="p-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-400 hover:text-purple-500 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
-                        </button>
-                    </div>
-                </div>
 			</div>
 
 			<div id="journeyList" class="space-y-6">
@@ -265,7 +257,7 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 									<span class="px-2 py-0.5 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 text-[9px] font-black uppercase tracking-widest border border-blue-100 dark:border-blue-800/50">{log.memberName}</span>
 								</div>
 							</div>
-							<h4 class="text-lg md:text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-2 italic">"{log.title}"</h4>
+							<h4 class="text-lg md:text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight italic">"{log.title}"</h4>
 							
                             <div class="expandable-content overflow-hidden max-h-0 transition-all duration-500 opacity-0">
                                 {log.description && <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-4 pt-4 border-t border-slate-50 dark:border-slate-800">{log.description}</p>}
@@ -277,17 +269,17 @@ const heatmapColumns = activityWeeks.map((week, i) => {
                                 )}
                                 <div class="mt-4 flex gap-4">
                                     <div class="flex items-center gap-1.5">
-                                        <span class="text-[10px] font-black text-slate-400 uppercase">Wisdom</span>
+                                        <span class="text-[10px] font-black text-slate-400 uppercase text-[8px]">Wisdom</span>
                                         <span class="text-xs font-black text-purple-500">+{log.wisdom}</span>
                                     </div>
                                     <div class="flex items-center gap-1.5">
-                                        <span class="text-[10px] font-black text-slate-400 uppercase">EXP</span>
+                                        <span class="text-[10px] font-black text-slate-400 uppercase text-[8px]">EXP</span>
                                         <span class="text-xs font-black text-emerald-500">+{log.exp}</span>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="mt-4 text-[9px] font-black uppercase tracking-widest text-purple-500 flex items-center gap-2 expand-label">
+                            <div class="mt-4 text-[8px] font-black uppercase tracking-widest text-purple-500 flex items-center gap-2 expand-label">
                                 <span>Expand Analysis</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m6 9 6 6 6-6"/></svg>
                             </div>
@@ -295,15 +287,53 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 					</div>
 				))}
 			</div>
+
+            <div class="mt-12 text-center">
+                <button id="loadMoreBtn" class="px-8 py-3 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 hover:text-blue-500 hover:border-blue-500/50 transition-all shadow-sm">
+                    Load More Chronicles
+                </button>
+            </div>
 		</section>
 	</div>
 </BaseLayout>
 
 <script is:inline>
+    let visibleCount = 10;
+    const increment = 10;
+
+    function updateVisibility() {
+        const filter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+        const allItems = Array.from(document.querySelectorAll('.journey-item'));
+        const filteredItems = allItems.filter(item => 
+            filter === 'all' || item.getAttribute('data-member') === filter
+        );
+        
+        // Update Counter
+        const totalCounter = document.getElementById('totalCounter');
+        totalCounter.textContent = `Manifested ${filteredItems.length} Artifacts of Knowledge`;
+
+        // Hide all first
+        allItems.forEach(item => item.style.display = 'none');
+        
+        // Show only up to visibleCount from filtered list
+        filteredItems.forEach((item, index) => {
+            if (index < visibleCount) {
+                item.style.display = 'block';
+            }
+        });
+
+        // Hide button if no more to show
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        if (visibleCount >= filteredItems.length) {
+            loadMoreBtn.style.display = 'none';
+        } else {
+            loadMoreBtn.style.display = 'inline-block';
+        }
+    }
+
 	function setupFilters() {
 		const filterBtns = document.querySelectorAll('.filter-btn');
 		const charCards = document.querySelectorAll('.char-card');
-		const journeyItems = document.querySelectorAll('.journey-item');
 
 		filterBtns.forEach(btn => {
 			btn.addEventListener('click', () => {
@@ -312,10 +342,10 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 				// Update buttons
 				filterBtns.forEach(b => {
 					b.classList.remove('active', 'bg-blue-600', 'text-white', 'shadow-lg');
-					b.classList.add('bg-white', 'dark:bg-slate-900', 'border', 'slate-200', 'dark:border-slate-800', 'text-slate-600', 'dark:text-slate-400');
+					b.classList.add('bg-white', 'dark:bg-slate-900', 'border', 'slate-200', 'dark:border-slate-800', 'text-slate-500');
 				});
 				btn.classList.add('active', 'bg-blue-600', 'text-white', 'shadow-lg');
-				btn.classList.remove('bg-white', 'dark:bg-slate-900', 'border', 'slate-200', 'dark:border-slate-800', 'text-slate-600', 'dark:text-slate-400');
+				btn.classList.remove('bg-white', 'dark:bg-slate-900', 'border', 'slate-200', 'dark:border-slate-800', 'text-slate-500');
 
 				// Update characters
 				charCards.forEach(card => {
@@ -328,67 +358,18 @@ const heatmapColumns = activityWeeks.map((week, i) => {
 					}
 				});
 
-                // Reset pagination to first page after filter
-                currentPage = 0;
-                updatePagination();
+                // Reset visible count on filter
+                visibleCount = 10;
+                updateVisibility();
 			});
 		});
 	}
 
-    let currentPage = 0;
-    const itemsPerPage = 10;
-    
-    function updatePagination() {
-        const filter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
-        const allItems = Array.from(document.querySelectorAll('.journey-item'));
-        const filteredItems = allItems.filter(item => 
-            filter === 'all' || item.getAttribute('data-member') === filter
-        );
-        
-        const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
-        
-        // Hide ALL first, then show only what's needed for current page
-        allItems.forEach(item => item.style.display = 'none');
-        
-        filteredItems.forEach((item, index) => {
-            const start = currentPage * itemsPerPage;
-            const end = start + itemsPerPage;
-            if (index >= start && index < end) {
-                item.style.display = 'block';
-            }
-        });
-        
-        // Update Info
-        const info = document.getElementById('paginationInfo');
-        info.textContent = `Showing ${filteredItems.length > 0 ? currentPage * itemsPerPage + 1 : 0} - ${Math.min((currentPage + 1) * itemsPerPage, filteredItems.length)} of ${filteredItems.length} Items`;
-
-        document.getElementById('prevPage').disabled = currentPage === 0;
-        document.getElementById('nextPage').disabled = currentPage >= totalPages - 1;
-        document.getElementById('prevPage').style.opacity = currentPage === 0 ? '0.3' : '1';
-        document.getElementById('nextPage').style.opacity = currentPage >= totalPages - 1 ? '0.3' : '1';
-    }
-
-    function setupPagination() {
-        document.getElementById('prevPage').addEventListener('click', () => {
-            if (currentPage > 0) {
-                currentPage--;
-                updatePagination();
-                window.scrollTo({ top: document.getElementById('learning-path').offsetTop - 100, behavior: 'smooth' });
-            }
-        });
-        
-        document.getElementById('nextPage').addEventListener('click', () => {
-            const filter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
-            const filteredItems = Array.from(document.querySelectorAll('.journey-item')).filter(item => 
-                filter === 'all' || item.getAttribute('data-member') === filter
-            );
-            const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
-            
-            if (currentPage < totalPages - 1) {
-                currentPage++;
-                updatePagination();
-                window.scrollTo({ top: document.getElementById('learning-path').offsetTop - 100, behavior: 'smooth' });
-            }
+    function setupLoadMore() {
+        const btn = document.getElementById('loadMoreBtn');
+        btn.addEventListener('click', () => {
+            visibleCount += increment;
+            updateVisibility();
         });
     }
 
@@ -418,7 +399,7 @@ const heatmapColumns = activityWeeks.map((week, i) => {
     }
 
 	setupFilters();
-    setupPagination();
+    setupLoadMore();
     setupAccordion();
-    updatePagination();
+    updateVisibility();
 </script>
