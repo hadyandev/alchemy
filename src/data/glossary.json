@@ -98,5 +98,15 @@
     "term": "Memory Compaction",
     "category": "Debugging",
     "description": "A context-window optimization event where the LLM runtime summarizes and compresses prior conversation history, potentially causing loss of granular session context. The primary threat that OVERSOUL Protocol was designed to counter."
+  },
+  {
+    "term": "The Fortress",
+    "category": "Infrastructure",
+    "description": "Nama resmi untuk server utama (VPS vmi2935473) yang menjalankan OpenClaw, Coolify, dan Dokploy. Simbol kekuatan infrastruktur DekiruLab."
+  },
+  {
+    "term": "Caddy",
+    "category": "Infrastructure",
+    "description": "Web server dan reverse proxy modern dengan HTTPS otomatis. Digunakan di The Fortress untuk routing domain: claw.dekirulab.dev (OpenClaw UI) dan wp.dekirulab.dev (WordPress)."
   }
 ]
