@@ -3,8 +3,8 @@
     "name": "Alkhawarizmi Zaid",
     "level": 3,
     "title": "The Alchemist-in-Training",
-    "exp": 1700,
-    "wisdom": 1035,
+    "exp": 2025,
+    "wisdom": 1220,
     "class": "The Scribe",
     "skills": [
       "Automation",
@@ -39,8 +39,8 @@
     "name": "Hadyan Ahmad",
     "level": 3,
     "title": "The Alchemist-in-Training",
-    "exp": 2010,
-    "wisdom": 1480,
+    "exp": 2280,
+    "wisdom": 1700,
     "class": "The Master",
     "skills": [
       "System Design",

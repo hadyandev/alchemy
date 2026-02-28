@@ -38,5 +38,15 @@
     ],
     "repo": "",
     "date": "2023-12-31"
+  },
+  {
+    "name": "⚗️ Angkain Apps",
+    "stability": "In Development",
+    "elements": [
+      "Code Alchemy",
+      "Infra Alchemy"
+    ],
+    "repo": "https://github.com/dekirulab/angkain",
+    "date": ""
   }
 ]

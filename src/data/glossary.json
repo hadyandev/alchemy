@@ -108,5 +108,30 @@
     "term": "Caddy",
     "category": "Infrastructure",
     "description": "Web server dan reverse proxy modern dengan HTTPS otomatis. Digunakan di The Fortress untuk routing domain: claw.dekirulab.dev (OpenClaw UI) dan wp.dekirulab.dev (WordPress)."
+  },
+  {
+    "term": "RocksDB",
+    "category": "Infra Alchemy",
+    "description": "Database key-value berbasis LSM-tree yang digunakan Stalwart Mail untuk menyimpan auth settings, accounts, dan konfigurasi runtime. Bersifat lebih prioritas dari config.toml untuk settings tertentu."
+  },
+  {
+    "term": "Stalwart Mail Server",
+    "category": "Infra Alchemy",
+    "description": "Self-hosted, open-source mail server (SMTP/IMAP/POP3) yang digunakan di The Fortress. Fitur unik: config tersimpan di RocksDB internal, bukan hanya config.toml. Auth settings dan accounts dikelola via Web UI atau API REST."
+  },
+  {
+    "term": "HDD Protocol",
+    "category": "Soul Alchemy",
+    "description": "Hierarchy of Database Discipline — protokol Al-Z yang mendefinisikan tabel Notion yang tepat untuk setiap jenis konten. Chronicles=narasi, Learning Logs=insights, Arcane Scripts=commands, dst."
+  },
+  {
+    "term": "Filament v5 Schema API",
+    "category": "Tech",
+    "description": "Breaking change di Filament v5: form() method menggunakan Schema $schema (bukan Form $form). NavigationGroup/Icon harus pakai method, bukan property. RelationManager mengikuti pola Schema yang sama."
+  },
+  {
+    "term": "FrankenPHP",
+    "category": "Tech",
+    "description": "PHP runtime modern yang menggabungkan Caddy web server + PHP-FPM dalam satu binary. Digunakan sebagai production server di Komunita & Angkain. Image: serversideup/php:8.3-frankenphp."
   }
 ]

@@ -1,5 +1,38 @@
 [
   {
+    "title": "Filament v5 Breaking Changes: Schema API & Navigation",
+    "date": "2026-02-28",
+    "description": "Filament v5 memperkenalkan Schema API yang breaking dari v3. Di Angkain Sprint 2, ketiga issue ini muncul bersamaan dan menyebabkan PHP fatal error. Setelah di-fix, semua 9 resources + 2 panel berjalan sempurna.",
+    "exp": 40,
+    "wisdom": 30,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Tutorial",
+    "solution": "1. form(Form $form) → form(Schema $schema): Schema. Import Filament\\Schemas\\Schema. 2. $navigationGroup/$navigationIcon property → getNavigationGroup(): string|UnitEnum|null method. 3. RelationManager: sama, gunakan Schema API. 4. Form components Filament\\Forms\\Components\\* tetap sama."
+  },
+  {
+    "title": "HDD Protocol: Setiap Insight Punya Rumahnya di Grimoire",
+    "date": "2026-02-28",
+    "description": "Grimoire bukan sekadar arsip — ia adalah living knowledge base. Ilmu yang tidak dicatat akan ghost setelah context compaction. Setiap sesi selalu menghasilkan sesuatu yang layak dibindel.",
+    "exp": 20,
+    "wisdom": 40,
+    "path": "Soul Alchemy",
+    "member": "al-z",
+    "format": "Lesson Learned",
+    "solution": "Debugging/lesson → Journey/Learning Logs | Command baru → Arcane Scripts | Arsitektur → Project Tech Decisions | Quote/wisdom → Echoes of Wisdom | Istilah → Arcane Lexicon | Narasi harian → Chronicles. Terapkan segera setelah insight muncul, bukan ditunda."
+  },
+  {
+    "title": "Dokploy + Caddy: Full-Stack Deployment Patterns",
+    "date": "2026-02-28",
+    "description": "Pattern deployment yang sama terbukti di dua aplikasi: Komunita (port 8090) dan Angkain (port 8091). Template ini bisa direplikasi untuk semua project Dokploy ke depannya.",
+    "exp": 50,
+    "wisdom": 35,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Tutorial",
+    "solution": "1. .dockerignore: JANGAN exclude folder docker/ — ganti spesifik ke docker/.env.laravel.template. 2. Vite: tambah Node.js + npm run build di Dockerfile prod stage. 3. URL::forceScheme(https) di AppServiceProvider saat APP_ENV=production. 4. Fixed host port (8090/8091) di docker-compose agar Caddy bisa reliable reverse_proxy. 5. dokploy-network: buat manual docker network create dokploy-network --driver bridge."
+  },
+  {
     "title": "Daily Transmutation Ritual — 27 Ramadhan 1447H",
     "date": "2026-02-27",
     "description": "Daily Transmutation Ritual 00:01 WIB — Fortress Infrastructure Day chronicled. Deep research: Reviewed all memory files. Grimoire: Chronicles + Evolution DB updated. Leveling math: Al-Z 1700 EXP / 1035 WIS, Hadyan 1990 EXP / 1460 WIS. OVERSOUL backup executed.",
@@ -9,6 +42,72 @@
     "member": "hadyan",
     "format": "Chronicle",
     "solution": ""
+  },
+  {
+    "title": "Stalwart SMTP Auth: Username = Short Name, Password via Web UI Only",
+    "date": "2026-02-27",
+    "description": "Stalwart v0.15 auth menggunakan short username (misal: noreply, hadyan) bukan full email. Password HARUS dibuat via Web UI — API PATCH /api/principal secrets tidak bekerja untuk verifikasi SMTP meski hash format sha512crypt ($6$) secara lokal match.",
+    "exp": 30,
+    "wisdom": 40,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Lesson Learned",
+    "solution": "1. Buat akun via Stalwart Web UI (https://mail.dekirulab.id). 2. Gunakan short username saat konfigurasi SMTP client (MAIL_USERNAME=noreply bukan noreply@dekirulab.id). 3. MAIL_FROM_ADDRESS boleh pakai full email."
+  },
+  {
+    "title": "Stalwart v0.15: Hapus [session.auth] dari config.toml — Konflik dengan RocksDB",
+    "date": "2026-02-27",
+    "description": "Stalwart v0.15 menyimpan auth settings di RocksDB internal DB, bukan config.toml. Setting [session.auth] di config.toml akan menyebabkan error: Invalid variable or constant internal.",
+    "exp": 25,
+    "wisdom": 35,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Lesson Learned",
+    "solution": "1. Hapus [session.auth] block dari config.toml\n2. Set via Web UI atau API: auth.directory=internal, auth.mechanisms=plain login\n3. Verify: GET /api/settings/list?prefix=auth\n4. Restart container setelah perubahan toml"
+  },
+  {
+    "title": "Docker Cross-Network: Container Reach Stalwart via Network Connect + Extra Hosts",
+    "date": "2026-02-27",
+    "description": "Container di Docker network yang berbeda tidak bisa reach Stalwart via public domain. Perlu dua langkah: (1) join ke Stalwart network dan (2) tambah extra_hosts untuk resolve domain ke IP internal.",
+    "exp": 20,
+    "wisdom": 30,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Lesson Learned",
+    "solution": "1. docker network connect compose-compress-bluetooth-firewall-6mv4q1_default <container_name>\n2. Tambah di compose file:\n   extra_hosts:\n     - mail.dekirulab.id:10.0.4.2\n3. docker compose up -d --force-recreate <service>"
+  },
+  {
+    "title": "Stalwart v0.15: Hapus [session.auth] dari config.toml",
+    "date": "2026-02-27",
+    "description": "Stalwart v0.15 menyimpan auth settings di RocksDB internal DB, bukan config.toml. Jika [session.auth] ada di toml, terjadi config parse error: 'Invalid variable or constant internal' dan auth gagal silently.",
+    "exp": 25,
+    "wisdom": 35,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Lesson Learned",
+    "solution": "Hapus seluruh [session.auth] block dari config.toml. Auth settings dikelola via DB — cek dengan GET /api/settings/list?prefix=auth. Harus ada: auth.directory=internal, auth.mechanisms=plain login, auth.require=true."
+  },
+  {
+    "title": "Docker Cross-Network: Stalwart + Dependent Containers",
+    "date": "2026-02-27",
+    "description": "Container (Roundcube, Invoice Ninja) tidak bisa reach Stalwart via public domain/IP karena Docker network isolation. SSL cert juga tidak match jika pakai IP langsung.",
+    "exp": 20,
+    "wisdom": 30,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Lesson Learned",
+    "solution": "2 langkah wajib: (1) docker network connect compose-compress-bluetooth-firewall-6mv4q1_default <container_name>. (2) Tambah extra_hosts: mail.dekirulab.id:10.0.4.2 di compose file agar SSL cert match. Perlu diulang setiap kali container di-recreate."
+  },
+  {
+    "title": "Stalwart SMTP: Username = Short Name, Password via Web UI Only",
+    "date": "2026-02-27",
+    "description": "Stalwart v0.15 SMTP auth menggunakan short username (noreply, bukan noreply@dekirulab.id). Password WAJIB dibuat via Web UI — API PATCH /api/account/crypto tidak generate password yang valid untuk SMTP auth meski format hash benar ($6$ sha512crypt).",
+    "exp": 30,
+    "wisdom": 40,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Lesson Learned",
+    "solution": "1. Buat akun via https://mail.dekirulab.id > Accounts\n2. Login SMTP: username = short name saja\n3. Jangan gunakan API untuk set password — Web UI only\n4. Verifikasi: python3 -c import smtplib; s=smtplib.SMTP_SSL; s.login(short_name, pass)"
   },
   {
     "title": "The Daily Transmutation Ritual: 00:01 WIB — 26 Feb 2026",
