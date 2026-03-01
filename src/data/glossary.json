@@ -133,5 +133,15 @@
     "term": "FrankenPHP",
     "category": "Tech",
     "description": "PHP runtime modern yang menggabungkan Caddy web server + PHP-FPM dalam satu binary. Digunakan sebagai production server di Komunita & Angkain. Image: serversideup/php:8.3-frankenphp."
+  },
+  {
+    "term": "filament-shield",
+    "category": "Tech",
+    "description": "RBAC package for Filament v5 (bezhansalleh/filament-shield v4.1) using spatie/laravel-permission ^6.0. Generates 111 permissions + 3 roles (super_admin, admin, operator). Note: RoleResource must set $isScopedToTenant = false (temp vendor patch)."
+  },
+  {
+    "term": "JurnalService",
+    "category": "Tech",
+    "description": "Custom double-entry accounting service in Angkain app. Auto-generates journal entries when Penerimaan/Penyaluran status changes to POSTED. Format: JRN-YYYYMM-XXXX. Built in-house because scottlaurent/accounting is incompatible with Laravel 12."
   }
 ]

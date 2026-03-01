@@ -1,5 +1,38 @@
 [
   {
+    "title": "JurnalService — Custom Double-Entry Accounting (Laravel 12)",
+    "date": "2026-03-01",
+    "description": "",
+    "exp": 35,
+    "wisdom": 30,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Lesson Learned",
+    "solution": "scottlaurent/accounting incompatible with Laravel 12. Solution: custom JurnalService with auto-journal observers on Penerimaan + Penyaluran (POSTED status). Account mapping: debit by metode_bayar (TUNAI=1-001, else 1-002); credit from kategoriPenerimaan->kode_akun. Journal number format: JRN-YYYYMM-XXXX. akun_perkiraan kode format: 1-001 (NOT 1-1-1)."
+  },
+  {
+    "title": "Dokploy Compose Deploy SOP — git pull + stash + API trigger",
+    "date": "2026-03-01",
+    "description": "",
+    "exp": 20,
+    "wisdom": 15,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Log",
+    "solution": "Komunita composeId: Gre0N0uR0Tg6oK2Mu_fxq | Angkain composeId: rT0VN4ALJFtf8KJ71ZFoQ. Deploy: push to GitHub -> git pull at /etc/dokploy/compose/<id>/code -> POST /api/compose.deploy. If uncommitted changes: git stash first. LOG_CHANNEL=stderr -> errors in docker logs <container>, not storage/logs/laravel.log."
+  },
+  {
+    "title": "Filament v5 — Namespace & Property Gotchas (Complete Compendium)",
+    "date": "2026-03-01",
+    "description": "",
+    "exp": 40,
+    "wisdom": 35,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Lesson Learned",
+    "solution": "1. Actions: Filament\\Actions\\ (NOT Tables\\Actions\\). 2. ChartWidget: getType(): string (no $chartType). 3. Page with form: HasForms + InteractsWithForms required. 4. ListRecords plural, others singular. 5. $navigationGroup = ?string only. 6. Blade @endif on own line always."
+  },
+  {
     "title": "Filament v5 Breaking Changes: Schema API & Navigation",
     "date": "2026-02-28",
     "description": "Filament v5 memperkenalkan Schema API yang breaking dari v3. Di Angkain Sprint 2, ketiga issue ini muncul bersamaan dan menyebabkan PHP fatal error. Setelah di-fix, semua 9 resources + 2 panel berjalan sempurna.",
