@@ -143,5 +143,20 @@
     "term": "JurnalService",
     "category": "Tech",
     "description": "Custom double-entry accounting service in Angkain app. Auto-generates journal entries when Penerimaan/Penyaluran status changes to POSTED. Format: JRN-YYYYMM-XXXX. Built in-house because scottlaurent/accounting is incompatible with Laravel 12."
+  },
+  {
+    "term": "secure_asset()",
+    "category": "Code Alchemy",
+    "description": "Laravel helper untuk generate HTTPS asset URLs. Replacement wajib untuk asset() ketika APP_URL pakai HTTPS. Mencegah Mixed Content browser error."
+  },
+  {
+    "term": "SaaS 1-Instance-1-Client",
+    "category": "Code Alchemy",
+    "description": "Model deployment Angkain: setiap klien mendapat instance terpisah, bukan shared multi-tenant. Cabang = unit operasional internal satu lembaga. Full data isolation, custom per-client."
+  },
+  {
+    "term": "Shadcn Theme (Filament)",
+    "category": "Code Alchemy",
+    "description": "openplain/filament-shadcn-theme — color-only package, swap CSS variables untuk adaptive dark mode. Bukan redesign layout/components. Font via ->font() hanya Filament sidebar/header."
   }
 ]

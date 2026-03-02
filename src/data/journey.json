@@ -1,5 +1,49 @@
 [
   {
+    "title": "Laravel HTTPS Mixed Content — asset() vs secure_asset()",
+    "date": "2026-03-02",
+    "description": "Mixed Content error terjadi karena asset() generate HTTP URLs di halaman HTTPS. secure_asset() auto-generate HTTPS URLs.",
+    "exp": 40,
+    "wisdom": 30,
+    "path": "Code Alchemy",
+    "member": "hadyan",
+    "format": "Insight",
+    "solution": "Replace ALL asset() with secure_asset() in panel providers. Add URL::forceScheme('https') + URL::forceRootUrl(config('app.url')) unconditionally in AppServiceProvider."
+  },
+  {
+    "title": "Filament v5 Custom Login Page — Split Layout Architecture",
+    "date": "2026-03-02",
+    "description": "Custom login dengan split layout: 60% brand panel kiri + 40% form kanan. Islamic geometric CSS pattern. Mobile responsive.",
+    "exp": 40,
+    "wisdom": 30,
+    "path": "Code Alchemy",
+    "member": "hadyan",
+    "format": "Insight",
+    "solution": "Extend Filament\\Auth\\Pages\\Login, override $view. Wrapper: x-filament-panels::layout.base. Content: x-filament-panels::page.simple. x-filament-panels::form.actions TIDAK ADA di v5."
+  },
+  {
+    "title": "Filament v5 Panel Architecture Reorg — Single Panel + Gate",
+    "date": "2026-03-02",
+    "description": "Menghilangkan SuperAdmin panel terpisah. Semua role akses /app, dengan gate di resource-level untuk super_admin features.",
+    "exp": 40,
+    "wisdom": 30,
+    "path": "Code Alchemy",
+    "member": "hadyan",
+    "format": "Insight",
+    "solution": "Hapus SuperAdminPanelProvider. Pindah semua resource ke /app. Gate super_admin role via canAccess(). $isScopedToTenant = false untuk global resources."
+  },
+  {
+    "title": "Back-to-Top Button — activeScroller Detection Pattern",
+    "date": "2026-03-02",
+    "description": "Filament menggunakan custom scroll container .fi-main-ctn. window.scrollY tidak reliable. Capture phase event listener untuk detect any scrolling element.",
+    "exp": 40,
+    "wisdom": 30,
+    "path": "Code Alchemy",
+    "member": "hadyan",
+    "format": "Insight",
+    "solution": "Use document.addEventListener('scroll', ..., true) capture phase. Track which element is scrolling as activeScroller. Poll fallback setInterval(updateVisibility, 800). Filament main container: .fi-main-ctn (NOT window)."
+  },
+  {
     "title": "JurnalService — Custom Double-Entry Accounting (Laravel 12)",
     "date": "2026-03-01",
     "description": "",
