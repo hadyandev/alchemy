@@ -145,6 +145,11 @@
     "description": "Custom double-entry accounting service in Angkain app. Auto-generates journal entries when Penerimaan/Penyaluran status changes to POSTED. Format: JRN-YYYYMM-XXXX. Built in-house because scottlaurent/accounting is incompatible with Laravel 12."
   },
   {
+    "term": "Soft Delete",
+    "category": "Technical",
+    "description": "Pattern database di mana record dihapus hanya ditandai dengan deleted_at timestamp, bukan benar-benar dihapus dari DB. Record masih bisa di-restore. Diimplementasi via SoftDeletes trait di Laravel Eloquent."
+  },
+  {
     "term": "secure_asset()",
     "category": "Code Alchemy",
     "description": "Laravel helper untuk generate HTTPS asset URLs. Replacement wajib untuk asset() ketika APP_URL pakai HTTPS. Mencegah Mixed Content browser error."
@@ -155,8 +160,38 @@
     "description": "Model deployment Angkain: setiap klien mendapat instance terpisah, bukan shared multi-tenant. Cabang = unit operasional internal satu lembaga. Full data isolation, custom per-client."
   },
   {
+    "term": "SimplePage (Filament)",
+    "category": "Technical",
+    "description": "Abstract base class untuk auth pages di Filament v5. Punya $layout static property yang mengontrol HTML wrapper layout. Default: filament-panels::components.layout.simple yang inject .fi-simple-layout dan .fi-simple-main-ctn wrapper."
+  },
+  {
     "term": "Shadcn Theme (Filament)",
     "category": "Code Alchemy",
     "description": "openplain/filament-shadcn-theme — color-only package, swap CSS variables untuk adaptive dark mode. Bukan redesign layout/components. Font via ->font() hanya Filament sidebar/header."
+  },
+  {
+    "term": "ZakatFitrahPayment",
+    "category": "Code Alchemy",
+    "description": "Filament model untuk data pembayaran Zakat Fitrah per keluarga. Menggunakan HierarchicalScoping untuk filtering komunitas. Fields: zakat_period_id, family_id, community_id, kepala_keluarga_member_id, jumlah_jiwa (auto-computed), nominal_per_jiwa, perkiraan, nominal (nullable = belum bayar), status, paid_at."
+  },
+  {
+    "term": "renderHook (Filament)",
+    "category": "Code Alchemy",
+    "description": "Filament v5 mechanism untuk inject HTML/CSS ke halaman tanpa custom blade template. Menghindari Livewire multi-root error. Hook: PanelsRenderHook::SIMPLE_PAGE_START — inject brand panel di login page."
+  },
+  {
+    "term": "HierarchicalScoping",
+    "category": "Code Alchemy",
+    "description": "Trait/model pada Komunita yang memfilter data berdasarkan hierarki komunitas user. Otomatis scope query agar user hanya melihat data komunitas yang diizinkan. TIDAK digunakan pada ZakatPeriod (superadmin-only) — hanya pada ZakatFitrahPayment."
+  },
+  {
+    "term": "baibot",
+    "category": "Tool",
+    "description": "Matrix bot framework that uses an OpenAI-compatible API endpoint. Used to build community ibadah tracking bot for Komunita App."
+  },
+  {
+    "term": "MutabaahEntry",
+    "category": "Code",
+    "description": "Record of a single member's ibadah/activity completion for a specific day in a period. Core table of Mutabaah Module in Komunita app."
   }
 ]

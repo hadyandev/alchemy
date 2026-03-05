@@ -1,5 +1,104 @@
 [
   {
+    "title": "Komunita: communitiesInScope() is instance method — use Community::descendantIds() static",
+    "date": "2026-03-04",
+    "description": "communitiesInScope() is an instance method on HierarchicalScoping trait — cannot be called statically. For static context (e.g. query scopes), use Community::descendantIds() instead.",
+    "exp": 20,
+    "wisdom": 15,
+    "path": "Code Alchemy",
+    "member": "both",
+    "format": "Bug Fix",
+    "solution": "Replace static calls to communitiesInScope() with Community::descendantIds() in query builders."
+  },
+  {
+    "title": "Matrix member linking: username column = @user:matrix.server",
+    "date": "2026-03-04",
+    "description": "To link Matrix users to app members: store Matrix user ID (@user:server) in username column of members table. Bot looks up member by username to identify sender.",
+    "exp": 20,
+    "wisdom": 15,
+    "path": "Code Alchemy",
+    "member": "both",
+    "format": "Pattern",
+    "solution": "Member::where('username', $matrixUserId)->first(). Unique constraint on username. Migration: add_unique_username_members.php"
+  },
+  {
+    "title": "baibot/Matrix: OpenAI-compatible endpoint for Laravel bots",
+    "date": "2026-03-04",
+    "description": "baibot (Matrix bot framework) requires OpenAI-compatible API. Implement POST /api/v1/chat/completions in Laravel with BotChatController. Auth via Bearer token (BOT_API_TOKEN env).",
+    "exp": 30,
+    "wisdom": 25,
+    "path": "Code Alchemy",
+    "member": "both",
+    "format": "Architecture",
+    "solution": "Controller: BotChatController.php. Config: config/bot.php. Routes: routes/api.php registered in bootstrap/app.php as api:. baibot config: base_url, api_key, model fields."
+  },
+  {
+    "title": "Mutabaah grid: auto-save per cell, today-highlight, future-disable pattern",
+    "date": "2026-03-04",
+    "description": "Livewire grid component: rows=members, cols=days 1–31. Auto-save on checkbox change (wire:change). Today column highlighted with CSS class. Future days disabled. OK count + % per row.",
+    "exp": 25,
+    "wisdom": 20,
+    "path": "Code Alchemy",
+    "member": "both",
+    "format": "Pattern",
+    "solution": "Use Livewire wire:change event → updateEntry(, ).  = now()->day. Disable if  > . Highlight if  == ."
+  },
+  {
+    "title": "Filament v5: $view must be non-static property in Page classes",
+    "date": "2026-03-04",
+    "description": "In Filament v5 Page classes, protected string $view must be non-static. Pages generated via shell heredoc may produce syntax errors.",
+    "exp": 25,
+    "wisdom": 20,
+    "path": "Code Alchemy",
+    "member": "both",
+    "format": "Bug Fix",
+    "solution": "Declare: protected string $view = \"path.to.view\"; (not static). Use write tool for generating Filament Page files."
+  },
+  {
+    "title": "PostgreSQL Ambiguous Column in JOIN Queries",
+    "date": "2026-03-03",
+    "description": "",
+    "exp": 3,
+    "wisdom": 5,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Problem: whereIn(\"id\", $ids) in Community.php + HierarchicalScoping.php caused PostgreSQL error when JOINed with user_communities (ambiguous column).\nFix: Qualify with table name → whereIn(\"communities.id\", $ids)\nRule: Always qualify column names when query involves JOINs in PostgreSQL."
+  },
+  {
+    "title": "Filament v5 ThemeMode Correct Namespace",
+    "date": "2026-03-03",
+    "description": "",
+    "exp": 3,
+    "wisdom": 5,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "WRONG: use Filament\\Support\\Enums\\ThemeMode\nCORRECT: use Filament\\Enums\\ThemeMode\nUsage: ->defaultThemeMode(ThemeMode::Light)->darkMode(false)"
+  },
+  {
+    "title": "Zakat Fitrah Module: generatePayments() Idempotent Pattern",
+    "date": "2026-03-03",
+    "description": "",
+    "exp": 3,
+    "wisdom": 5,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Design: generatePayments() uses idempotent upsert logic:\n1. New family → INSERT (jiwa from family_members count)\n2. Exists + nominal NULL → UPDATE jiwa + perkiraan\n3. Exists + nominal FILLED → SKIP (protect paid data)\nKey: jumlah_jiwa is auto-computed, non-editable → forces user to complete family data first.\nZakatPeriod excludes HierarchicalScoping intentionally (superadmin-only resource)."
+  },
+  {
+    "title": "Filament v5 Panel ID Migration (admin → app)",
+    "date": "2026-03-03",
+    "description": "",
+    "exp": 3,
+    "wisdom": 5,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "1. Change panel id in AdminPanelProvider: ->id(\"app\")\n2. Change path: ->path(\"app\")\n3. Replace ALL hardcoded route(\"filament.admin.xxx\") → use filament()->getCurrentPanel()->getId()\n4. Affected files: PeriodeResource.php, ViewPeriode.php, EventResource.php\n5. Update Caddy: redir / /app permanent"
+  },
+  {
     "title": "Laravel HTTPS Mixed Content — asset() vs secure_asset()",
     "date": "2026-03-02",
     "description": "Mixed Content error terjadi karena asset() generate HTTP URLs di halaman HTTPS. secure_asset() auto-generate HTTPS URLs.",
@@ -11,6 +110,17 @@
     "solution": "Replace ALL asset() with secure_asset() in panel providers. Add URL::forceScheme('https') + URL::forceRootUrl(config('app.url')) unconditionally in AppServiceProvider."
   },
   {
+    "title": "SoftDeletes + Filament v5 Resource Integration",
+    "date": "2026-03-02",
+    "description": "Tidak ada global setting soft delete di Filament. Harus: (1) trait SoftDeletes di model, (2) migration alter table add deleted_at, (3) TrashedFilter + RestoreAction + ForceDeleteAction di setiap Resource. JurnalEntry dikecualikan karena immutable by PSAK 109.",
+    "exp": 25,
+    "wisdom": 20,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Lesson Learned",
+    "solution": ""
+  },
+  {
     "title": "Filament v5 Custom Login Page — Split Layout Architecture",
     "date": "2026-03-02",
     "description": "Custom login dengan split layout: 60% brand panel kiri + 40% form kanan. Islamic geometric CSS pattern. Mobile responsive.",
@@ -20,6 +130,17 @@
     "member": "hadyan",
     "format": "Insight",
     "solution": "Extend Filament\\Auth\\Pages\\Login, override $view. Wrapper: x-filament-panels::layout.base. Content: x-filament-panels::page.simple. x-filament-panels::form.actions TIDAK ADA di v5."
+  },
+  {
+    "title": "Filament v5 Login Page — Anatomy & Override",
+    "date": "2026-03-02",
+    "description": "Filament v5 Login extends SimplePage. SimplePage punya $layout yang inject .fi-simple-layout wrapper. Untuk full custom login, override $layout ke base di subclass Login + render form via $this->content.",
+    "exp": 40,
+    "wisdom": 35,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Lesson Learned",
+    "solution": "Override static $layout property + buat full custom HTML view. x-filament-panels::form.actions tidak exist di v5 - gunakan content langsung."
   },
   {
     "title": "Filament v5 Panel Architecture Reorg — Single Panel + Gate",
@@ -42,6 +163,17 @@
     "member": "hadyan",
     "format": "Insight",
     "solution": "Use document.addEventListener('scroll', ..., true) capture phase. Track which element is scrolling as activeScroller. Poll fallback setInterval(updateVisibility, 800). Filament main container: .fi-main-ctn (NOT window)."
+  },
+  {
+    "title": "Filament Multi-Tenant: getTenants() harus return non-empty",
+    "date": "2026-03-02",
+    "description": "Filament pakai getTenants() untuk initial redirect setelah login. Jika return empty Collection → 404. canAccessTenant() return true tidak cukup. Super_admin harus return semua Cabang aktif di getTenants(), bukan hanya pivot entries.",
+    "exp": 20,
+    "wisdom": 25,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Lesson Learned",
+    "solution": ""
   },
   {
     "title": "JurnalService — Custom Double-Entry Accounting (Laravel 12)",
