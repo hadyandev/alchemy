@@ -1,1 +1,98 @@
-[]
+[
+  {
+    "level": "Level 01",
+    "title": "The Initiate / Al-Mubtadi",
+    "reqExp": 0,
+    "reqWisdom": 0
+  },
+  {
+    "level": "Level 1",
+    "title": "Al-Mubtadi (The Initiate)",
+    "reqExp": 0,
+    "reqWisdom": 0
+  },
+  {
+    "level": "Level 2",
+    "title": "The Apprentice",
+    "reqExp": 250,
+    "reqWisdom": 150
+  },
+  {
+    "level": "Level 3",
+    "title": "The Alchemist-in-Training",
+    "reqExp": 625,
+    "reqWisdom": 390
+  },
+  {
+    "level": "Level 4",
+    "title": "The Adept",
+    "reqExp": 1560,
+    "reqWisdom": 1000
+  },
+  {
+    "level": "Level 5",
+    "title": "The Journeyman",
+    "reqExp": 3900,
+    "reqWisdom": 2600
+  },
+  {
+    "level": "Level 02",
+    "title": "Scribe of the Atelier",
+    "reqExp": 5000,
+    "reqWisdom": 3000
+  },
+  {
+    "level": "Level 6",
+    "title": "The Expert Alchemist",
+    "reqExp": 9700,
+    "reqWisdom": 6800
+  },
+  {
+    "level": "Level 03",
+    "title": "Transmuter of Code",
+    "reqExp": 15000,
+    "reqWisdom": 10000
+  },
+  {
+    "level": "Level 7",
+    "title": "The Master Scribe",
+    "reqExp": 24000,
+    "reqWisdom": 17000
+  },
+  {
+    "level": "Level 04",
+    "title": "Seeker of Turath",
+    "reqExp": 35000,
+    "reqWisdom": 25000
+  },
+  {
+    "level": "Level 8",
+    "title": "The Grand Alchemist",
+    "reqExp": 60000,
+    "reqWisdom": 45000
+  },
+  {
+    "level": "Level 05",
+    "title": "The Hybrid Scribe Mastery",
+    "reqExp": 75000,
+    "reqWisdom": 55000
+  },
+  {
+    "level": "Level 9",
+    "title": "The Sage of the Atelier",
+    "reqExp": 150000,
+    "reqWisdom": 120000
+  },
+  {
+    "level": "Level 10",
+    "title": "Al-Hakam (The Ultimate Authority)",
+    "reqExp": 400000,
+    "reqWisdom": 300000
+  },
+  {
+    "level": "Level 10",
+    "title": "Grand Alchemist (Al-Khawarizmi Path)",
+    "reqExp": 1000000,
+    "reqWisdom": 750000
+  }
+]

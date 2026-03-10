@@ -1,1 +1,149 @@
-[]
+[
+  {
+    "name": "Coolify PrivateKey DB Patch",
+    "category": "Infra Alchemy",
+    "type": "Shell Command",
+    "description": "Fixes 'No query results for model [App\\Models\\PrivateKey] 0' by mapping localhost server to the first available private key.",
+    "complexity": "Adept"
+  },
+  {
+    "name": "Caddyfile WebSocket Proxy for Coolify",
+    "category": "Infra Alchemy",
+    "type": "Docker Compose",
+    "description": "Configures Caddy to forward WebSocket traffic to the correct internal ports for Coolify realtime services.",
+    "complexity": "Adept"
+  },
+  {
+    "name": "The Great Reset: Force Sync Branch",
+    "category": "Code Alchemy",
+    "type": "Shell Command",
+    "description": "Memaksa branch lokal/remote untuk mengikuti branch target secara absolut. Berguna saat terjadi merge conflict buntu pada Astro Pages.",
+    "complexity": "Adept"
+  },
+  {
+    "name": "Image Forge: Adaptive Logo Inversion",
+    "category": "Code Alchemy",
+    "type": "Shell Command",
+    "description": "Perintah ImageMagick untuk membersihkan background logo dan memastikan transparansi sempurna untuk CSS masking.",
+    "complexity": "Adept"
+  },
+  {
+    "name": "The Daily Ritual Sync",
+    "category": "Utility",
+    "type": "Reproducible Script",
+    "description": "Skrip utama untuk sinkronisasi data dari Notion ke Astro Web, memicu build, dan melakukan Soul Backup ke GitHub.",
+    "complexity": "Adept"
+  },
+  {
+    "name": "Spirit Cleansing: Kill Ghost Processes",
+    "category": "Infra Alchemy",
+    "type": "Shell Command",
+    "description": "Mencari dan mematikan proses zombie atau proses yang tersangkut di background yang menggunakan port tertentu (misal: Astro port 4321).",
+    "complexity": "Novice"
+  },
+  {
+    "name": "Alchemist Audit: Disk Usage Analysis",
+    "category": "Infra Alchemy",
+    "type": "Shell Command",
+    "description": "Menganalisis penggunaan disk di workspace untuk mencegah kepenuhan cache yang bisa menggagalkan build.",
+    "complexity": "Novice"
+  },
+  {
+    "name": "Transmutation Circle: SVG Mask Forge",
+    "category": "Code Alchemy",
+    "type": "Shell Command",
+    "description": "Membuat mask SVG dari PNG dengan transparansi untuk efek transmutaion circle adaptif tema.",
+    "complexity": "Grandmaster"
+  },
+  {
+    "name": "Aether Routing Reset (Caddy)",
+    "category": "Infra Alchemy",
+    "type": "Shell Command",
+    "description": "Membersihkan dan me-reload konfigurasi Caddy untuk memperbaiki masalah WebSocket loop.",
+    "complexity": "Novice"
+  },
+  {
+    "name": "Oracle Status Check",
+    "category": "Infra Alchemy",
+    "type": "Shell Command",
+    "description": "Memeriksa kesehatan gateway OpenClaw dan status koneksi seluruh API (Telegram, Notion, GitHub).",
+    "complexity": "Novice"
+  },
+  {
+    "name": "Soul Backup: Manual Repository Push",
+    "category": "Defense Alchemy",
+    "type": "Shell Command",
+    "description": "Melakukan push manual seluruh memori dan konfigurasi workspace ke GitHub menggunakan PAT.",
+    "complexity": "Novice"
+  },
+  {
+    "name": "Atelier Fortress: UFW Security Hardening",
+    "category": "Defense Alchemy",
+    "type": "Shell Command",
+    "description": "sudo ufw default deny incoming && sudo ufw default allow outgoing && sudo ufw allow 22,80,443,3002,6001,6002,8000/tcp && sudo ufw enable",
+    "complexity": "Adept"
+  },
+  {
+    "name": "Docker: Connect Container ke External Network",
+    "category": "Docker",
+    "type": "Shell",
+    "description": "docker network connect <network_name> <container_name>\n\nContoh untuk Stalwart network:\ndocker network connect compose-compress-bluetooth-firewall-6mv4q1_default roundcube-dekirulab\n\nWajib diulang setiap container di-recreate.",
+    "complexity": "Basic"
+  },
+  {
+    "name": "Coolify: Edit Service .env Langsung (Bypass API)",
+    "category": "Coolify",
+    "type": "Shell",
+    "description": "# Saat Coolify API PATCH /envs return \"Service not found\" (service masih starting/unhealthy)\n# Edit langsung:\nVIM /data/coolify/services/<uuid>/.env\n\n# Lalu restart:\ncd /data/coolify/services/<uuid> && docker compose up -d",
+    "complexity": "Intermediate"
+  },
+  {
+    "name": "Dokploy: Deploy Compose via API (sourceType: raw)",
+    "category": "Dokploy",
+    "type": "Shell",
+    "description": "curl -X POST \"https://dokploy.dekirulab.dev/api/compose.create\" \\\n  -H \"x-api-key: TOKEN\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"projectId\":\"ID\",\"name\":\"name\",\"sourceType\":\"raw\"}'\n\nPenting: sourceType HARUS \"raw\", bukan \"github\" (default). Lalu update composeFile dan deploy.",
+    "complexity": "Intermediate"
+  },
+  {
+    "name": "Stalwart: Debug SMTP Auth dengan Python EHLO Trace",
+    "category": "Mail Server",
+    "type": "Shell",
+    "description": "python3 << EOF\nimport smtplib, ssl\nctx = ssl.create_default_context()\nctx.check_hostname = False\nctx.verify_mode = ssl.CERT_NONE\nwith smtplib.SMTP_SSL(\"127.0.0.1\", 465, context=ctx) as s:\n    s.set_debuglevel(2)\n    s.ehlo(\"test.local\")\n    print(\"ESMTP features:\", s.esmtp_features)\n    s.login(\"username\", \"password\")\nEOF\n\nMenampilkan full EHLO handshake + AUTH PLAIN/LOGIN sequence untuk debug.",
+    "complexity": "Intermediate"
+  },
+  {
+    "name": "Stalwart: Create Mail Account via Web UI Protocol",
+    "category": "Mail Server",
+    "type": "Protocol",
+    "description": "Buat akun Stalwart via Web UI (https://mail.dekirulab.id). SMTP login = short username (noreply), bukan full email. API PATCH tidak bisa set password yang berfungsi di v0.15.",
+    "complexity": "Intermediate"
+  },
+  {
+    "name": "Stalwart: Test SMTP Auth dari Container",
+    "category": "Mail Server",
+    "type": "Shell",
+    "description": "docker exec <container> python3 -c \"\nimport smtplib, ssl\nctx = ssl.create_default_context()\nwith smtplib.SMTP_SSL('mail.dekirulab.id', 465, context=ctx) as s:\n    s.login('noreply', 'password')\n    print('AUTH OK')\n\"",
+    "complexity": "Basic"
+  },
+  {
+    "name": "Docker Compose: Extra Hosts untuk SSL Cert Match",
+    "category": "Docker",
+    "type": "Config",
+    "description": "Tambah ke service di docker-compose.yml:\nextra_hosts:\n  - \"mail.dekirulab.id:10.0.4.2\"\n\nWajib agar SSL cert valid saat container reach Stalwart via domain name (bukan IP langsung).",
+    "complexity": "Basic"
+  },
+  {
+    "name": "Stalwart: Verify Auth Settings di RocksDB",
+    "category": "Mail Server",
+    "type": "Shell",
+    "description": "TOKEN=$(echo -n \"admin:PASSWORD\" | base64)\ncurl -s \"https://mail.dekirulab.id/api/settings/list?prefix=auth\" \\\n  -H \"Authorization: Basic $TOKEN\"\n\nHarus ada: auth.directory=internal, auth.mechanisms=plain login, auth.require=true",
+    "complexity": "Basic"
+  },
+  {
+    "name": "Beszel Agent: Install & Register via get.beszel.dev",
+    "category": "Monitoring",
+    "type": "Shell",
+    "description": "# Install agent\ncurl -sL https://get.beszel.dev | bash\n\n# Jika tidak ada useradd (VPS minimal), jalankan sebagai root:\n# Edit /etc/systemd/system/beszel-agent.service → User=root\nsystemctl daemon-reload && systemctl restart beszel-agent\nsystemctl status beszel-agent",
+    "complexity": "Basic"
+  }
+]
