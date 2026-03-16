@@ -1,1 +1,662 @@
-[]
+[
+  {
+    "id": "30e79a34-e7c9-80a0-89e7-efb1d6ceff55",
+    "slug": "seni-dakwah-menyampaikan-pesan-dengan-hikmah",
+    "title": "Seni Dakwah: Menyampaikan Pesan dengan Hikmah",
+    "date": "2024-12-20",
+    "severity": "Low",
+    "status": "Finished",
+    "protocol": "Taushiya as a Service",
+    "tags": [
+      "Dakwah",
+      "Spiritual Engineering",
+      "Communication"
+    ],
+    "source": "Khutbah Jum’at - 20 Desember 2024",
+    "strategy": "Menerapkan prinsip pengemasan pesan yang relevan tanpa mengubah esensi nilai. Selalu lakukan analisis audiens sebelum melakukan transmisi ilmu.",
+    "polish": "Dakwah adalah solusi nyata bagi kondisi umat saat ini yang diibaratkan seperti buih: jumlahnya banyak namun cenderung apatis karena kurangnya pemahaman mendalam terhadap agama. Untuk mengubah kondisi ini, kita memerlukan proses pendidikan (tarbiyah) yang masif, dan itu hanya bisa dicapai jika setiap individu yang memiliki pemahaman Islam merasa tergerak untuk berbagi, mulai dari diri sendiri hingga keluarga terdekat. Dengan berlandaskan perintah Allah (seperti dalam QS 41:33 dan 3:110), dakwah bukan sekadar kewajiban, tapi juga kehormatan prestisius yang menjanjikan ganjaran besar—mulai dari doa seluruh makhluk hingga keselamatan dari azab. Intinya, hidayah yang kita rasakan hari ini adalah buah dari dakwah orang lain, maka sudah saatnya kita menyambung rantai kebaikan tersebut.",
+    "author": "Hadyan",
+    "content": [
+      {
+        "object": "block",
+        "id": "30e79a34-e7c9-800b-b855-de2eede1984f",
+        "parent": {
+          "type": "page_id",
+          "page_id": "30e79a34-e7c9-80a0-89e7-efb1d6ceff55"
+        },
+        "created_time": "2026-02-21T08:32:00.000Z",
+        "last_edited_time": "2026-02-21T08:32:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "872faa26-6786-4f76-ba53-957dde8f7d8e"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "872faa26-6786-4f76-ba53-957dde8f7d8e"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Tiap org punya amalan andalan. Hendaknya nikmatnya amalan tsb disampaikan kpd org lain.\nSampaikan walau 1 ayat.\nIndo mayoritas Islam. Tp rasanya spt agama yg lain krn Indo.\nSekuler: memisahkan agama dgn kehidupan\nIslam hny diposisikan di ranah privat\nSurvey: umat Islam yg sholat 38%. Yg baca bis baca quran lbh sedikit lg\nJika dakwah hanya dibebankan hny kpd ust/dai, berat\nMngapa mendakwahkan amalan terbaik/unggulan kita? Krn Allah benci klo kita omdo. 61:2-3\nDan dakwah merupakan solusi dr kondisi indo hari ini: menyadarkan\nUmmat Islam hari ini bagai buih, hny banyak dr sisi",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Tiap org punya amalan andalan. Hendaknya nikmatnya amalan tsb disampaikan kpd org lain.\nSampaikan walau 1 ayat.\nIndo mayoritas Islam. Tp rasanya spt agama yg lain krn Indo.\nSekuler: memisahkan agama dgn kehidupan\nIslam hny diposisikan di ranah privat\nSurvey: umat Islam yg sholat 38%. Yg baca bis baca quran lbh sedikit lg\nJika dakwah hanya dibebankan hny kpd ust/dai, berat\nMngapa mendakwahkan amalan terbaik/unggulan kita? Krn Allah benci klo kita omdo. 61:2-3\nDan dakwah merupakan solusi dr kondisi indo hari ini: menyadarkan\nUmmat Islam hari ini bagai buih, hny banyak dr sisi",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "30e79a34-e7c9-80cd-b20c-d2aa4fac2092",
+        "parent": {
+          "type": "page_id",
+          "page_id": "30e79a34-e7c9-80a0-89e7-efb1d6ceff55"
+        },
+        "created_time": "2026-02-21T08:32:00.000Z",
+        "last_edited_time": "2026-02-21T08:32:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "872faa26-6786-4f76-ba53-957dde8f7d8e"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "872faa26-6786-4f76-ba53-957dde8f7d8e"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Dakwah: mulai dr diri sndiri, keluarga, kerabat trdekat\n6:125 perintah dan cara berdakwah\nKeistimewaan dakwah\nAmalan yg dijalankan Nabi dan Rasul. Dai adl role yg prestige di hadapan Allah\n3:110 dakwah ciri ummat terbaik\n41:33 dakwah adl sebaik2 perkataan\nGanjaran yg besar: unta merah, didoakan seluruh makhluk darat dan laut, mndptkan pahala dr amalan dakwah\n7:164 agar lepas dr tg jawab dan diselamatkan dr adzab yg pedih\nHidayah yg kita dpt hari ini perantaraan dr dakwah",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Dakwah: mulai dr diri sndiri, keluarga, kerabat trdekat\n6:125 perintah dan cara berdakwah\nKeistimewaan dakwah\nAmalan yg dijalankan Nabi dan Rasul. Dai adl role yg prestige di hadapan Allah\n3:110 dakwah ciri ummat terbaik\n41:33 dakwah adl sebaik2 perkataan\nGanjaran yg besar: unta merah, didoakan seluruh makhluk darat dan laut, mndptkan pahala dr amalan dakwah\n7:164 agar lepas dr tg jawab dan diselamatkan dr adzab yg pedih\nHidayah yg kita dpt hari ini perantaraan dr dakwah",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "30e79a34-e7c9-8041-a9b9-c496063daab8",
+        "parent": {
+          "type": "page_id",
+          "page_id": "30e79a34-e7c9-80a0-89e7-efb1d6ceff55"
+        },
+        "created_time": "2026-02-21T08:32:00.000Z",
+        "last_edited_time": "2026-02-21T08:32:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "872faa26-6786-4f76-ba53-957dde8f7d8e"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "872faa26-6786-4f76-ba53-957dde8f7d8e"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "My comment:\nUmat Islam spt buih: apatis, cuek, ga sadar => ga paham/tau terkait agamanya => tdk terdidik\nSolusi: pendidikan / tarbiyah, agar umat terdidik\nBagaimana agar tarbiyah sampai ke ummat => dakwah yg masif\nGmn agar dakwah masif => mrk yg punya pemahaman thd Islam msti tergerak utk berdakwah, jgn dipendam sndiri. Dakwah mulai dr diri sndiri, lalu ke keluarga trdekat, hingga akhirnya trbentuk masyarakat Islami",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "My comment:\nUmat Islam spt buih: apatis, cuek, ga sadar => ga paham/tau terkait agamanya => tdk terdidik\nSolusi: pendidikan / tarbiyah, agar umat terdidik\nBagaimana agar tarbiyah sampai ke ummat => dakwah yg masif\nGmn agar dakwah masif => mrk yg punya pemahaman thd Islam msti tergerak utk berdakwah, jgn dipendam sndiri. Dakwah mulai dr diri sndiri, lalu ke keluarga trdekat, hingga akhirnya trbentuk masyarakat Islami",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "30e79a34-e7c9-8154-ad20-db502104510e",
+        "parent": {
+          "type": "page_id",
+          "page_id": "30e79a34-e7c9-80a0-89e7-efb1d6ceff55"
+        },
+        "created_time": "2026-02-21T08:48:00.000Z",
+        "last_edited_time": "2026-02-21T08:48:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "divider",
+        "divider": {},
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "30e79a34-e7c9-81cf-ad2b-e956a899c23e",
+        "parent": {
+          "type": "page_id",
+          "page_id": "30e79a34-e7c9-80a0-89e7-efb1d6ceff55"
+        },
+        "created_time": "2026-02-21T08:48:00.000Z",
+        "last_edited_time": "2026-02-21T08:48:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "💠 Alchemical Polish (Public Draft)",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "💠 Alchemical Polish (Public Draft)",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "30e79a34-e7c9-8164-94da-f3d0b25cdaf2",
+        "parent": {
+          "type": "page_id",
+          "page_id": "30e79a34-e7c9-80a0-89e7-efb1d6ceff55"
+        },
+        "created_time": "2026-02-21T15:28:00.000Z",
+        "last_edited_time": "2026-02-21T15:28:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Pernah nggak sih kita ngerasa kalau ibadah yang kita lakuin itu nikmat banget, tapi kita simpen sendiri? Padahal, setiap dari kita pasti punya \"amalan andalan\" yang jadi pegangan. Nah, amalan itulah yang harusnya kita ceritain ke orang lain. Ingat prinsip \"sampaikan walau satu ayat\"? Itulah intinya.\n\nKalau kita lihat kondisi di Indonesia sekarang, miris juga ya. Mayoritas memang Muslim, tapi rasanya sekularisme sudah mulai mengakar—agama cuma ditaruh di ranah privat, dipisahin dari kehidupan sehari-hari. Bayangkan, hasil survei bilang cuma 38% umat Islam yang rajin sholat, apalagi yang bisa baca Quran. Kalau beban dakwah cuma ditaruh di pundak ustadz atau dai saja, ya jelas berat banget.\n\nKenapa sih kita harus mendakwahkan amalan terbaik kita? Simpelnya, supaya kita nggak kena teguran keras dari Allah SWT:",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Pernah nggak sih kita ngerasa kalau ibadah yang kita lakuin itu nikmat banget, tapi kita simpen sendiri? Padahal, setiap dari kita pasti punya \"amalan andalan\" yang jadi pegangan. Nah, amalan itulah yang harusnya kita ceritain ke orang lain. Ingat prinsip \"sampaikan walau satu ayat\"? Itulah intinya.\n\nKalau kita lihat kondisi di Indonesia sekarang, miris juga ya. Mayoritas memang Muslim, tapi rasanya sekularisme sudah mulai mengakar—agama cuma ditaruh di ranah privat, dipisahin dari kehidupan sehari-hari. Bayangkan, hasil survei bilang cuma 38% umat Islam yang rajin sholat, apalagi yang bisa baca Quran. Kalau beban dakwah cuma ditaruh di pundak ustadz atau dai saja, ya jelas berat banget.\n\nKenapa sih kita harus mendakwahkan amalan terbaik kita? Simpelnya, supaya kita nggak kena teguran keras dari Allah SWT:",
+              "href": null
+            }
+          ],
+          "color": "blue_background"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "30e79a34-e7c9-81fd-ba47-fc6d98793839",
+        "parent": {
+          "type": "page_id",
+          "page_id": "30e79a34-e7c9-80a0-89e7-efb1d6ceff55"
+        },
+        "created_time": "2026-02-21T15:28:00.000Z",
+        "last_edited_time": "2026-02-21T15:28:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "quote",
+        "quote": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "\"Wahai orang-orang yang beriman, kenapakah kamu mengatakan sesuatu yang tidak kamu kerjakan? Amat besar kebencian di sisi Allah bahwa kamu mengatakan apa-apa yang tidak kamu kerjakan.\" (QS. As-Saff: 2-3).",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "\"Wahai orang-orang yang beriman, kenapakah kamu mengatakan sesuatu yang tidak kamu kerjakan? Amat besar kebencian di sisi Allah bahwa kamu mengatakan apa-apa yang tidak kamu kerjakan.\" (QS. As-Saff: 2-3).",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "30e79a34-e7c9-8187-9eae-c4292895291b",
+        "parent": {
+          "type": "page_id",
+          "page_id": "30e79a34-e7c9-80a0-89e7-efb1d6ceff55"
+        },
+        "created_time": "2026-02-21T15:28:00.000Z",
+        "last_edited_time": "2026-02-21T15:28:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Allah benci banget sama orang yang cuma \"omdo\" alias omong doang tapi nggak berbuat. Dengan berdakwah, kita sebenarnya lagi ngasih solusi buat menyadarkan umat yang sekarang ini cuma kayak buih—banyak jumlahnya, tapi apatis dan nggak terdidik karena nggak paham agamanya sendiri. Solusinya cuma satu: Pendidikan atau Tarbiyah yang masif.\n\nLalu, kenapa dakwah itu istimewa banget? Berikut beberapa alasannya:",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Allah benci banget sama orang yang cuma \"omdo\" alias omong doang tapi nggak berbuat. Dengan berdakwah, kita sebenarnya lagi ngasih solusi buat menyadarkan umat yang sekarang ini cuma kayak buih—banyak jumlahnya, tapi apatis dan nggak terdidik karena nggak paham agamanya sendiri. Solusinya cuma satu: Pendidikan atau Tarbiyah yang masif.\n\nLalu, kenapa dakwah itu istimewa banget? Berikut beberapa alasannya:",
+              "href": null
+            }
+          ],
+          "color": "blue_background"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "30e79a34-e7c9-8101-a04a-db8dca51503b",
+        "parent": {
+          "type": "page_id",
+          "page_id": "30e79a34-e7c9-80a0-89e7-efb1d6ceff55"
+        },
+        "created_time": "2026-02-21T15:28:00.000Z",
+        "last_edited_time": "2026-02-21T15:28:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Amalan Para Nabi: Ini adalah peran yang dijalankan langsung oleh para Nabi dan Rasul.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Amalan Para Nabi: Ini adalah peran yang dijalankan langsung oleh para Nabi dan Rasul.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "30e79a34-e7c9-8196-9ba2-d9ee711075fb",
+        "parent": {
+          "type": "page_id",
+          "page_id": "30e79a34-e7c9-80a0-89e7-efb1d6ceff55"
+        },
+        "created_time": "2026-02-21T15:28:00.000Z",
+        "last_edited_time": "2026-02-21T15:28:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Role yang Prestisius: Menjadi dai adalah posisi yang sangat mulia di hadapan Allah.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Role yang Prestisius: Menjadi dai adalah posisi yang sangat mulia di hadapan Allah.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "30e79a34-e7c9-8144-a568-fb66900da303",
+        "parent": {
+          "type": "page_id",
+          "page_id": "30e79a34-e7c9-80a0-89e7-efb1d6ceff55"
+        },
+        "created_time": "2026-02-21T15:28:00.000Z",
+        "last_edited_time": "2026-02-21T15:28:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Ciri Umat Terbaik: Sebagaimana firman-Nya: \"Kamu adalah umat yang terbaik yang dilahirkan untuk manusia, menyuruh kepada yang ma’ruf, dan mencegah dari yang munkar...\" (QS. Ali Imran: 110).",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Ciri Umat Terbaik: Sebagaimana firman-Nya: \"Kamu adalah umat yang terbaik yang dilahirkan untuk manusia, menyuruh kepada yang ma’ruf, dan mencegah dari yang munkar...\" (QS. Ali Imran: 110).",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "30e79a34-e7c9-812f-9409-f9e673c87742",
+        "parent": {
+          "type": "page_id",
+          "page_id": "30e79a34-e7c9-80a0-89e7-efb1d6ceff55"
+        },
+        "created_time": "2026-02-21T15:28:00.000Z",
+        "last_edited_time": "2026-02-21T15:28:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Sebaik-baik Perkataan: \"Siapakah yang lebih baik perkataannya daripada orang yang menyeru kepada Allah, mengerjakan amal yang saleh, dan berkata: Sesungguhnya aku termasuk orang-orang yang menyerah diri?\" (QS. Fussilat: 33).",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Sebaik-baik Perkataan: \"Siapakah yang lebih baik perkataannya daripada orang yang menyeru kepada Allah, mengerjakan amal yang saleh, dan berkata: Sesungguhnya aku termasuk orang-orang yang menyerah diri?\" (QS. Fussilat: 33).",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "30e79a34-e7c9-81d5-b43b-c160a27a611b",
+        "parent": {
+          "type": "page_id",
+          "page_id": "30e79a34-e7c9-80a0-89e7-efb1d6ceff55"
+        },
+        "created_time": "2026-02-21T15:28:00.000Z",
+        "last_edited_time": "2026-02-21T15:28:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Ganjaran yang Luar Biasa: Mendapatkan pahala lebih berharga dari unta merah, didoakan seluruh makhluk di darat dan laut, serta mendapatkan aliran pahala dari mereka yang mengikuti dakwah kita.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Ganjaran yang Luar Biasa: Mendapatkan pahala lebih berharga dari unta merah, didoakan seluruh makhluk di darat dan laut, serta mendapatkan aliran pahala dari mereka yang mengikuti dakwah kita.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "30e79a34-e7c9-81ca-ab87-fd6bef05a864",
+        "parent": {
+          "type": "page_id",
+          "page_id": "30e79a34-e7c9-80a0-89e7-efb1d6ceff55"
+        },
+        "created_time": "2026-02-21T15:28:00.000Z",
+        "last_edited_time": "2026-02-21T15:28:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Melepas Tanggung Jawab & Selamat dari Azab: Agar kita punya alasan di hadapan Allah dan diselamatkan dari azab yang pedih (QS. Al-A'raf: 164).",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Melepas Tanggung Jawab & Selamat dari Azab: Agar kita punya alasan di hadapan Allah dan diselamatkan dari azab yang pedih (QS. Al-A'raf: 164).",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "30e79a34-e7c9-812e-910f-e493b7c4f5f1",
+        "parent": {
+          "type": "page_id",
+          "page_id": "30e79a34-e7c9-80a0-89e7-efb1d6ceff55"
+        },
+        "created_time": "2026-02-21T15:28:00.000Z",
+        "last_edited_time": "2026-02-21T15:28:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Intinya, hidayah yang kita rasakan hari ini adalah perantara dari dakwah orang lain juga. Jadi, masa kita mau berhenti di sini? Yuk, kita sambung rantai kebaikan ini mulai dari diri sendiri dan keluarga terdekat sampai terbentuk masyarakat yang bener-bener terdidik dan Islami.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Intinya, hidayah yang kita rasakan hari ini adalah perantara dari dakwah orang lain juga. Jadi, masa kita mau berhenti di sini? Yuk, kita sambung rantai kebaikan ini mulai dari diri sendiri dan keluarga terdekat sampai terbentuk masyarakat yang bener-bener terdidik dan Islami.",
+              "href": null
+            }
+          ],
+          "color": "blue_background"
+        },
+        "archived": false
+      }
+    ]
+  }
+]

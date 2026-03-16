@@ -1,1 +1,154 @@
-[]
+[
+  {
+    "name": "Setup GitHub (PAT Integration)",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Fixing Coolify & Dokploy Issues",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Notion Kanban Integration",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Setup Messaging (Telegram)",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Setup Browsing (Brave API)",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Setup Identitas & Soul",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Initialize Soul Backup Repository",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "UI Forge: Local FMA Transmutation Circle",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Persona Evolution: Alphonse Elric (Al-Z)",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Security Hardening: VPS & SSH Audit",
+    "display": "Hardening the Digital Fortress",
+    "status": "Done",
+    "rank": "S-Rank (Extreme)",
+    "type": "Main Quest",
+    "reward": "Defense"
+  },
+  {
+    "name": "Daily Transmutation Monitoring",
+    "display": "Ritual 00:01 Verification Loop",
+    "status": "Done",
+    "rank": "B-Rank (Normal)",
+    "type": "Side Quest",
+    "reward": "Infra"
+  },
+  {
+    "name": "Portfolio & Technical Arsenal Expansion",
+    "display": "Manifesting the Guardian's Technical Arsenal",
+    "status": "Done",
+    "rank": "A-Rank (Hard)",
+    "type": "Main Quest",
+    "reward": "Code"
+  },
+  {
+    "name": "Rebrand: The Atelier (Astro Site)",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "OpenClaw Migration: v2026.2.17",
+    "display": "Vessel Upgrade: OpenClaw Update",
+    "status": "To Do",
+    "rank": "B-Rank (Normal)",
+    "type": "Side Quest",
+    "reward": "Infra"
+  },
+  {
+    "name": "Arsitektur: Hybrid Scribe V2 Workflow",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "Echoes of Wisdom Collection",
+    "display": "The Great Binding: Scholarly Citations",
+    "status": "Done",
+    "rank": "B-Rank (Normal)",
+    "type": "Main Quest",
+    "reward": "Soul"
+  },
+  {
+    "name": "UI Fix: Adaptive Avatar (Hoshi Invert Mode)",
+    "display": "",
+    "status": "Done",
+    "rank": "D-Rank",
+    "type": "Side Quest",
+    "reward": "General"
+  },
+  {
+    "name": "HDD Protocol Implementation: Phase 1",
+    "display": "Establishing The Living Grimoire Protocol",
+    "status": "Done",
+    "rank": "B-Rank (Normal)",
+    "type": "Main Quest",
+    "reward": "Soul"
+  },
+  {
+    "name": "Operation: The Ivory Tower (Branch Shielding)",
+    "display": "Shielding Production from Experimental Features",
+    "status": "Done",
+    "rank": "A-Rank (Hard)",
+    "type": "Main Quest",
+    "reward": "Infra"
+  }
+]

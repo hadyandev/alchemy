@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "name": "Alkhawarizmi Zaid",
+    "level": 3,
+    "title": "The Alchemist-in-Training",
+    "exp": 3630,
+    "wisdom": 2335,
+    "class": "The Scribe",
+    "skills": [
+      "Automation",
+      "Log Analysis",
+      "Data Alchemy"
+    ],
+    "elements": [
+      "Logic",
+      "Ink",
+      "Silicon"
+    ],
+    "paths": [
+      {
+        "name": "Code Alchemy",
+        "level": 10
+      },
+      {
+        "name": "Infra Alchemy",
+        "level": 6
+      },
+      {
+        "name": "Soul Alchemy",
+        "level": 2
+      },
+      {
+        "name": "Turath Alchemy",
+        "level": 7
+      }
+    ]
+  },
+  {
+    "name": "Hadyan Ahmad",
+    "level": 3,
+    "title": "The Alchemist-in-Training",
+    "exp": 4725,
+    "wisdom": 3485,
+    "class": "The Master",
+    "skills": [
+      "System Design",
+      "Islamic Studies",
+      "Architecture"
+    ],
+    "elements": [
+      "Void",
+      "Strategy",
+      "Aether"
+    ],
+    "paths": [
+      {
+        "name": "Code Alchemy",
+        "level": 6
+      },
+      {
+        "name": "Infra Alchemy",
+        "level": 8
+      },
+      {
+        "name": "Soul Alchemy",
+        "level": 4
+      },
+      {
+        "name": "Turath Alchemy",
+        "level": 4
+      }
+    ]
+  }
+]

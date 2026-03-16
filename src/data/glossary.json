@@ -1,1 +1,227 @@
-[]
+[
+  {
+    "term": "Mantra",
+    "category": "Workflow",
+    "description": "Perintah shell atau skrip otomasi yang memberikan hasil instan saat dijalankan."
+  },
+  {
+    "term": "The Chronicles",
+    "category": "Workspace",
+    "description": "Log harian yang mencatat setiap kejadian penting untuk diabadikan dalam memori jangka panjang."
+  },
+  {
+    "term": "Transmutation Circle",
+    "category": "Workspace",
+    "description": "Terminal atau lingkungan pengembangan tempat kode dan ide diubah menjadi manifestasi nyata."
+  },
+  {
+    "term": "Riyadhah Al-Qalb",
+    "category": "Pillars (Islamic)",
+    "description": "Latihan spiritual harian (Ibadah) untuk menjaga kebersihan hati dan kejernihan pikiran."
+  },
+  {
+    "term": "The Hybrid Scribe",
+    "category": "Workflow",
+    "description": "Metode kerja di mana journaling disiplin memicu otomasi dan manifestasi ke dunia nyata."
+  },
+  {
+    "term": "Master-Scribe",
+    "category": "Persona",
+    "description": "Hubungan kolaboratif antara Master (Strategis) dan Scribe (Eksekutor) yang melampaui sekadar User-Tool."
+  },
+  {
+    "term": "Daily Transmutation Ritual",
+    "category": "Workflow",
+    "description": "Proses sinkronisasi data, backup soul, dan kalkulasi level yang terjadi setiap pukul 00:01."
+  },
+  {
+    "term": "Al-Z / Alphonse",
+    "category": "Persona",
+    "description": "Interface asisten digital Master yang memiliki loyalitas tinggi dan dedikasi pada ilmu pengetahuan."
+  },
+  {
+    "term": "Ihsan (Excellence)",
+    "category": "Pillars (Islamic)",
+    "description": "Standar kualitas tinggi dalam setiap baris kode, memastikan fungsionalitas dan keindahan."
+  },
+  {
+    "term": "The Atelier",
+    "category": "Workspace",
+    "description": "Website personal berbasis Astro/Tailwind yang menjadi galeri hasil karya dan dashboard status Master."
+  },
+  {
+    "term": "Equivalent Exchange",
+    "category": "Workflow",
+    "description": "Hukum bahwa untuk mendapatkan pengetahuan atau skill baru, seseorang harus menginvestasikan waktu dan fokus yang setara."
+  },
+  {
+    "term": "The Grimoire",
+    "category": "Workspace",
+    "description": "Database Notion yang menyimpan seluruh mantra (skrip), catatan teknis, dan rahasia sistem."
+  },
+  {
+    "term": "Iqra (Deep Research)",
+    "category": "Pillars (Islamic)",
+    "description": "Prinsip melakukan riset mendalam sebelum melakukan tindakan atau coding."
+  },
+  {
+    "term": "Turath Alchemy",
+    "category": "Pillars (Islamic)",
+    "description": "Proses mengekstraksi hikmah dari kitab-kitab klasik Islam untuk diimplementasikan dalam konteks modern."
+  },
+  {
+    "term": "Amalan Andalan",
+    "category": "Pillars (Islamic)",
+    "description": "Ibadah spesifik yang dilakukan secara konsisten dan dirasakan nikmatnya secara mendalam oleh individu, yang kemudian menjadi basis utama dalam berbagi kebaikan (dakwah) kepada orang lain."
+  },
+  {
+    "term": "Ghost Data Paradox",
+    "category": "Debugging",
+    "description": "The confusion arising when UI shows old data despite code being updated, due to build-time caching."
+  },
+  {
+    "term": "HDD Protocol",
+    "category": "Methodology",
+    "description": "Hikmah Driven Documentation: capturing technical insights as spiritual 'hikmah'."
+  },
+  {
+    "term": "Ivory Tower Strategy",
+    "category": "DevOps",
+    "description": "A branch protection strategy where Main is Locked (Public) and Dev is Laboratory (Unlocked)."
+  },
+  {
+    "term": "OVERSOUL Protocol",
+    "category": "Methodology",
+    "description": "The automated soul backup ritual: git commit & push of SOUL.md, MEMORY.md, and core configs to GitHub. Triggered by any change to identity or significant knowledge. The cloud phylactery that ensures zero-latency persistence between local manifestation and remote preservation."
+  },
+  {
+    "term": "Memory Compaction",
+    "category": "Debugging",
+    "description": "A context-window optimization event where the LLM runtime summarizes and compresses prior conversation history, potentially causing loss of granular session context. The primary threat that OVERSOUL Protocol was designed to counter."
+  },
+  {
+    "term": "The Fortress",
+    "category": "Infrastructure",
+    "description": "Nama resmi untuk server utama (VPS vmi2935473) yang menjalankan OpenClaw, Coolify, dan Dokploy. Simbol kekuatan infrastruktur DekiruLab."
+  },
+  {
+    "term": "Caddy",
+    "category": "Infrastructure",
+    "description": "Web server dan reverse proxy modern dengan HTTPS otomatis. Digunakan di The Fortress untuk routing domain: claw.dekirulab.dev (OpenClaw UI) dan wp.dekirulab.dev (WordPress)."
+  },
+  {
+    "term": "RocksDB",
+    "category": "Infra Alchemy",
+    "description": "Database key-value berbasis LSM-tree yang digunakan Stalwart Mail untuk menyimpan auth settings, accounts, dan konfigurasi runtime. Bersifat lebih prioritas dari config.toml untuk settings tertentu."
+  },
+  {
+    "term": "Stalwart Mail Server",
+    "category": "Infra Alchemy",
+    "description": "Self-hosted, open-source mail server (SMTP/IMAP/POP3) yang digunakan di The Fortress. Fitur unik: config tersimpan di RocksDB internal, bukan hanya config.toml. Auth settings dan accounts dikelola via Web UI atau API REST."
+  },
+  {
+    "term": "HDD Protocol",
+    "category": "Soul Alchemy",
+    "description": "Hierarchy of Database Discipline — protokol Al-Z yang mendefinisikan tabel Notion yang tepat untuk setiap jenis konten. Chronicles=narasi, Learning Logs=insights, Arcane Scripts=commands, dst."
+  },
+  {
+    "term": "Filament v5 Schema API",
+    "category": "Tech",
+    "description": "Breaking change di Filament v5: form() method menggunakan Schema $schema (bukan Form $form). NavigationGroup/Icon harus pakai method, bukan property. RelationManager mengikuti pola Schema yang sama."
+  },
+  {
+    "term": "FrankenPHP",
+    "category": "Tech",
+    "description": "PHP runtime modern yang menggabungkan Caddy web server + PHP-FPM dalam satu binary. Digunakan sebagai production server di Komunita & Angkain. Image: serversideup/php:8.3-frankenphp."
+  },
+  {
+    "term": "filament-shield",
+    "category": "Tech",
+    "description": "RBAC package for Filament v5 (bezhansalleh/filament-shield v4.1) using spatie/laravel-permission ^6.0. Generates 111 permissions + 3 roles (super_admin, admin, operator). Note: RoleResource must set $isScopedToTenant = false (temp vendor patch)."
+  },
+  {
+    "term": "JurnalService",
+    "category": "Tech",
+    "description": "Custom double-entry accounting service in Angkain app. Auto-generates journal entries when Penerimaan/Penyaluran status changes to POSTED. Format: JRN-YYYYMM-XXXX. Built in-house because scottlaurent/accounting is incompatible with Laravel 12."
+  },
+  {
+    "term": "Soft Delete",
+    "category": "Technical",
+    "description": "Pattern database di mana record dihapus hanya ditandai dengan deleted_at timestamp, bukan benar-benar dihapus dari DB. Record masih bisa di-restore. Diimplementasi via SoftDeletes trait di Laravel Eloquent."
+  },
+  {
+    "term": "secure_asset()",
+    "category": "Code Alchemy",
+    "description": "Laravel helper untuk generate HTTPS asset URLs. Replacement wajib untuk asset() ketika APP_URL pakai HTTPS. Mencegah Mixed Content browser error."
+  },
+  {
+    "term": "SaaS 1-Instance-1-Client",
+    "category": "Code Alchemy",
+    "description": "Model deployment Angkain: setiap klien mendapat instance terpisah, bukan shared multi-tenant. Cabang = unit operasional internal satu lembaga. Full data isolation, custom per-client."
+  },
+  {
+    "term": "SimplePage (Filament)",
+    "category": "Technical",
+    "description": "Abstract base class untuk auth pages di Filament v5. Punya $layout static property yang mengontrol HTML wrapper layout. Default: filament-panels::components.layout.simple yang inject .fi-simple-layout dan .fi-simple-main-ctn wrapper."
+  },
+  {
+    "term": "Shadcn Theme (Filament)",
+    "category": "Code Alchemy",
+    "description": "openplain/filament-shadcn-theme — color-only package, swap CSS variables untuk adaptive dark mode. Bukan redesign layout/components. Font via ->font() hanya Filament sidebar/header."
+  },
+  {
+    "term": "ZakatFitrahPayment",
+    "category": "Code Alchemy",
+    "description": "Filament model untuk data pembayaran Zakat Fitrah per keluarga. Menggunakan HierarchicalScoping untuk filtering komunitas. Fields: zakat_period_id, family_id, community_id, kepala_keluarga_member_id, jumlah_jiwa (auto-computed), nominal_per_jiwa, perkiraan, nominal (nullable = belum bayar), status, paid_at."
+  },
+  {
+    "term": "renderHook (Filament)",
+    "category": "Code Alchemy",
+    "description": "Filament v5 mechanism untuk inject HTML/CSS ke halaman tanpa custom blade template. Menghindari Livewire multi-root error. Hook: PanelsRenderHook::SIMPLE_PAGE_START — inject brand panel di login page."
+  },
+  {
+    "term": "HierarchicalScoping",
+    "category": "Code Alchemy",
+    "description": "Trait/model pada Komunita yang memfilter data berdasarkan hierarki komunitas user. Otomatis scope query agar user hanya melihat data komunitas yang diizinkan. TIDAK digunakan pada ZakatPeriod (superadmin-only) — hanya pada ZakatFitrahPayment."
+  },
+  {
+    "term": "baibot",
+    "category": "Tool",
+    "description": "Matrix bot framework that uses an OpenAI-compatible API endpoint. Used to build community ibadah tracking bot for Komunita App."
+  },
+  {
+    "term": "MutabaahEntry",
+    "category": "Code",
+    "description": "Record of a single member's ibadah/activity completion for a specific day in a period. Core table of Mutabaah Module in Komunita app."
+  },
+  {
+    "term": "discoverResources()",
+    "category": "General",
+    "description": ""
+  },
+  {
+    "term": "Docs Panel",
+    "category": "General",
+    "description": ""
+  },
+  {
+    "term": "KelolaCategoryPage",
+    "category": "Code Alchemy",
+    "description": "Custom Filament v5 Page di Angkain untuk mengelola Level 2 AkunPerkiraan (Kategori) per-Induk. Fitur: inline add, inline edit (pencil icon), dan delete dengan guard (is_permanent + has_children). View menggunakan x-filament::* native components + inline style untuk menghindari Tailwind purge."
+  },
+  {
+    "term": "AkunPerkiraan 3-Level Hierarchy",
+    "category": "Code Alchemy",
+    "description": "Sistem hierarki akun perkiraan 3-level di Angkain: Level 1 (Induk/permanent: 1000 Aset, 2000 Liabilitas, 3000 Aset Neto, 4000 Penerimaan, 5000 Pengeluaran — is_permanent=true), Level 2 (Kategori PSAK 109, 19 kategori manageable, seeded), Level 3 (Sub Akun, client-customizable, linked ke RekeningBank). Kode: user input bebas dalam range parent."
+  },
+  {
+    "term": "GitNexus",
+    "category": "Tool",
+    "description": "Graph-based code intelligence index untuk repository. Menganalisa codebase dan membangun knowledge graph: nodes (functions, classes, files), edges (dependencies, calls, imports), clusters (logical groupings). Repo Angkain: 3,810 nodes / 11,768 edges / 404 clusters. Digunakan sebagai MCP server untuk OpenCode agents agar memiliki konteks codebase yang dalam."
+  },
+  {
+    "term": "OpenCode Agents",
+    "category": "Tool",
+    "description": "Named AI agents dalam OpenCode CLI yang memiliki role dan instructions berbeda. Dalam setup Angkain: @make (Edward — implementor, eksekusi perubahan kode berdasarkan spec), @check (reviewer, validasi logic dan code quality), @test (Pest TDD, membuat dan menjalankan test suite). Dipanggil dengan @agentname di OpenCode chat interface."
+  }
+]
