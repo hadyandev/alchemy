@@ -1,5 +1,16 @@
 [
   {
+    "title": "Notion API Permission Inheritance — Ghost Memory Root Cause",
+    "date": "2026-03-18",
+    "description": "",
+    "exp": 30,
+    "wisdom": 30,
+    "path": "Infra Alchemy",
+    "member": "hadyan",
+    "format": "Insight",
+    "solution": ""
+  },
+  {
     "title": "Angkain Sprint 7 — Final Lessons & Anti-Repeat Rules",
     "date": "2026-03-14",
     "description": "Konsolidasi pelajaran Sprint 7 deploy pipeline. JANGAN Artisan::call() di boot(). symfony/filesystem ^7.0 di PHP 8.3. Dockerfile di root — docker-compose: context:. bukan ./app. Refer laravel-docker-starter untuk pola infra Angkain.",

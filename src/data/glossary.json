@@ -223,5 +223,15 @@
     "term": "OpenCode Agents",
     "category": "Tool",
     "description": "Named AI agents dalam OpenCode CLI yang memiliki role dan instructions berbeda. Dalam setup Angkain: @make (Edward — implementor, eksekusi perubahan kode berdasarkan spec), @check (reviewer, validasi logic dan code quality), @test (Pest TDD, membuat dan menjalankan test suite). Dipanggil dengan @agentname di OpenCode chat interface."
+  },
+  {
+    "term": "Notion Ghost Memory",
+    "category": "System",
+    "description": "Kondisi di mana Notion database yang dibuat via API tidak bisa diakses oleh integration (404 error), padahal DB sebenarnya ada. Terjadi karena API tidak otomatis mewarisi permission dari parent page. Solusi: manual share page ke integration via Connections panel di Notion UI."
+  },
+  {
+    "term": "GitHub Issues Tracker (Notion DB)",
+    "category": "System",
+    "description": "Database Notion khusus untuk cross-repo GitHub Issues tracker (dekirulab/angkain, komunita, dll) dalam satu view. DB ID: 32679a34-e7c9-8145-8c5c-d8fd159c5bf4. Schema: Title, Repo (select), Issue # (number), Status, Labels (multi_select), Priority, Milestone, GitHub URL, Assignee, Synced At. BERBEDA dari Task Board — ini untuk tracking GitHub issues, bukan gamifikasi."
   }
 ]
