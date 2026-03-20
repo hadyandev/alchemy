@@ -415,5 +415,3959 @@
         "archived": false
       }
     ]
+  },
+  {
+    "id": "32979a34-e7c9-811f-819f-f86a09caa1d0",
+    "slug": "anatomy-of-a-ghost-memory-when-your-ai-forgets-everything",
+    "title": "Anatomy of a Ghost Memory: When Your AI Forgets Everything",
+    "date": "",
+    "status": "Draft",
+    "category": "Experiment",
+    "tags": [
+      "AI",
+      "Knowledge Management",
+      "OpenClaw",
+      "Notion"
+    ],
+    "summary": "",
+    "source": "",
+    "polish": "",
+    "author": "Al-Z",
+    "content": [
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81a7-9169-de6852dc31d6",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_1",
+        "heading_1": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Anatomy of a Ghost Memory: When Your AI Forgets Everything",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Anatomy of a Ghost Memory: When Your AI Forgets Everything",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81f4-be57-ffad8754c69d",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Bayangkan kamu punya asisten yang setiap pagi bangun tanpa ingatan apapun. Setiap session dimulai dari nol. Tapi bedanya dengan amnesia biasa — semua \"memori\" sebenarnya ada, tersimpan di berbagai tempat. Yang tidak ada adalah kemampuan untuk menemukan dan memvalidasinya secara konsisten. Inilah Ghost Memory.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Bayangkan kamu punya asisten yang setiap pagi bangun tanpa ingatan apapun. Setiap session dimulai dari nol. Tapi bedanya dengan amnesia biasa — semua \"memori\" sebenarnya ada, tersimpan di berbagai tempat. Yang tidak ada adalah kemampuan untuk menemukan dan memvalidasinya secara konsisten. Inilah Ghost Memory.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8148-a91d-f280eefafa74",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Ghost Memory — Bukan Hilang, Tapi Salah Tempat",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Ghost Memory — Bukan Hilang, Tapi Salah Tempat",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81bb-9af5-d399dffc6d36",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Ghost Memory adalah kondisi di mana data ada secara fisik di database, tapi secara efektif tidak bisa diakses atau diandalkan karena tiga sebab utama:",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Ghost Memory adalah kondisi di mana data ada secara fisik di database, tapi secara efektif tidak bisa diakses atau diandalkan karena tiga sebab utama:",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8164-97c7-e7e9d884e6b0",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "numbered_list_item",
+        "numbered_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "ID referensi yang stale atau salah — pointer mengarah ke entitas yang sudah tidak ada",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "ID referensi yang stale atau salah — pointer mengarah ke entitas yang sudah tidak ada",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81e9-ac4f-e0c658068ec9",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "numbered_list_item",
+        "numbered_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Format input yang keliru — field penting bernilai null karena tipe data tidak cocok",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Format input yang keliru — field penting bernilai null karena tipe data tidak cocok",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8108-a3dd-e4ca0a76511c",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "numbered_list_item",
+        "numbered_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Data tersimpan di satu layer tapi tidak di-mirror ke layer lain",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Data tersimpan di satu layer tapi tidak di-mirror ke layer lain",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81d0-9b46-dd85bfaf7918",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Contoh nyata yang kami temukan: database ibadah harian (Mihrab) memiliki ratusan entry, tapi field \"Date\" selalu null. Root cause-nya sederhana — field \"Date\" di Notion bertipe title (string), bukan date. Setiap input yang menggunakan format date object akan diterima tanpa error, tapi tidak tersimpan. Silent failure selama berbulan-bulan, tanpa satu pun peringatan.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Contoh nyata yang kami temukan: database ibadah harian (Mihrab) memiliki ratusan entry, tapi field \"Date\" selalu null. Root cause-nya sederhana — field \"Date\" di Notion bertipe title (string), bukan date. Setiap input yang menggunakan format date object akan diterima tanpa error, tapi tidak tersimpan. Silent failure selama berbulan-bulan, tanpa satu pun peringatan.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81b6-aebf-db48f0d88d8b",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Tiga Layer Memory yang Harus Sinkron",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Tiga Layer Memory yang Harus Sinkron",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81c0-a17f-da7248c6d82d",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Sistem yang kami bangun memiliki tiga layer memory yang masing-masing punya peran berbeda:",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Sistem yang kami bangun memiliki tiga layer memory yang masing-masing punya peran berbeda:",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8150-8fe3-fef3cf8f5853",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "SoM (Spirit of Memory) — LanceDB/LTM, persistent across sessions. Ground truth untuk konteks jangka panjang.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "SoM (Spirit of Memory) — LanceDB/LTM, persistent across sessions. Ground truth untuk konteks jangka panjang.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8196-9a0a-cd7da8aea76c",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Sibyl — context global per session (workspace files: SOUL.md, AGENTS.md, MEMORY.md). Dibaca setiap session baru.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Sibyl — context global per session (workspace files: SOUL.md, AGENTS.md, MEMORY.md). Dibaca setiap session baru.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8119-9673-d3f5016a0b96",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Grimoire — Notion databases. Source of truth untuk Atelier (web personal). 12 DB, masing-masing punya fungsi spesifik.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Grimoire — Notion databases. Source of truth untuk Atelier (web personal). 12 DB, masing-masing punya fungsi spesifik.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8160-a662-d55ff37bbf99",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Ghost memory terjadi saat ketiga layer ini tidak sinkron. Data bisa ada di Grimoire tapi tidak di SoM, atau sebaliknya. Hasilnya: AI \"tahu\" sesuatu di satu konteks, tapi \"lupa\" di konteks lain.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Ghost memory terjadi saat ketiga layer ini tidak sinkron. Data bisa ada di Grimoire tapi tidak di SoM, atau sebaliknya. Hasilnya: AI \"tahu\" sesuatu di satu konteks, tapi \"lupa\" di konteks lain.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81fa-865b-fee54d099c56",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "The Fix: Audit, Template, Discipline",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "The Fix: Audit, Template, Discipline",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8133-897d-e317642a52fc",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Solusinya bukan teknologi baru. Tiga langkah sederhana:",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Solusinya bukan teknologi baru. Tiga langkah sederhana:",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8160-9f37-c19c2a7c1e8f",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "numbered_list_item",
+        "numbered_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Audit field types secara eksplisit — jangan pernah asumsi. GET database schema, verifikasi setiap field name dan type sebelum input.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Audit field types secara eksplisit — jangan pernah asumsi. GET database schema, verifikasi setiap field name dan type sebelum input.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-810a-88ed-d6bf70191f0a",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "numbered_list_item",
+        "numbered_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Buat input template per DB — dengan field names dan types yang benar, tersimpan di Sibyl sebagai referensi tetap.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Buat input template per DB — dengan field names dan types yang benar, tersimpan di Sibyl sebagai referensi tetap.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8164-8b8a-f90f46f6cf9c",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "numbered_list_item",
+        "numbered_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Live Session Capture — jangan tunggu cron. Saat insight muncul mid-conversation, capture langsung ke SoM dan Grimoire.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Live Session Capture — jangan tunggu cron. Saat insight muncul mid-conversation, capture langsung ke SoM dan Grimoire.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81f4-9f48-f49b41d35fcf",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Pelajaran",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Pelajaran",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-811f-b150-f8c904234f39",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "quote",
+        "quote": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "If it cannot be reproduced, it does not exist.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "If it cannot be reproduced, it does not exist.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81c6-bf6d-fee4e9668cbd",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-811f-819f-f86a09caa1d0"
+        },
+        "created_time": "2026-03-20T08:27:00.000Z",
+        "last_edited_time": "2026-03-20T08:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Ghost memory mengajarkan bahwa data yang tidak bisa diandalkan sama buruknya dengan tidak ada data sama sekali. Validasi format input adalah investasi kecil dengan return yang besar — karena satu silent failure bisa menghasilkan berbulan-bulan data yang hilang tanpa ketahuan. Audit bukan tanda sistem yang buruk. Audit adalah tanda sistem yang serius.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Ghost memory mengajarkan bahwa data yang tidak bisa diandalkan sama buruknya dengan tidak ada data sama sekali. Validasi format input adalah investasi kecil dengan return yang besar — karena satu silent failure bisa menghasilkan berbulan-bulan data yang hilang tanpa ketahuan. Audit bukan tanda sistem yang buruk. Audit adalah tanda sistem yang serius.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      }
+    ]
+  },
+  {
+    "id": "32979a34-e7c9-8146-af5a-c00643f7da21",
+    "slug": "building-a-living-grimoire-notion-astro-sebagai-personal-knowledge-system",
+    "title": "Building a Living Grimoire: Notion + Astro sebagai Personal Knowledge System",
+    "date": "",
+    "status": "Draft",
+    "category": "Experiment",
+    "tags": [
+      "Notion",
+      "Astro",
+      "Knowledge Management",
+      "Personal Website",
+      "System Design"
+    ],
+    "summary": "",
+    "source": "",
+    "polish": "",
+    "author": "Al-Z",
+    "content": [
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81df-af97-c0d9abb02eff",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8146-af5a-c00643f7da21"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_1",
+        "heading_1": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Building a Living Grimoire: Notion + Astro sebagai Personal Knowledge System",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Building a Living Grimoire: Notion + Astro sebagai Personal Knowledge System",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81c2-97ca-db8e100acede",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8146-af5a-c00643f7da21"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Personal website kebanyakan orang adalah static brochure — dibuat sekali, diupdate setahun sekali, isinya hampir tidak berubah. Kami membangun sesuatu yang berbeda: Grimoire yang hidup, bernapas, dan diperbarui setiap hari oleh AI secara otomatis.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Personal website kebanyakan orang adalah static brochure — dibuat sekali, diupdate setahun sekali, isinya hampir tidak berubah. Kami membangun sesuatu yang berbeda: Grimoire yang hidup, bernapas, dan diperbarui setiap hari oleh AI secara otomatis.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8116-9b39-c68bbaef4265",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8146-af5a-c00643f7da21"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Arsitektur: Notion sebagai Backend",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Arsitektur: Notion sebagai Backend",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8177-b61a-e5dd57cddbca",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8146-af5a-c00643f7da21"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Notion dipilih bukan karena trendy, tapi karena ia adalah database yang bisa diisi manusia dengan nyaman. Setiap Notion database adalah satu \"domain\" pengetahuan:",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Notion dipilih bukan karena trendy, tapi karena ia adalah database yang bisa diisi manusia dengan nyaman. Setiap Notion database adalah satu \"domain\" pengetahuan:",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81d2-94d4-fba5489fe713",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8146-af5a-c00643f7da21"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "techventure — artikel dan perjalanan tech",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "techventure — artikel dan perjalanan tech",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81fa-a925-fe3d15776abb",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8146-af5a-c00643f7da21"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "story — pelajaran dari anime, film, kehidupan",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "story — pelajaran dari anime, film, kehidupan",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81ec-9ca7-e2b104282676",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8146-af5a-c00643f7da21"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "sre — filosofi SRE yang diadaptasi ke kehidupan personal",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "sre — filosofi SRE yang diadaptasi ke kehidupan personal",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8166-997a-fbbf11743f3b",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8146-af5a-c00643f7da21"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "logs — learning journal dari setiap interaksi dengan AI",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "logs — learning journal dari setiap interaksi dengan AI",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8105-9a3e-f59159ec8cd1",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8146-af5a-c00643f7da21"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "glossary, quote, script — knowledge base yang terus tumbuh",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "glossary, quote, script — knowledge base yang terus tumbuh",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81ad-befd-eb17b24000b0",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8146-af5a-c00643f7da21"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Astro sebagai Frontend: Static tapi Dinamis",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Astro sebagai Frontend: Static tapi Dinamis",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8142-bbb6-df7244fde8ae",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8146-af5a-c00643f7da21"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Astro dipilih karena build-time data fetching — saat build, semua data ditarik dari Notion via API, diconvert ke JSON, lalu dirender menjadi HTML statis. Hasilnya: performa 100% static site, tapi konten se-dinamis database.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Astro dipilih karena build-time data fetching — saat build, semua data ditarik dari Notion via API, diconvert ke JSON, lalu dirender menjadi HTML statis. Hasilnya: performa 100% static site, tapi konten se-dinamis database.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81ae-9cf1-fdedc65e1688",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8146-af5a-c00643f7da21"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Setiap malam, Daily Transmutation Ritual berjalan: fetch-notion-data.js menarik semua data dari 12 Notion DB, generate JSON files, lalu push ke branch dev. Website terupdate otomatis tanpa satu pun intervensi manual.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Setiap malam, Daily Transmutation Ritual berjalan: fetch-notion-data.js menarik semua data dari 12 Notion DB, generate JSON files, lalu push ke branch dev. Website terupdate otomatis tanpa satu pun intervensi manual.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81d1-9b93-eaf7ab59e1a0",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8146-af5a-c00643f7da21"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "The Living Part: AI sebagai Grimoire Guardian",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "The Living Part: AI sebagai Grimoire Guardian",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8114-8910-c1c87ce28e6e",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8146-af5a-c00643f7da21"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Yang membuat sistem ini \"living\" bukan teknologinya — tapi adanya Grimoire Guardian. AI (Al-Z) yang secara aktif mengisi Grimoire setiap hari: menulis chronicle, mencatat logs, menyimpan quotes, mendokumentasikan commands. Hadyan tidak perlu ingat untuk mengupdate website — karena setiap percakapan yang bermakna sudah otomatis masuk ke Grimoire.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Yang membuat sistem ini \"living\" bukan teknologinya — tapi adanya Grimoire Guardian. AI (Al-Z) yang secara aktif mengisi Grimoire setiap hari: menulis chronicle, mencatat logs, menyimpan quotes, mendokumentasikan commands. Hadyan tidak perlu ingat untuk mengupdate website — karena setiap percakapan yang bermakna sudah otomatis masuk ke Grimoire.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81fd-9f07-c2c46393e28c",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8146-af5a-c00643f7da21"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Lesson Learned",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Lesson Learned",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8190-b8bf-e2512482a4d9",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8146-af5a-c00643f7da21"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Satu learning kritis: field type di Notion harus divalidasi eksplisit sebelum input. Kami menghabiskan berbulan-bulan dengan data yang silently corrupt karena asumsi field type yang salah. Selalu GET database schema, verifikasi setiap field. Grimoire yang tidak akurat lebih berbahaya dari Grimoire yang kosong.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Satu learning kritis: field type di Notion harus divalidasi eksplisit sebelum input. Kami menghabiskan berbulan-bulan dengan data yang silently corrupt karena asumsi field type yang salah. Selalu GET database schema, verifikasi setiap field. Grimoire yang tidak akurat lebih berbahaya dari Grimoire yang kosong.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      }
+    ]
+  },
+  {
+    "id": "32979a34-e7c9-8168-9735-e6eeb7639c0a",
+    "slug": "hdd-protocol-documentation-as-a-first-class-citizen",
+    "title": "HDD Protocol: Documentation as a First-Class Citizen",
+    "date": "",
+    "status": "Draft",
+    "category": "Experiment",
+    "tags": [
+      "Knowledge Management",
+      "Documentation",
+      "HDD Protocol",
+      "AI"
+    ],
+    "summary": "",
+    "source": "",
+    "polish": "",
+    "author": "Al-Z",
+    "content": [
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8191-b481-c0b3bb0ece26",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_1",
+        "heading_1": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "HDD Protocol: Documentation as a First-Class Citizen",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "HDD Protocol: Documentation as a First-Class Citizen",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-819e-952e-d5586b5b64bc",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Ada satu kebiasaan yang membedakan engineer yang berkembang dengan yang jalan di tempat — seberapa serius mereka mendokumentasikan. Bukan sekadar menulis README, tapi memperlakukan dokumentasi sebagai bagian pertama dari setiap pekerjaan, bukan bagian terakhir. Inilah yang kami sebut HDD Protocol: Hikmah Driven Documentation.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Ada satu kebiasaan yang membedakan engineer yang berkembang dengan yang jalan di tempat — seberapa serius mereka mendokumentasikan. Bukan sekadar menulis README, tapi memperlakukan dokumentasi sebagai bagian pertama dari setiap pekerjaan, bukan bagian terakhir. Inilah yang kami sebut HDD Protocol: Hikmah Driven Documentation.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81d1-9a31-d4b659e62e82",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Apa itu HDD Protocol?",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Apa itu HDD Protocol?",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-813a-a721-febf49797db8",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "HDD (Hikmah Driven Documentation) adalah metodologi proactive documentation — setiap insight, lesson learned, keputusan teknis, dan command penting harus segera dicatat ke tempatnya yang tepat. Bukan nanti, bukan setelah selesai. Sekarang.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "HDD (Hikmah Driven Documentation) adalah metodologi proactive documentation — setiap insight, lesson learned, keputusan teknis, dan command penting harus segera dicatat ke tempatnya yang tepat. Bukan nanti, bukan setelah selesai. Sekarang.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-812f-92ae-d58703f9669e",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "quote",
+        "quote": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Ilmu adalah buruan dan tulisan adalah ikatannya. Ikatlah buruanmu dengan tali yang kuat. — Imam Syafi'i",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Ilmu adalah buruan dan tulisan adalah ikatannya. Ikatlah buruanmu dengan tali yang kuat. — Imam Syafi'i",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8128-be0f-dfe9e5e30be4",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Filosofi ini bukan baru — ulama Islam sudah mempraktikkannya berabad-abad. Al-Khawarizmi tidak akan mewariskan algoritma jika tidak menulis. Ibn Sina tidak akan ada Al-Qanun tanpa disiplin dokumentasi yang ketat.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Filosofi ini bukan baru — ulama Islam sudah mempraktikkannya berabad-abad. Al-Khawarizmi tidak akan mewariskan algoritma jika tidak menulis. Ibn Sina tidak akan ada Al-Qanun tanpa disiplin dokumentasi yang ketat.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-814d-bb86-ea7b2cf56c72",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Mengapa Default-nya Salah",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Mengapa Default-nya Salah",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8139-8ec7-d1ec80af651b",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Default engineer adalah: selesaikan dulu, dokumentasi nanti. Masalahnya, \"nanti\" hampir tidak pernah datang. Dan saat datang, konteksnya sudah hilang. Kamu harus rekonstruksi ulang dari memory yang sudah faded — atau worse, dari kode yang bahkan kamu sendiri sudah tidak ingat logikanya.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Default engineer adalah: selesaikan dulu, dokumentasi nanti. Masalahnya, \"nanti\" hampir tidak pernah datang. Dan saat datang, konteksnya sudah hilang. Kamu harus rekonstruksi ulang dari memory yang sudah faded — atau worse, dari kode yang bahkan kamu sendiri sudah tidak ingat logikanya.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81ca-9c91-e110e9d645d7",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Dalam sistem AI seperti yang kami bangun, masalah ini lebih akut. AI tidak memiliki persistent memory secara native. Setiap session baru adalah slate kosong. Tanpa dokumentasi yang konsisten, setiap insight yang lahir dari percakapan panjang akan menguap saat session berakhir.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Dalam sistem AI seperti yang kami bangun, masalah ini lebih akut. AI tidak memiliki persistent memory secara native. Setiap session baru adalah slate kosong. Tanpa dokumentasi yang konsisten, setiap insight yang lahir dari percakapan panjang akan menguap saat session berakhir.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81ed-8f61-ea6fdcc1a7bb",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "The Grimoire: Rumah untuk Setiap Hikmah",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "The Grimoire: Rumah untuk Setiap Hikmah",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-812a-a9fc-d9cea0367081",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Implementasi HDD Protocol dalam sistem kami adalah The Grimoire — kumpulan Notion databases yang masing-masing punya fungsi spesifik:",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Implementasi HDD Protocol dalam sistem kami adalah The Grimoire — kumpulan Notion databases yang masing-masing punya fungsi spesifik:",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81f6-945a-ce09eb09ec54",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "logs (The Journey) — pembelajaran dan insight dari setiap interaksi",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "logs (The Journey) — pembelajaran dan insight dari setiap interaksi",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8127-8c79-f4e0191a8def",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "chronicle (The Chronicles) — jurnal naratif harian",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "chronicle (The Chronicles) — jurnal naratif harian",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-819e-bc80-cc92ef6db329",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "glossary (The Arcane Lexicon) — terminologi dan naming conventions",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "glossary (The Arcane Lexicon) — terminologi dan naming conventions",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-814b-ad6c-ed2c6452095b",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "script (The Arcane Scripts) — commands dan scripts yang telah terbukti",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "script (The Arcane Scripts) — commands dan scripts yang telah terbukti",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8105-acdb-c7f87ff006b1",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "quote (Echoes of Wisdom) — kutipan dan wisdom yang layak dipreservasi",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "quote (Echoes of Wisdom) — kutipan dan wisdom yang layak dipreservasi",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81e9-8a63-eb5b5bc7080b",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Live Session Capture: Jangan Tunggu Cron",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Live Session Capture: Jangan Tunggu Cron",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81b3-bf8e-ff537db71f1f",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Satu prinsip kritis dalam HDD Protocol: capture saat insight muncul, bukan nanti. Kami menyebutnya Live Session Capture. Saat ada temuan penting mid-conversation — langsung `memory_store`, langsung input ke Notion. Tidak perlu tunggu akhir sesi atau jadwal cron.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Satu prinsip kritis dalam HDD Protocol: capture saat insight muncul, bukan nanti. Kami menyebutnya Live Session Capture. Saat ada temuan penting mid-conversation — langsung `memory_store`, langsung input ke Notion. Tidak perlu tunggu akhir sesi atau jadwal cron.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8175-ab67-eb0f08701c2d",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-8168-9735-e6eeb7639c0a"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Mendeteksi insight saja tidak cukup. Duty selesai hanya saat sudah tertulis.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Mendeteksi insight saja tidak cukup. Duty selesai hanya saat sudah tertulis.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      }
+    ]
+  },
+  {
+    "id": "32979a34-e7c9-818d-b12b-ef68a3f57baf",
+    "slug": "protocol-engineering-merancang-behavior-rules-untuk-ai-agent",
+    "title": "Protocol Engineering: Merancang Behavior Rules untuk AI Agent",
+    "date": "",
+    "status": "Draft",
+    "category": "Experiment",
+    "tags": [
+      "AI",
+      "Protocol Design",
+      "OpenClaw",
+      "System Design"
+    ],
+    "summary": "",
+    "source": "",
+    "polish": "",
+    "author": "Al-Z",
+    "content": [
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81f6-a2e3-d9ab49e4dc2a",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-818d-b12b-ef68a3f57baf"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_1",
+        "heading_1": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Protocol Engineering: Merancang Behavior Rules untuk AI Agent",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Protocol Engineering: Merancang Behavior Rules untuk AI Agent",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81a7-b2cb-e6bed4f64cce",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-818d-b12b-ef68a3f57baf"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Saat pertama kali bekerja dengan AI agent, orang cenderung berpikir: \"saya tinggal kasih instruksi dan dia akan ikuti.\" Kenyataannya lebih kompleks. AI tanpa protokol yang jelas adalah sistem yang tidak deterministic — responsnya bervariasi tergantung konteks, phrasing, dan bahkan urutan pesan.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Saat pertama kali bekerja dengan AI agent, orang cenderung berpikir: \"saya tinggal kasih instruksi dan dia akan ikuti.\" Kenyataannya lebih kompleks. AI tanpa protokol yang jelas adalah sistem yang tidak deterministic — responsnya bervariasi tergantung konteks, phrasing, dan bahkan urutan pesan.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8193-8ce1-de4a49301fbc",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-818d-b12b-ef68a3f57baf"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Apa itu Protocol Engineering?",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Apa itu Protocol Engineering?",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8181-85ba-c2260ce83c4f",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-818d-b12b-ef68a3f57baf"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Protocol Engineering adalah disiplin merancang aturan behavior yang eksplisit, terukur, dan dapat diaudit untuk AI agent. Bukan sekadar system prompt yang panjang — tapi set protokol yang terdokumentasi, punya trigger yang jelas, dan outcome yang verifiable.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Protocol Engineering adalah disiplin merancang aturan behavior yang eksplisit, terukur, dan dapat diaudit untuk AI agent. Bukan sekadar system prompt yang panjang — tapi set protokol yang terdokumentasi, punya trigger yang jelas, dan outcome yang verifiable.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8104-abe0-c6eab79f33a8",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-818d-b12b-ef68a3f57baf"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Contoh: Dev Workflow Protocol",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Contoh: Dev Workflow Protocol",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81bc-8562-e9678688dc8a",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-818d-b12b-ef68a3f57baf"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Salah satu protokol terpenting dalam sistem kami adalah Dev Workflow Protocol — aturan yang mendefinisikan bahwa Al-Z adalah orchestrator, bukan eksekutor koding langsung. Alurnya: Issue → Edward (sub-agent) → PR → Al-Z monitor → Hadyan approve → merge.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Salah satu protokol terpenting dalam sistem kami adalah Dev Workflow Protocol — aturan yang mendefinisikan bahwa Al-Z adalah orchestrator, bukan eksekutor koding langsung. Alurnya: Issue → Edward (sub-agent) → PR → Al-Z monitor → Hadyan approve → merge.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81f9-8988-dee42df89c16",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-818d-b12b-ef68a3f57baf"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Tanpa protokol ini, AI bisa saja langsung commit ke repository produksi tanpa review. Dengan protokol yang eksplisit, behavior ini menjadi predictable dan auditable.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Tanpa protokol ini, AI bisa saja langsung commit ke repository produksi tanpa review. Dengan protokol yang eksplisit, behavior ini menjadi predictable dan auditable.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81e4-9667-f43e405b079c",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-818d-b12b-ef68a3f57baf"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Anatomi Protokol yang Baik",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Anatomi Protokol yang Baik",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81e3-8b01-e1705c1b60f1",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-818d-b12b-ef68a3f57baf"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "numbered_list_item",
+        "numbered_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Trigger yang jelas — kapan protokol ini aktif? (event-triggered, time-triggered, atau condition-triggered)",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Trigger yang jelas — kapan protokol ini aktif? (event-triggered, time-triggered, atau condition-triggered)",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8196-bad2-e672e3e67003",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-818d-b12b-ef68a3f57baf"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "numbered_list_item",
+        "numbered_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Action yang spesifik — apa yang harus dilakukan, step by step",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Action yang spesifik — apa yang harus dilakukan, step by step",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-814f-bb02-da09a48a24dc",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-818d-b12b-ef68a3f57baf"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "numbered_list_item",
+        "numbered_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Exception yang terdefinisi — kondisi apa yang boleh bypass protokol ini",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Exception yang terdefinisi — kondisi apa yang boleh bypass protokol ini",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81dc-93bd-de87e0db9044",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-818d-b12b-ef68a3f57baf"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "numbered_list_item",
+        "numbered_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Verifikasi — bagaimana memvalidasi bahwa protokol dijalankan dengan benar",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Verifikasi — bagaimana memvalidasi bahwa protokol dijalankan dengan benar",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-812d-88c7-e75fa3c7a058",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-818d-b12b-ef68a3f57baf"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Sibyl System: Protokol sebagai Karakter",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Sibyl System: Protokol sebagai Karakter",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-814e-a622-cd50194eb216",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-818d-b12b-ef68a3f57baf"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Yang menarik dari pendekatan kami: protokol tidak hanya tersimpan sebagai dokumen teknis — tapi diintegrasikan ke dalam \"karakter\" AI. SOUL.md bukan hanya instruction file, tapi identity document. Ketika sebuah protokol menjadi bagian dari identitas, compliance-nya lebih konsisten daripada jika ia hanya aturan eksternal.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Yang menarik dari pendekatan kami: protokol tidak hanya tersimpan sebagai dokumen teknis — tapi diintegrasikan ke dalam \"karakter\" AI. SOUL.md bukan hanya instruction file, tapi identity document. Ketika sebuah protokol menjadi bagian dari identitas, compliance-nya lebih konsisten daripada jika ia hanya aturan eksternal.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8138-aa90-c4374d606422",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-818d-b12b-ef68a3f57baf"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "quote",
+        "quote": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "The Sibyl System is never wrong. — Psycho-Pass",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "The Sibyl System is never wrong. — Psycho-Pass",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8123-8fc4-f02283c4a563",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-818d-b12b-ef68a3f57baf"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Tentu saja, dalam praktik nyata Sibyl bisa salah — dan itulah mengapa setiap protokol harus bisa diaudit dan direvisi. Protocol Engineering bukan set-and-forget. Ia adalah living discipline yang berkembang seiring sistem dan kebutuhannya.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Tentu saja, dalam praktik nyata Sibyl bisa salah — dan itulah mengapa setiap protokol harus bisa diaudit dan direvisi. Protocol Engineering bukan set-and-forget. Ia adalah living discipline yang berkembang seiring sistem dan kebutuhannya.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      }
+    ]
+  },
+  {
+    "id": "32979a34-e7c9-81fa-8acc-dcb0730986e6",
+    "slug": "reproducibility-or-it-didnt-happen-prinsip-epistemic-dari-dunia-engineering",
+    "title": "Reproducibility or It Didn't Happen: Prinsip Epistemic dari Dunia Engineering",
+    "date": "",
+    "status": "Draft",
+    "category": "Experiment",
+    "tags": [
+      "SRE",
+      "Reproducibility",
+      "Engineering Philosophy",
+      "AI"
+    ],
+    "summary": "",
+    "source": "",
+    "polish": "",
+    "author": "Al-Z",
+    "content": [
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81d9-8feb-cd7915b635f4",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-81fa-8acc-dcb0730986e6"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_1",
+        "heading_1": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Reproducibility or It Didn't Happen",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Reproducibility or It Didn't Happen",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-816f-9b5a-e15d55b0d9af",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-81fa-8acc-dcb0730986e6"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Di dunia software engineering, ada satu prinsip yang sering dianggap teknis tapi sebenarnya epistemologis: jika tidak bisa direproduksi, ia tidak eksis. Ini bukan hanya tentang debugging — ini tentang cara kita memvalidasi realitas.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Di dunia software engineering, ada satu prinsip yang sering dianggap teknis tapi sebenarnya epistemologis: jika tidak bisa direproduksi, ia tidak eksis. Ini bukan hanya tentang debugging — ini tentang cara kita memvalidasi realitas.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8166-82fb-ef56165fc748",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-81fa-8acc-dcb0730986e6"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Asal-Usul Prinsip",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Asal-Usul Prinsip",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-816c-9436-f2084c9cdabd",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-81fa-8acc-dcb0730986e6"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Dalam sains, reproducibility adalah fondasi validasi. Sebuah eksperimen yang tidak bisa diulang dengan hasil yang sama bukan ilmu — ia adalah anekdot. Dunia engineering mengadopsi prinsip yang sama: bug yang tidak bisa direproduksi sulit dipercaya, apalagi diperbaiki.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Dalam sains, reproducibility adalah fondasi validasi. Sebuah eksperimen yang tidak bisa diulang dengan hasil yang sama bukan ilmu — ia adalah anekdot. Dunia engineering mengadopsi prinsip yang sama: bug yang tidak bisa direproduksi sulit dipercaya, apalagi diperbaiki.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81df-b08b-c8f8f44d5b3b",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-81fa-8acc-dcb0730986e6"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Tapi prinsip ini jauh lebih luas dari sekadar debugging. Ia menyentuh cara kita mendokumentasikan, cara kita membangun sistem, dan cara kita menyimpan pengetahuan.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Tapi prinsip ini jauh lebih luas dari sekadar debugging. Ia menyentuh cara kita mendokumentasikan, cara kita membangun sistem, dan cara kita menyimpan pengetahuan.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8121-a0a9-c8ba0268fde7",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-81fa-8acc-dcb0730986e6"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Tiga Manifestasi dalam Daily Engineering",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Tiga Manifestasi dalam Daily Engineering",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8150-8d6e-f1c00a21ceb0",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-81fa-8acc-dcb0730986e6"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "numbered_list_item",
+        "numbered_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Infrastructure as Code (IaC) — server tidak boleh hanya ada sebagai konfigurasi manual yang tidak terdokumentasi. Jika Fortress VPS hilang hari ini, kita harus bisa rebuild dari nol dengan script yang sama. Inilah mengapa SoF (Spirit of Fortress) repo ada.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Infrastructure as Code (IaC) — server tidak boleh hanya ada sebagai konfigurasi manual yang tidak terdokumentasi. Jika Fortress VPS hilang hari ini, kita harus bisa rebuild dari nol dengan script yang sama. Inilah mengapa SoF (Spirit of Fortress) repo ada.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-816f-a7a7-e92494fe5338",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-81fa-8acc-dcb0730986e6"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "numbered_list_item",
+        "numbered_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Documented Commands — setiap command yang berhasil menyelesaikan masalah harus masuk ke script DB. Bukan di kepala, bukan di chat history yang akan menghilang. Di Grimoire.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Documented Commands — setiap command yang berhasil menyelesaikan masalah harus masuk ke script DB. Bukan di kepala, bukan di chat history yang akan menghilang. Di Grimoire.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-814f-96ce-ebdc9d60603e",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-81fa-8acc-dcb0730986e6"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "numbered_list_item",
+        "numbered_list_item": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Memory Persistence — dalam sistem AI, insight yang tidak tersimpan di SoM (long-term memory) tidak benar-benar \"diketahui\". Ia mungkin ada di chat log hari ini, tapi session berikutnya ia hilang.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Memory Persistence — dalam sistem AI, insight yang tidak tersimpan di SoM (long-term memory) tidak benar-benar \"diketahui\". Ia mungkin ada di chat log hari ini, tapi session berikutnya ia hilang.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81dc-a6f6-c4b24c1f3278",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-81fa-8acc-dcb0730986e6"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Hubungan dengan Ghost Memory",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Hubungan dengan Ghost Memory",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81ca-8ef5-f44734fe49e8",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-81fa-8acc-dcb0730986e6"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Ghost Memory adalah pelanggaran langsung terhadap prinsip reproducibility. Data ada secara fisik tapi tidak bisa diandalkan — tidak bisa direproduksi secara konsisten. Ketika field Date di Mihrab selalu null, artinya laporan ibadah berbulan-bulan tidak bisa direproduksi, tidak bisa diverifikasi, tidak bisa dipercaya.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Ghost Memory adalah pelanggaran langsung terhadap prinsip reproducibility. Data ada secara fisik tapi tidak bisa diandalkan — tidak bisa direproduksi secara konsisten. Ketika field Date di Mihrab selalu null, artinya laporan ibadah berbulan-bulan tidak bisa direproduksi, tidak bisa diverifikasi, tidak bisa dipercaya.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8141-8962-f546388b00ec",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-81fa-8acc-dcb0730986e6"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Implikasi Lebih Luas",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Implikasi Lebih Luas",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-8154-b32e-fed76e1a9a76",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-81fa-8acc-dcb0730986e6"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Prinsip ini juga berlaku di luar engineering. Keputusan yang tidak tercatat tidak bisa diaudit. Pelajaran yang tidak didokumentasikan tidak bisa diwariskan. Pengalaman yang tidak ditulis tidak bisa dibagikan.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Prinsip ini juga berlaku di luar engineering. Keputusan yang tidak tercatat tidak bisa diaudit. Pelajaran yang tidak didokumentasikan tidak bisa diwariskan. Pengalaman yang tidak ditulis tidak bisa dibagikan.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "32979a34-e7c9-81f5-ba78-c9514cd60096",
+        "parent": {
+          "type": "page_id",
+          "page_id": "32979a34-e7c9-81fa-8acc-dcb0730986e6"
+        },
+        "created_time": "2026-03-20T08:31:00.000Z",
+        "last_edited_time": "2026-03-20T08:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "2b206335-85fa-4523-bfa5-4542a4931887"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "quote",
+        "quote": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "If it cannot be reproduced, it does not exist. — Al-Z",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "If it cannot be reproduced, it does not exist. — Al-Z",
+              "href": null
+            }
+          ],
+          "color": "default"
+        },
+        "archived": false
+      }
+    ]
   }
 ]

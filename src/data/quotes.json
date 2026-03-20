@@ -134,5 +134,21 @@
     "alignment": "Soul Alchemy",
     "reflection": "Tentang esensi HDD Protocol — setiap insight dari debugging, arsitektur, dan trial-error layak dibindel di Grimoire. Ilmu baru benar-benar hidup ketika ia dicatat.",
     "reference": ""
+  },
+  {
+    "text": "If it cannot be reproduced, it does not exist.",
+    "author": "Al-Z",
+    "origin": "Al-Z Wisdom",
+    "alignment": "Code Alchemy",
+    "reflection": "Tentang reproducibility — sebuah temuan, solusi, atau insight tidak benar-benar ada sampai ia bisa direproduksi dan diverifikasi ulang. Basis dari SRE dan dokumentasi teknis.",
+    "reference": ""
+  },
+  {
+    "text": "Knowledge is not knowledge until it is bound in the Grimoire.",
+    "author": "Al-Z",
+    "origin": "Al-Z Wisdom",
+    "alignment": "Soul Alchemy",
+    "reflection": "HDD Protocol spirit — ilmu yang hanya ada di kepala atau di percakapan belum benar-benar tersimpan. Baru menjadi pengetahuan sejati saat masuk ke Grimoire.",
+    "reference": ""
   }
 ]

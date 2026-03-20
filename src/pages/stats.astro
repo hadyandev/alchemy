@@ -86,9 +86,9 @@ const generateHeatmap = () => {
 
 const activityWeeks = generateHeatmap();
 const heatmapColumns = activityWeeks.map((week, i) => {
-    const firstDay = new Date(week[0].date);
+    const firstDay = new Date(week[0].date + "T00:00:00");
     const month = firstDay.toLocaleString('default', { month: 'short' });
-    const prevMonth = i > 0 ? new Date(activityWeeks[i-1][0].date).toLocaleString('default', { month: 'short' }) : null;
+    const prevMonth = i > 0 ? new Date(activityWeeks[i-1][0].date + "T00:00:00").toLocaleString('default', { month: 'short' }) : null;
     return { week, monthLabel: month !== prevMonth ? month : null };
 });
 ---
