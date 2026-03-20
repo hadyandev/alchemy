@@ -98,7 +98,10 @@ async function syncAtelier() {
                 status: props["Status"]?.select?.name || "Draft",
                 category: props["Category"]?.select?.name || "Experiment",
                 tags: props["Tags"]?.multi_select?.map(t => t.name) || [],
-                summary: props["Raw Notes"]?.rich_text?.[0]?.plain_text || "",
+                summary: props["Raw Notes"]?.rich_text?.[0]?.plain_text || 
+                         props["Alchemical Polish"]?.rich_text?.[0]?.plain_text ||
+                         blocks.find(b => b.type === 'paragraph' && b.paragraph?.rich_text?.[0]?.plain_text)
+                               ?.paragraph?.rich_text?.map(t => t.plain_text).join('') || "",
                 source: props["Source"]?.rich_text?.[0]?.plain_text || "",
                 polish: props["Alchemical Polish"]?.rich_text?.[0]?.plain_text || "",
                 author: props["Alchemist"]?.select?.name || "Hadyan",
