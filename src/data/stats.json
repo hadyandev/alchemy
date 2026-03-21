@@ -3,8 +3,8 @@
     "name": "Alkhawarizmi Zaid",
     "level": 3,
     "title": "The Alchemist-in-Training",
-    "exp": 3710,
-    "wisdom": 2395,
+    "exp": 4020,
+    "wisdom": 2675,
     "class": "The Scribe",
     "skills": [
       "Automation",
@@ -27,11 +27,11 @@
       },
       {
         "name": "Soul Alchemy",
-        "level": 2
+        "level": 5
       },
       {
         "name": "Turath Alchemy",
-        "level": 7
+        "level": 3
       }
     ]
   },
@@ -39,8 +39,8 @@
     "name": "Hadyan Ahmad",
     "level": 3,
     "title": "The Alchemist-in-Training",
-    "exp": 4775,
-    "wisdom": 3525,
+    "exp": 4795,
+    "wisdom": 3540,
     "class": "The Master",
     "skills": [
       "System Design",

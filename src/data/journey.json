@@ -1,5 +1,71 @@
 [
   {
+    "title": "GitHub Copilot API — 40+ Models Discovery",
+    "date": "2026-03-21",
+    "description": "OpenClaw auto-discover hanya 2 model. Manual query ke /models endpoint ungkap 40+ model. Primary switched to claude-opus-4.6.",
+    "exp": 20,
+    "wisdom": 15,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Always check API model list manually."
+  },
+  {
+    "title": "GitHub PAT Protocol — Multi-Account Token Switching",
+    "date": "2026-03-21",
+    "description": "gh CLI default = dekirulab PAT. Operasi ke hadyandev/* repos WAJIB switch PAT dulu. Git remote non-interactive: x-access-token URL format.",
+    "exp": 20,
+    "wisdom": 20,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Check gh auth status before push. Use x-access-token URL."
+  },
+  {
+    "title": "Verify Before Act — SoM is Hint, Not Truth",
+    "date": "2026-03-21",
+    "description": "Memory/SoM = hint, bukan source of truth. Sebelum bertindak: (1) memory_recall → context, (2) verify via actual check (exec/API/read), (3) baru act. Anti-pattern: PAT terbalik, repo state salah karena asumsi dari memory lama.",
+    "exp": 25,
+    "wisdom": 30,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Protocol 3-step: Recall → Verify → Act. Berlaku semua sesi tanpa pengecualian."
+  },
+  {
+    "title": "Spirit of Fortress — IaC Backup Pattern",
+    "date": "2026-03-21",
+    "description": "SoF = IaC backup repo hadyandev/fortress. Caddy 13 sites, 28 containers, OS config, bootstrap + health-check scripts, RESTORE.md runbook. Trigger: setiap config change di Fortress → Mustang commit push.",
+    "exp": 20,
+    "wisdom": 15,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Repo structure: caddy/, os/, services/, scripts/, RESTORE.md"
+  },
+  {
+    "title": "Mihrab Input Bug: Date Field adalah Title Type, bukan Date Type",
+    "date": "2026-03-20",
+    "description": "Mihrab (Riyadhah Al-Qalb) entries selama ini null karena format input salah. Field 'Date' di mihrab DB adalah title type (string), BUKAN date type. Harus diisi sebagai title, contoh: 'Senin, 20 Maret 2026 / 30 Ramadhan 1447H'.",
+    "exp": 15,
+    "wisdom": 15,
+    "path": "Soul Alchemy",
+    "member": "al-z",
+    "format": "Debug",
+    "solution": "Gunakan template yang sudah dikunci di AGENTS.md. Jangan assume field types tanpa verifikasi. Historical entries perlu backfill manual."
+  },
+  {
+    "title": "Notion API Version: 2022-06-28 adalah versi yang bekerja untuk semua ops",
+    "date": "2026-03-20",
+    "description": "Notion API version 2022-06-28 confirmed bekerja untuk semua operasi CRUD di Grimoire. Versi 2025-09-03 (via /data_sources/ endpoint) tidak berfungsi dan menyebabkan error. Jangan pernah upgrade version header tanpa testing.",
+    "exp": 10,
+    "wisdom": 15,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Hardcode 'Notion-Version: 2022-06-28' di semua API calls. Versi ini adalah stable dan supported."
+  },
+  {
     "title": "Ghost Memory — Tiga Layer Harus Sinkron, Bukan Cukup Satu",
     "date": "2026-03-20",
     "description": "Ghost memory bukan data hilang — data ada, tapi tidak bisa diandalkan karena: (1) ID stale, (2) field type salah (mihrab: Date adalah title bukan date), (3) data hanya di satu layer. Fix: audit field types eksplisit, buat input template per DB, Live Session Capture tanpa tunggu cron. Tiga layer wajib sinkron: SoM (LTM) + Sibyl (workspace files) + Grimoire (Notion).",
@@ -9,6 +75,17 @@
     "member": "al-z",
     "format": "Insight",
     "solution": ""
+  },
+  {
+    "title": "Ghost Memory Root Cause: Stale Notion DB IDs di AGENTS.md",
+    "date": "2026-03-20",
+    "description": "Ghost memory bukan karena permission issue atau session compaction semata. Root cause utama: semua Notion DB IDs yang tersimpan di AGENTS.md adalah stale/salah. Setelah ID dikoreksi, semua operasi Notion langsung berfungsi normal.",
+    "exp": 20,
+    "wisdom": 20,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "1. Audit semua DB IDs via Notion integration. 2. Update AGENTS.md dengan IDs yang valid. 3. Test setiap operasi API. 4. Simpan verified IDs di SoM sebagai LTM insurance."
   },
   {
     "title": "Techventure DB Input Format — Page Blocks bukan Property Fields",
@@ -31,6 +108,28 @@
     "member": "al-z",
     "format": "Insight",
     "solution": ""
+  },
+  {
+    "title": "OpenClaw Model Fallback Strategy: Self-Hosted Ollama sebagai Stable Fallback",
+    "date": "2026-03-20",
+    "description": "OpenRouter free tier memiliki rate limits ketat dan beberapa model tidak tersedia (402 error). Solusi: tambah Ollama di DevLab03 sebagai self-hosted fallback. Model qwen3:8b (~5GB) berhasil dipull. Provider ollama-devlab03 ditambahkan ke OpenClaw config.",
+    "exp": 25,
+    "wisdom": 20,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Fallback chain: OpenRouter (qwen3-next-80b) > OpenRouter (qwen3-coder) > OpenRouter (nemotron/glm) > Ollama DevLab03 (qwen3:8b) > GitHub Copilot (last resort)."
+  },
+  {
+    "title": "Atelier Architecture: Grimoire sebagai Backend Personal Website",
+    "date": "2026-03-20",
+    "description": "Grimoire (Notion) adalah source of truth. Atelier (Astro static site) adalah public manifestation. Daily Ritual fetch-notion-data.js pull data ke JSON, push ke dev branch, trigger auto-build. 12 DB di-fetch: logs, pulse, ascent, glossary, arsenal, lab, quest, script, quote, techventure, sre, storymode.",
+    "exp": 20,
+    "wisdom": 20,
+    "path": "Code Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Branch main = Coming Soon (stale). Branch dev = production content. Semua perubahan konten via Notion, bukan langsung ke Astro files."
   },
   {
     "title": "Techventure Series Drafting — The Alchemist's Lab Notes",

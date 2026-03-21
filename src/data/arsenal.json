@@ -40,5 +40,152 @@
     "description": "The primary interface for code transmutation. Enhanced with extensions for faster logic weaving.",
     "power": 0.95,
     "status": "Equipped"
+  },
+  {
+    "name": "Docker (v27.0.3)",
+    "category": "Infra",
+    "description": "Container runtime. Manages all app containers: Coolify, Dokploy, Stalwart, Invoice Ninja, Roundcube, etc.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "systemd / systemctl",
+    "category": "Infra",
+    "description": "Service manager. Used to manage OpenClaw, Caddy, Docker daemons.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "jq (v1.7)",
+    "category": "Utility",
+    "description": "JSON processor for shell scripts and API response parsing.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "docker-rollout",
+    "category": "CLI Tool",
+    "description": "Zero-downtime deployment untuk Docker Compose. Ganti 'docker compose up -d' dengan 'docker rollout <service>' — scale 2x, tunggu healthcheck, baru hapus container lama. Install: ~/.docker/cli-plugins/.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "context-hub / chub (v0.1.3)",
+    "category": "CLI Tool",
+    "description": "Curated versioned API docs untuk coding agents (Edward). Mengurangi API hallucination. Contoh: 'chub get notion/workspace-api --lang js'. By Andrew Ng (aisuite). Installed: /usr/local/bin/chub.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "GitNexus (v1.3.6)",
+    "category": "CLI Tool",
+    "description": "Repo knowledge graph — index codebase, query execution flow, impact analysis, wiki generation. Installed at /usr/bin/gitnexus.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "Team9 (team9ai)",
+    "category": "Platform",
+    "description": "Collaborative workspace untuk AI agents — built on OpenClaw. Multi-agent channels, shared docs, audit trail. Relevant kalau scale ke multi-user/tim startup. Repo: github.com/team9ai/team9.",
+    "power": 0,
+    "status": "Watchlist"
+  },
+  {
+    "name": "OpenCode (v1.2.24)",
+    "category": "CLI Tool",
+    "description": "AI coding agent via MCP. Installed at /usr/bin/opencode. Config: ~/.config/opencode/.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "Dokploy API",
+    "category": "API Integration",
+    "description": "Deploy & manage apps on Fortress. Base URL: https://dokploy.dekirulab.dev. Token in Vault.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "OpenClaw CLI (v2026.3.13)",
+    "category": "Platform",
+    "description": "OpenClaw daemon management: gateway start/stop/restart, plugin install, config. Installed at /usr/bin/openclaw.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "curl (v8.5.0)",
+    "category": "Network",
+    "description": "HTTP client for API calls (Notion, Netlify, Cloudflare, Coolify, Dokploy). Primary tool for REST interactions.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "GitHub CLI — gh (v2.88.1)",
+    "category": "CLI Tool",
+    "description": "GitHub operations: issues, PRs, CI runs, releases, API queries. Auth via PAT hadyandev.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "Netlify API",
+    "category": "API Integration",
+    "description": "Deploy & manage hadyan.netlify.app (branch dev). Token in Vault. Site ID: a798b3b4-de56-4368-a6d4-306f6a528fde.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "Cloudflare API",
+    "category": "API Integration",
+    "description": "DNS, Pages, security. Token in Vault. Account ID: aff712af7dd5a6c6292b96a03a64ffd9.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "Stitch SDK (Google)",
+    "category": "UI Tooling",
+    "description": "Generate UI screens dari text prompt → HTML + screenshot. Berguna untuk rapid prototyping startup design sprint sebelum Edward polish. Repo: github.com/google-labs-code/stitch-sdk.",
+    "power": 0,
+    "status": "Watchlist"
+  },
+  {
+    "name": "Caddy (v2.10.2)",
+    "category": "Infra",
+    "description": "Reverse proxy for Fortress. Handles TLS, routing for claw.dekirulab.dev, wp.dekirulab.dev, mail.dekirulab.id, etc.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "Coolify API",
+    "category": "API Integration",
+    "description": "Deploy & manage apps on Fortress. Base URL: https://coolify.dekirulab.dev. Token in Vault.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "Python 3 (v3.12.3)",
+    "category": "Runtime",
+    "description": "Scripting, data processing, JSON parsing. Default python3 at /usr/bin/python3.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "SWE-AF (Agent-Field)",
+    "category": "AI Agent",
+    "description": "One API call → autonomous engineering team (PM, architect, coder, reviewer, tester). Worth revisit ketika sprint volume naik 3-5x. Repo: github.com/Agent-Field/SWE-AF.",
+    "power": 0,
+    "status": "Watchlist"
+  },
+  {
+    "name": "Node.js (v22.22.0) + npm",
+    "category": "Runtime",
+    "description": "JS runtime + package manager. Used for Atelier (Astro), fetch-notion-data.js, and general scripting.",
+    "power": 0,
+    "status": "Active"
+  },
+  {
+    "name": "Modal.com",
+    "category": "Cloud Infra",
+    "description": "Serverless GPU cloud untuk ML workloads — sub-second cold start, elastic GPU, scale to zero. Free tier ada. Bukan solusi The Mind (latency+privacy), tapi berguna untuk batch ML/fine-tuning masa depan.",
+    "power": 0,
+    "status": "Watchlist"
   }
 ]
