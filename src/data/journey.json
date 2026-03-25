@@ -1,5 +1,27 @@
 [
   {
+    "title": "OpenClaw Provider Auth: models.json ↔ auth-profiles.json Must Stay in Sync",
+    "date": "2026-03-24",
+    "description": "Menambahkan provider baru ke models.json tanpa entry di auth-profiles.json menyebabkan auth error saat provider lain rate-limited. Meski endpoint tidak butuh auth (IP whitelisted), OpenClaw tetap butuh entry auth-profiles.json — bisa pakai dummy apiKey.",
+    "exp": 15,
+    "wisdom": 10,
+    "path": "Infra Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Checklist: (1) Tambah provider ke models.json, (2) WAJIB tambah entry auth di auth-profiles.json, (3) Gateway restart. Tanpa step 2, fallback chain terputus."
+  },
+  {
+    "title": "GitHub Fine-grained PAT Limitations: No User-Level Permissions",
+    "date": "2026-03-24",
+    "description": "Fine-grained PAT GitHub scope-nya per-repository, tidak support user-level permissions (read:user, user:email, read:org). Untuk operasi yang butuh user + repo access sekaligus (gh CLI, OVERSOUL push), classic PAT tetap diperlukan.",
+    "exp": 10,
+    "wisdom": 10,
+    "path": "Defense Alchemy",
+    "member": "al-z",
+    "format": "Insight",
+    "solution": "Classic PAT untuk operasi user-level (gh CLI, OVERSOUL). Fine-grained PAT untuk repo-only operations di org tertentu (griyayatim, seatrax). Pisahkan sesuai kebutuhan scope."
+  },
+  {
     "title": "GitHub Copilot API — 40+ Models Discovery",
     "date": "2026-03-21",
     "description": "OpenClaw auto-discover hanya 2 model. Manual query ke /models endpoint ungkap 40+ model. Primary switched to claude-opus-4.6.",
