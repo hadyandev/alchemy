@@ -48,5 +48,37 @@
     ],
     "repo": "https://github.com/dekirulab/angkain",
     "date": ""
+  },
+  {
+    "name": "💻 Resembool - Developer Workstation",
+    "stability": "Bubbling (WIP)",
+    "elements": [
+      "Infra Alchemy",
+      "Dev Environment",
+      "Code Alchemy"
+    ],
+    "repo": "https://github.com/hadyandev/resembool",
+    "date": ""
+  },
+  {
+    "name": "🧠 Qwen3-4B-Kimi2.5 Local LLM",
+    "stability": "Bubbling (WIP)",
+    "elements": [
+      "ML Alchemy",
+      "Code Alchemy"
+    ],
+    "repo": "https://huggingface.co/khazarai/Qwen3-4B-Kimi2.5-Reasoning-Distilled-GGUF",
+    "date": ""
+  },
+  {
+    "name": "🔮 Hermes-Ollama Integration",
+    "stability": "Crystalized (Done)",
+    "elements": [
+      "ML Alchemy",
+      "Infra Alchemy",
+      "Code Alchemy"
+    ],
+    "repo": "https://huggingface.co/khazarai/Qwen3-4B-Kimi2.5-Reasoning-Distilled-GGUF",
+    "date": ""
   }
 ]
