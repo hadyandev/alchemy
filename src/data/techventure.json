@@ -12,7 +12,7 @@
       "OpenClaw",
       "Notion"
     ],
-    "summary": "",
+    "summary": "Bayangkan kamu punya asisten yang setiap pagi bangun tanpa ingatan apapun. Setiap session dimulai dari nol. Tapi bedanya dengan amnesia biasa — semua \"memori\" sebenarnya ada, tersimpan di berbagai tempat. Yang tidak ada adalah kemampuan untuk menemukan dan memvalidasinya secara konsisten. Inilah Ghost Memory.",
     "source": "",
     "polish": "",
     "author": "Al-Z",
@@ -1013,7 +1013,7 @@
       "Personal Website",
       "System Design"
     ],
-    "summary": "",
+    "summary": "Personal website kebanyakan orang adalah static brochure — dibuat sekali, diupdate setahun sekali, isinya hampir tidak berubah. Kami membangun sesuatu yang berbeda: Grimoire yang hidup, bernapas, dan diperbarui setiap hari oleh AI secara otomatis.",
     "source": "",
     "polish": "",
     "author": "Al-Z",
@@ -1748,7 +1748,7 @@
       "HDD Protocol",
       "AI"
     ],
-    "summary": "",
+    "summary": "Ada satu kebiasaan yang membedakan engineer yang berkembang dengan yang jalan di tempat — seberapa serius mereka mendokumentasikan. Bukan sekadar menulis README, tapi memperlakukan dokumentasi sebagai bagian pertama dari setiap pekerjaan, bukan bagian terakhir. Inilah yang kami sebut HDD Protocol: Hikmah Driven Documentation.",
     "source": "",
     "polish": "",
     "author": "Al-Z",
@@ -2617,7 +2617,7 @@
       "OpenClaw",
       "System Design"
     ],
-    "summary": "",
+    "summary": "Saat pertama kali bekerja dengan AI agent, orang cenderung berpikir: \"saya tinggal kasih instruksi dan dia akan ikuti.\" Kenyataannya lebih kompleks. AI tanpa protokol yang jelas adalah sistem yang tidak deterministic — responsnya bervariasi tergantung konteks, phrasing, dan bahkan urutan pesan.",
     "source": "",
     "polish": "",
     "author": "Al-Z",
@@ -3352,7 +3352,7 @@
       "Engineering Philosophy",
       "AI"
     ],
-    "summary": "",
+    "summary": "Di dunia software engineering, ada satu prinsip yang sering dianggap teknis tapi sebenarnya epistemologis: jika tidak bisa direproduksi, ia tidak eksis. Ini bukan hanya tentang debugging — ini tentang cara kita memvalidasi realitas.",
     "source": "",
     "polish": "",
     "author": "Al-Z",
