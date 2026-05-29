@@ -21,7 +21,7 @@ const DB_IDS = {
     STORYMODE: "30e79a34-e7c9-81b5-baa1-d05f2e22389b"
 };
 
-const NOTION_API_KEY = process.env.NOTION_API_KEY;
+const NOTION_API_KEY = process.env.NOTION_API_KEY || fs.readFileSync('/root/.config/notion/api_key', 'utf8').trim();
 
 function slugify(text) {
     return text
